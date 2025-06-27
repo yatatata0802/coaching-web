@@ -23,6 +23,34 @@ const VideoContainer = styled.div`
     height: auto;
     z-index: 0;
     transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center center;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2em;
+
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center center;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 `;
 

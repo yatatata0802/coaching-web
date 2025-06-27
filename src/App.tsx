@@ -1,19 +1,14 @@
 import styled from "styled-components";
-import Header from "./components/Header";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import ProfilePage from "./pages/ProfilePage";
+import ServicePage from "./pages/ServicePage";
+import ContactPage from "./pages/ContactPage";
+import WhatCoachingPage from "./pages/WhatCoachingPage";
 import HeroVideo from "./components/HeroVideo";
 import KineticText from "./components/KineticText";
 import { colors } from "./styles/GlobalStyles";
-import { keyframes } from "styled-components";
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import AboutPage from "./pages/AboutPage";
-import ServicePage from "./pages/ServicePage";
-import ContactPage from "./pages/ContactPage";
+import Header from "./components/Header";
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -35,12 +30,25 @@ const HeroSectionContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    padding-top: 18vh;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 12vh;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 `;
 
-const HeroSubHeading = styled.p`
-  font-size: 1.8em;
+const HeroSubHeading = styled.div`
+  font-size: 1.6em;
   margin-top: 24px;
   margin-bottom: 24px;
   font-family: "Noto Serif JP", serif;
@@ -50,6 +58,42 @@ const HeroSubHeading = styled.p`
   background: rgba(10, 10, 10, 0.32);
   border-radius: 10px;
   padding: 0.7em 1.2em;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  @media (max-width: 768px) {
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0.6em 1em;
+    line-height: 1.5;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9em;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0.5em 0.8em;
+    line-height: 1.4;
+    max-width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 0.85em;
+    padding: 0.4em 0.6em;
+    max-width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const CallToAction = styled.button`
@@ -64,6 +108,10 @@ const CallToAction = styled.button`
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
   &::before {
     content: "";
@@ -87,74 +135,63 @@ const CallToAction = styled.button`
       opacity: 0.5;
     }
   }
-`;
 
-// ゴールド下矢印アニメーション
-const bounce = keyframes`
-  0%, 100% { transform: translateY(0); opacity: 0.7; }
-  50% { transform: translateY(16px); opacity: 1; }
-`;
-const ScrollDownWrapper = styled.div`
-  position: absolute;
-  left: 50%;
-  bottom: 32px;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 2;
-`;
-const ScrollText = styled.div`
-  color: #d4af37;
-  font-size: 1em;
-  letter-spacing: 0.12em;
-  margin-bottom: 6px;
-  font-family: "Noto Serif JP", serif;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-`;
-const Arrow = styled.div`
-  width: 28px;
-  height: 28px;
-  border-left: 3px solid #d4af37;
-  border-bottom: 3px solid #d4af37;
-  transform: rotate(-45deg);
-  animation: ${bounce} 1.6s infinite;
-  margin-bottom: 2px;
-  filter: drop-shadow(0 2px 8px #d4af37aa);
+  @media (max-width: 768px) {
+    font-size: 1.3em;
+    padding: 12px 24px;
+    margin-top: 16px;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin-top: 12px;
+    min-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 function Home() {
   const navigate = useNavigate();
+
   return (
     <AppContainer>
       <HeroVideo />
       <HeroSectionContent>
-        <KineticText text="あなたの物語は、まだ途中だ" />
-        <HeroSubHeading>いまこそ、本当の自分を生きると決めよう</HeroSubHeading>
+        <KineticText text="このまま終わっていいのか？" />
+        <HeroSubHeading>
+          毎朝、同じ顔。
+          <br />
+          毎日、同じルート。
+          <br />
+          心が、どこか置き去りのまま。
+          <br />
+          「こんなはずじゃない」って、気づいてるはずだ。
+        </HeroSubHeading>
         <CallToAction onClick={() => navigate("/main")}>
           最初の一歩を踏み出す
         </CallToAction>
       </HeroSectionContent>
-      <ScrollDownWrapper>
-        <ScrollText>SCROLL</ScrollText>
-        <Arrow />
-      </ScrollDownWrapper>
     </AppContainer>
   );
 }
 
-function App() {
+export default function App() {
   return (
-    <Router>
+    <>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/main" element={<MainPage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/service" element={<ServicePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/what-coaching" element={<WhatCoachingPage />} />
       </Routes>
-    </Router>
+    </>
   );
 }
-
-export default App;

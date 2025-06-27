@@ -3,7 +3,38 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { colors } from "../styles/GlobalStyles";
 gsap.registerPlugin(ScrollTrigger);
+
+const ProfileContainer = styled.div`
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+`;
+
+const ProfileContent = styled.div`
+  max-width: 800px;
+  text-align: center;
+`;
+
+const Title = styled.h1`
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: ${colors.accent1};
+  letter-spacing: 0.2em;
+`;
+
+const Description = styled.p`
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #cccccc;
+`;
 
 const AboutContainer = styled.div`
   min-height: 100vh;
@@ -91,7 +122,7 @@ const ImpactText = styled.h2`
   }
 `;
 
-const AboutPage: React.FC = () => {
+const ProfilePage: React.FC = () => {
   const impactRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     const sections = document.querySelectorAll(".reveal-section");
@@ -156,6 +187,14 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Header />
+      <ProfileContainer>
+        <ProfileContent>
+          <Title>PROFILE</Title>
+          <Description>
+            プロフィールページの内容がここに表示されます。
+          </Description>
+        </ProfileContent>
+      </ProfileContainer>
       <AboutContainer>
         <HeroSection>
           <HeroTitle>
@@ -298,4 +337,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default ProfilePage;
