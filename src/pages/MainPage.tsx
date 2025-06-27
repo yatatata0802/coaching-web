@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Header from "../components/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -714,7 +713,6 @@ const MainPage: React.FC = () => {
 
   return (
     <MainContainer>
-      <Header />
       <Hero id="hero">
         <CanvasBG ref={canvasRef} />
         <Light />
@@ -739,7 +737,7 @@ const MainPage: React.FC = () => {
         </HeroTitle>
         <HeroSub ref={subRef}>魅セルジブン × 踊ルココロ</HeroSub>
         <HeroCatch ref={catchRef}>
-          “このままの自分でいいのか？”と問い続けているあなたへ
+          "このままの自分でいいのか？"と問い続けているあなたへ
           <br />
           <br />
           <Accent>"なりたい自分"</Accent>を夢で終わらせない。

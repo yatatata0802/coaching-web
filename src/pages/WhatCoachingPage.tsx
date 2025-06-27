@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
+import { colors } from "../styles/GlobalStyles";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -97,7 +97,6 @@ const WhatCoachingPage: React.FC = () => {
 
   return (
     <>
-      <Header />
       <WhatCoachingContainer>
         <HeroSection>
           <HeroTitle>What's Coaching?</HeroTitle>

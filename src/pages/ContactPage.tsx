@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import Header from "../components/Header";
+import { colors } from "../styles/GlobalStyles";
 import gsap from "gsap";
 
 const shine = keyframes`
@@ -234,7 +234,6 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Header />
       <ContactContainer>
         <Hero>
           <Light />

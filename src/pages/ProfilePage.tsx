@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { colors } from "../styles/GlobalStyles";
@@ -185,155 +184,60 @@ const ProfilePage: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <Header />
-      <ProfileContainer>
-        <ProfileContent>
-          <Title>PROFILE</Title>
-          <Description>
-            プロフィールページの内容がここに表示されます。
-          </Description>
-        </ProfileContent>
-      </ProfileContainer>
-      <AboutContainer>
-        <HeroSection>
-          <HeroTitle>
-            人生を"作品"として生きる ── 矢田谷充則という物語
-          </HeroTitle>
-        </HeroSection>
-        <StorySection>
-          <StoryBlock className="reveal-section">
-            <StoryTitle>【1】はじまりの記憶：幼少期〜空手との出会い</StoryTitle>
-            <StoryText>
-              僕の人生は、4歳のときに空手道場の門を叩いたところから始まった。
-              <br />
-              兄の影響だったが、それは"自分で選んだ"というより、
-              <br />
-              "やるのが当たり前"と思わされていた選択だった。
-              <br />
-              <br />
-              幼い頃の僕は、<Accent>"強さ"に憧れていた</Accent>。<br />
-              強くなれば、自信が持てる。認められる。愛される。
-              <br />
-              そんな気持ちをどこかで抱えていた。
-              <br />
-              <br />
-              でも、空手を続ける中で次第に、
-              <br />
-              "これって本当に自分のやりたいことなのか？"
-              <br />
-              という違和感が心に芽生えていった。
-            </StoryText>
-          </StoryBlock>
-          <StoryBlock className="reveal-section">
-            <StoryTitle>【2】解放と反発：空手をやめたその先に</StoryTitle>
-            <StoryText>
-              中学を卒業したとき、空手をやめた。
-              <br />
-              道場に通わない自分は、まるで鎖を解かれたようだった。
-              <br />
-              "やっと自由になれた"そう感じた。
-              <br />
-              <br />
-              だがその自由は、次の迷いを連れてきた。
-              <br />
-              誰かの期待から解放されたぶん、自分が何者なのか分からなくなった。
-              <br />
-              学校にもなじめず、やや"はみ出し気味"な時期を過ごす。
-              <br />
-              ブレイクダンスとの出会いが、そんな自分に一つの光をくれた。
-            </StoryText>
-          </StoryBlock>
-          <StoryBlock className="reveal-section">
-            <StoryTitle>【3】ブレイクダンス：自分を"選ぶ"楽しさ</StoryTitle>
-            <StoryText>
-              地元の駅前で踊っていた先輩たちの姿に、胸が高鳴った。
-              <br />
-              "これや！かっこええ！"と直感した僕は、すぐに"教えてください"と声をかけた。
-              <br />
-              <br />
-              空手とは違う。"やらされる"のではなく、"自分で選ぶ"表現。
-              <br />
-              音に合わせて、自分の意思で動く。
-              <br />
-              ブレイクダンスは、僕に<Accent>"自分を生きる感覚"</Accent>
-              を教えてくれた。
-            </StoryText>
-          </StoryBlock>
-          <StoryBlock className="reveal-section">
-            <StoryTitle>
-              【4】社会人としての自分：規律と成長のはざまで
-            </StoryTitle>
-            <StoryText>
-              警察官として働きながら、僕は再び"規律"の中に戻った。
-              <br />
-              でも、今度は逃げなかった。自分で選んだ道だったからだ。
-              <br />
-              <br />
-              日々の業務、当直、部下の指導。
-              <br />
-              決して楽な日々ではなかったが、その分、自分を律する力が磨かれていった。
-              <br />
-              並行して筋トレをライフワークとし、ムエタイの大会にも出場。
-              <br />
-              強くなるだけじゃない。<Accent>"自分を超える"</Accent>
-              ということが、少しずつ分かってきた。
-            </StoryText>
-          </StoryBlock>
-          <StoryBlock className="reveal-section">
-            <StoryTitle>【5】転機：コーチングとの出会い</StoryTitle>
-            <StoryText>
-              "もっと成長したい。もっと、自分を生きたい"
-              <br />
-              そんな思いで出会ったのがコーチングだった。
-              <br />
-              <br />
-              話すことで、こんなにも自分と向き合えるのか。
-              <br />
-              "人が本気で変わろうとすれば、必ず成長できる"
-              <br />
-              そう信じられるようになったとき、僕は"この力を人にも届けたい"と思った。
-            </StoryText>
-          </StoryBlock>
-          <StoryBlock className="reveal-section">
-            <StoryTitle>
-              【6】ミッション：人生をデザインする伴走者として
-            </StoryTitle>
-            <StoryText>
-              僕は、もう"空手をやらされた子供"じゃない。
-              <br />
-              "誰かに指示されて生きる人間"でもない。
-              <br />
-              <br />
-              自分の意志で、挑戦を選び続けている。
-              <br />
-              筋トレも、格闘技も、コーチングも──
-              <br />
-              全部、"自分で選んだ生き方"だ。
-              <br />
-              <br />
-              だからこそ、今くすぶっている人に伝えたい。
-              <br />
-              "変われない自分"にモヤモヤしているあなたに届けたい。
-              <br />
-              <br />
-              人生は、自分でデザインできる。
-              <br />
-              そして、その一歩は、"誰かと話すこと"から始まる。
-            </StoryText>
-          </StoryBlock>
-        </StorySection>
-        <ImpactMessage>
-          <ImpactText ref={impactRef}>
-            {"このまま終わる？\nそれとも、ここから始める？"
-              .split("")
-              .map((char, i) => (
-                <span key={i}>{char === "\n" ? <br /> : char}</span>
-              ))}
-          </ImpactText>
-        </ImpactMessage>
-      </AboutContainer>
-    </>
+    <AboutContainer>
+      <HeroSection>
+        <HeroTitle>人生を"作品"として生きる ── 矢田谷充則という物語</HeroTitle>
+      </HeroSection>
+
+      <StorySection>
+        <StoryBlock className="reveal-section">
+          <StoryTitle>フィジークとの出会い</StoryTitle>
+          <StoryText>
+            大学時代、<Accent>フィジーク</Accent>という競技に出会いました。
+            これは、筋肉の美しさとバランスを競うスポーツです。
+            当時の私は、ただ筋肉を大きくすることだけを考えていました。
+            しかし、フィジークを通じて、<Accent>身体の美しさ</Accent>と
+            <Accent>心の美しさ</Accent>の両方が大切だと気づいたのです。
+          </StoryText>
+        </StoryBlock>
+
+        <StoryBlock className="reveal-section">
+          <StoryTitle>挫折と再起</StoryTitle>
+          <StoryText>
+            フィジークの大会で結果を出せず、一度は諦めかけました。
+            しかし、その時、<Accent>コーチング</Accent>という存在を知りました。
+            コーチの指導を受けることで、自分の中に眠っていた
+            <Accent>可能性</Accent>を発見できたのです。
+            この経験が、私がコーチングを学ぶきっかけとなりました。
+          </StoryText>
+        </StoryBlock>
+
+        <StoryBlock className="reveal-section">
+          <StoryTitle>コーチングへの道</StoryTitle>
+          <StoryText>
+            フィジークの経験を活かし、<Accent>心と身体の両面</Accent>から
+            人をサポートするコーチングを学びました。 私の使命は、
+            <Accent>"なりたい自分"</Accent>を夢で終わらせないこと。
+            フィジークで培った<Accent>継続力</Accent>と
+            <Accent>自己管理能力</Accent>を活かし、
+            あなたの人生を"作品"として輝かせるお手伝いをします。
+          </StoryText>
+        </StoryBlock>
+      </StorySection>
+
+      <ImpactMessage>
+        <ImpactText ref={impactRef}>
+          <span>変</span>
+          <span>化</span>
+          <span>は</span>
+          <span>必</span>
+          <span>ず</span>
+          <span>起</span>
+          <span>き</span>
+          <span>る</span>
+        </ImpactText>
+      </ImpactMessage>
+    </AboutContainer>
   );
 };
 

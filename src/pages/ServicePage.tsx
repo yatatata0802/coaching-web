@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
+import styled from "styled-components";
+import { colors } from "../styles/GlobalStyles";
 
 const ServicePage: React.FC = () => (
   <>
-    <Header />
     <div
       style={{
         minHeight: "80vh",
