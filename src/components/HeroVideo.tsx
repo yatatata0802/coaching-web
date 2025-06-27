@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const VideoContainer = styled.div`
   width: 100%;
@@ -30,7 +30,7 @@ const HeroVideo: React.FC = () => {
   return (
     <VideoContainer>
       <video autoPlay loop muted playsInline>
-        <source src="/hero_video.mp4" type="video/mp4" />
+        <source src="/coaching-web/hero_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </VideoContainer>

@@ -1,8 +1,19 @@
-import styled from 'styled-components';
-import HeroVideo from './components/HeroVideo';
-import KineticText from './components/KineticText';
-import { colors } from './styles/GlobalStyles';
-import { keyframes } from 'styled-components';
+import styled from "styled-components";
+import Header from "./components/Header";
+import HeroVideo from "./components/HeroVideo";
+import KineticText from "./components/KineticText";
+import { colors } from "./styles/GlobalStyles";
+import { keyframes } from "styled-components";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import AboutPage from "./pages/AboutPage";
+import ServicePage from "./pages/ServicePage";
+import ContactPage from "./pages/ContactPage";
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -32,7 +43,7 @@ const HeroSubHeading = styled.p`
   font-size: 1.8em;
   margin-top: 24px;
   margin-bottom: 24px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
   font-weight: 700;
   color: #fff;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45), 0 1px 0 #d4af37;
@@ -55,7 +66,7 @@ const CallToAction = styled.button`
   transition: background-color 0.3s ease;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -50%;
     left: -50%;
@@ -98,7 +109,7 @@ const ScrollText = styled.div`
   font-size: 1em;
   letter-spacing: 0.12em;
   margin-bottom: 6px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 `;
 const Arrow = styled.div`
@@ -112,28 +123,37 @@ const Arrow = styled.div`
   filter: drop-shadow(0 2px 8px #d4af37aa);
 `;
 
-function App() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+function Home() {
+  const navigate = useNavigate();
   return (
     <AppContainer>
       <HeroVideo />
       <HeroSectionContent>
         <KineticText text="あなたの物語は、まだ途中だ" />
         <HeroSubHeading>いまこそ、本当の自分を生きると決めよう</HeroSubHeading>
-        <CallToAction onClick={() => scrollToSection('contact-session')}>最初の一歩を踏み出す</CallToAction>
+        <CallToAction onClick={() => navigate("/main")}>
+          最初の一歩を踏み出す
+        </CallToAction>
       </HeroSectionContent>
-      {/* Scroll Downアニメーション */}
       <ScrollDownWrapper>
         <ScrollText>SCROLL</ScrollText>
         <Arrow />
       </ScrollDownWrapper>
     </AppContainer>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/service" element={<ServicePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Router>
   );
 }
 
