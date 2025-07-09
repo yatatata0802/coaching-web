@@ -10,7 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingSocial from "./components/ui/FloatingSocial";
-import FloatingLineCTA from "./components/ui/FloatingLineCTA";
+import FloatingCTA from "./components/FloatingCTA";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
                 <Header />
                 <HomePage />
                 <FloatingSocial />
+                <FloatingCTA />
               </>
             }
           />

@@ -5,7 +5,6 @@ import { Home, ArrowUp, Target, Eye, Zap, Users } from "lucide-react";
 import VisualGuide from "../components/ui/VisualGuide";
 import ParticleBackground from "../components/ParticleBackground";
 import SEO from "../components/SEO";
-import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const WhatIsCoachingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -148,7 +147,7 @@ const WhatIsCoachingPage: React.FC = () => {
                       duration: 0.5,
                     }}
                     dangerouslySetInnerHTML={{
-                      __html: smartBreakJapanese(line, 25),
+                      __html: line.replace(/\n/g, "<br/>"),
                     }}
                   />
                 ))}
@@ -161,54 +160,47 @@ const WhatIsCoachingPage: React.FC = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                  <VisualGuide type="attention-grabber" delay={0.3}>
-                    <motion.button
-                      onClick={() => navigate("/contact")}
-                      className="flex items-center gap-3 px-10 py-4 text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] border-none rounded-full cursor-pointer transition-all duration-300 hover:from-[#fffbe6] hover:to-[#ffd700] hover:text-[#d4af37] hover:transform hover:scale-[1.07] hover:-translate-y-0.5"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Zap size={20} />
-                      無料相談を申し込む
-                    </motion.button>
-                  </VisualGuide>
+                  {/* 無料相談を申し込むボタン削除 */}
                 </motion.div>
               )}
             </motion.div>
           ))}
         </div>
 
-        {/* Enhanced Navigation Buttons */}
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center py-12 sm:py-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          <VisualGuide type="arrow-right" delay={0.2}>
-            <motion.button
-              onClick={() => navigate("/main")}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] rounded-full transition-all duration-300 hover:shadow-[0_8px_32px_rgba(212,175,55,0.4)] mobile-touch-target"
-            >
-              <Home size={20} />
-              HOMEに戻る
-            </motion.button>
-          </VisualGuide>
-
-          <VisualGuide type="arrow-down" delay={0.4}>
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-transparent border-2 border-[#d4af37] text-[#d4af37] rounded-full transition-all duration-300 hover:bg-[#d4af37] hover:text-[#181818] mobile-touch-target"
-            >
-              <ArrowUp size={20} />
-              ページトップへ
-            </motion.button>
-          </VisualGuide>
-        </motion.div>
+        {/* ナビゲーションボタン削除済み。LINE・noteボタンのみ残す */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center my-8">
+          {/* LINE登録ボタン */}
+          <button
+            onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
+            className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
+            style={{ minWidth: 220 }}
+          >
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <rect width="40" height="40" rx="12" fill="#fff" />
+              <path
+                d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                fill="#06C755"
+              />
+              <path
+                d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+            ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
+          </button>
+          {/* note誘導ボタン */}
+          <a
+            href="https://note.com/YOUR_NOTE_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base sm:text-lg shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
+            style={{ minWidth: 200 }}
+          >
+            ＞＞ 物語の“本編”を読む（note第1話へ）
+          </a>
+        </div>
 
         <div className="h-20"></div>
       </div>

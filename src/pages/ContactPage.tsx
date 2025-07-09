@@ -12,7 +12,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import SEO from "../components/SEO";
-import { smartBreakJapanese } from "../smartBreakJapanese";
+import { CONTACT_INFO, ASSURANCES } from "../constants/content";
 
 interface FormData {
   name: string;
@@ -43,19 +43,6 @@ const ContactPage: React.FC = () => {
     setIsSubmitted(true);
   };
 
-  const contactInfo = [
-    { icon: Mail, text: smartBreakJapanese("coaching@yatagai.com") },
-    { icon: MapPin, text: smartBreakJapanese("大阪府大阪市（オンライン対応可）") },
-    { icon: Clock, text: smartBreakJapanese("平日 9:00-21:00 / 土日 10:00-18:00") },
-  ];
-
-  const assurances = [
-    smartBreakJapanese("無理な勧誘は一切いたしません"),
-    smartBreakJapanese("ご相談内容・個人情報は秘密厳守"),
-    smartBreakJapanese("初回体験セッションは完全無料"),
-    smartBreakJapanese("24時間以内に必ずご返信"),
-  ];
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -74,7 +61,7 @@ const ContactPage: React.FC = () => {
             CONTACT
           </h1>
           <div className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-2">
-            {smartBreakJapanese(`あなたの"変わりたい"をここから。`)}
+            あなたの"変わりたい"をここから。
           </div>
         </div>
 
@@ -93,7 +80,9 @@ const ContactPage: React.FC = () => {
                   ありがとうございます！
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                  {smartBreakJapanese(`お問い合わせを受け付けました。24時間以内にご返信いたします。`)}
+                  {smartBreakJapanese(
+                    `お問い合わせを受け付けました。24時間以内にご返信いたします。`
+                  )}
                 </p>
               </motion.div>
             ) : (
@@ -179,7 +168,7 @@ const ContactPage: React.FC = () => {
                 お気軽にご連絡ください
               </h3>
               <div className="space-y-3 sm:space-y-4">
-                {contactInfo.map((info, index) => {
+                {CONTACT_INFO.map((info, index) => {
                   const IconComponent = info.icon;
                   return (
                     <div
@@ -190,7 +179,9 @@ const ContactPage: React.FC = () => {
                         className="text-[#d4af37] mr-3 sm:mr-4 flex-shrink-0"
                         size={16}
                       />
-                      <span className="jp-text-optimal leading-relaxed">{info.text}</span>
+                      <span className="jp-text-optimal leading-relaxed">
+                        {info.text}
+                      </span>
                     </div>
                   );
                 })}
@@ -203,13 +194,15 @@ const ContactPage: React.FC = () => {
                 安心してご相談ください
               </h3>
               <div className="space-y-3 sm:space-y-4 text-gray-300">
-                {assurances.map((assurance, index) => (
+                {ASSURANCES.map((assurance, index) => (
                   <div key={index} className="flex items-start">
                     <Heart
                       className="text-[#d4af37] mr-3 mt-1 flex-shrink-0"
                       size={12}
                     />
-                    <span className="text-sm sm:text-base jp-text-optimal leading-relaxed">{assurance}</span>
+                    <span className="text-sm sm:text-base jp-text-optimal leading-relaxed">
+                      {assurance}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -220,7 +213,7 @@ const ContactPage: React.FC = () => {
                 今すぐ行動を起こしませんか？
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                {smartBreakJapanese(`人生を変える最初の一歩は、このフォームを送信することから始まります。`)}
+                人生を変える最初の一歩は、このフォームを送信することから始まります。
               </p>
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#d4af37]">
                 あなたの物語は、まだ途中だ。
@@ -231,31 +224,43 @@ const ContactPage: React.FC = () => {
 
         <div className="p-6 sm:p-8 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-center mt-12 sm:mt-16">
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed jp-text-optimal">
-            {smartBreakJapanese(`一人で悩まず、まずは話してみませんか？あなたの"変わりたい"という気持ちを、全力でサポートします。`)}
+            一人で悩まず、まずは話してみませんか？あなたの"変わりたい"という気持ちを、全力でサポートします。
           </p>
         </div>
 
-        {/* ナビゲーションボタン */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-8 sm:py-12">
-          <motion.button
-            onClick={() => navigate("/main")}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] rounded-full transition-all duration-300 hover:shadow-[0_8px_32px_rgba(212,175,55,0.4)] mobile-touch-target"
+        {/* ナビゲーションボタン削除済み。LINE・noteボタンのみ残す */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center my-8">
+          {/* LINE登録ボタン */}
+          <button
+            onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
+            className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
+            style={{ minWidth: 220 }}
           >
-            <Home size={20} />
-            HOMEに戻る
-          </motion.button>
-
-          <motion.button
-            onClick={scrollToTop}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-transparent border-2 border-[#d4af37] text-[#d4af37] rounded-full transition-all duration-300 hover:bg-[#d4af37] hover:text-[#181818] mobile-touch-target"
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <rect width="40" height="40" rx="12" fill="#fff" />
+              <path
+                d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                fill="#06C755"
+              />
+              <path
+                d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+            ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
+          </button>
+          {/* note誘導ボタン */}
+          <a
+            href="https://note.com/YOUR_NOTE_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base sm:text-lg shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
+            style={{ minWidth: 200 }}
           >
-            <ArrowUp size={20} />
-            ページトップへ
-          </motion.button>
+            ＞＞ 物語の“本編”を読む（note第1話へ）
+          </a>
         </div>
       </div>
     </div>

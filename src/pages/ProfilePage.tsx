@@ -3,10 +3,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Home, ArrowUp } from "lucide-react";
 import SEO from "../components/SEO";
-import { profileStoryContent } from "../constants/profileStory";
 import AnimatedText from "../components/ui/AnimatedText";
 import VisualGuide from "../components/ui/VisualGuide";
-import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const ProfilePage: React.FC = () => {
   const navigate = useNavigate();
@@ -43,7 +41,6 @@ const ProfilePage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // profileStoryContentをProfilePage.tsx内に直接定義
   const profileStoryContent = [
     {
       type: "paragraph",
@@ -206,135 +203,38 @@ const ProfilePage: React.FC = () => {
           {/* プロフィール基本情報 - スマホ最適化 */}
           <div className="max-w-sm sm:max-w-md mx-auto mb-8 sm:mb-10 p-4 sm:p-6 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-left border-l-[5px] border-[#e53935] text-sm sm:text-base">
             {basicProfile.map((line, index) => (
-              <React.Fragment key={index}>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: smartBreakJapanese(line, 25),
-                  }}
-                />
-              </React.Fragment>
+              <div key={index} className="mb-1">
+                {line}
+              </div>
             ))}
           </div>
-
-          {/* GCS認定コーチセクション */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10 mb-10 sm:mb-12">
-            <div className="p-6 sm:p-8 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#d4af37]/20 border-2 border-[#d4af37] flex items-center justify-center mr-4">
-                  <span className="text-[#d4af37] font-bold text-lg">G</span>
-                </div>
-                <div>
-                  <h2 className="text-xl sm:text-2xl font-bold text-[#d4af37] mb-1">
-                    GCS認定コーチ
-                  </h2>
-                  <p className="text-gray-300 text-sm">
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(
-                          "銀座コーチングスクール認定資格",
-                          25
-                        ),
-                      }}
-                    />
-                  </p>
-                </div>
-              </div>
-
-              <div className="space-y-3 text-sm sm:text-base text-gray-300 leading-normal">
-                <p>
-                  <strong className="text-[#d4af37]">
-                    銀座コーチングスクール
-                  </strong>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: smartBreakJapanese(
-                        "でコーチングの基礎から実践まで体系的に学び、認定コーチとしての資格を取得しました。",
-                        25
-                      ),
-                    }}
-                  />
-                </p>
-                <p>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: smartBreakJapanese(
-                        "GCSは日本最大級のコーチングスクールとして知られ、厳格な認定基準をクリアしたコーチのみが認定コーチとして活動できます。",
-                        25
-                      ),
-                    }}
-                  />
-                </p>
-                <div className="mt-4 p-3 bg-white/10 rounded-lg border-l-4 border-[#d4af37]">
-                  <p className="text-[#d4af37] font-semibold text-sm mb-1">
-                    認定コーチとしての強み
-                  </p>
-                  <ul className="text-gray-300 text-sm space-y-1 leading-normal">
-                    <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 体系的で実践的なコーチングスキル",
-                            25
-                          ),
-                        }}
-                      />
-                    </li>
-                    <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 継続的な学習とスキルアップ",
-                            25
-                          ),
-                        }}
-                      />
-                    </li>
-                    <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 厳格な認定基準をクリアした信頼性",
-                            25
-                          ),
-                        }}
-                      />
-                    </li>
-                    <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 日本最大級スクールのネットワーク",
-                            25
-                          ),
-                        }}
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div className="mt-4 text-center">
-                  <a
-                    href="https://www.ginza-coach.com/coaches/view.cgi?username=2505FB4944"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37] text-[#181818] font-bold rounded-lg hover:bg-[#ffd700] transition-all duration-300 text-sm"
-                  >
-                    認定コーチ詳細を見る
-                    <span className="text-xs">↗</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* My Story セクション */}
           <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10 jp-text-optimal text-balance">
             {/* タイトルのみ大きく表示 */}
-            <p
-              className="text-center text-2xl sm:text-3xl font-bold text-[#d4af37] mb-10"
-              dangerouslySetInnerHTML={{
-                __html: smartBreakJapanese(profileStoryContent[0].content, 25),
-              }}
-            />
+            <div className="text-center text-2xl sm:text-3xl font-bold text-[#d4af37] mb-10">
+              <p className="mb-4">「このままで、本当にいいのか？」</p>
+              <p className="mb-4">
+                もし、あなたの心の奥で、そんな"声"が聞こえ始めているなら──
+                <br />
+                この物語は、きっと、あなたのためのものだ。
+              </p>
+              <p className="mb-4">
+                はじめまして。矢田谷充則（やたがいみつのり）です。
+              </p>
+              <p className="mb-4">
+                私は、20年間「公安警察官」という仮面を被り、自分を押し殺してきました。
+              </p>
+              <p className="mb-4">
+                しかし、ある日を境に、全てを捨てて
+                <strong>“自分の人生を演じる”</strong>ことを決意しました。
+              </p>
+              <p className="mb-4">
+                ここでは、私がどうやって重たい鎧を脱ぎ捨て、自分を取り戻してきたのか。
+                <br />
+                その泥臭い「脱皮」の全記録を、包み隠さずお話しします。
+              </p>
+            </div>
             {/* headingごとにグループ化して四角で囲む */}
             {(() => {
               const blocks = [];
@@ -344,8 +244,35 @@ const ProfilePage: React.FC = () => {
                 const item = profileStoryContent[i];
                 if (item.type === "heading") {
                   if (currentBlock.length > 0) {
+                    // 章末の問いかけを追加
+                    if (blockIdx === 0) {
+                      currentBlock.push({
+                        type: "question",
+                        content:
+                          "──あなたは今、誰の期待に応えるために、頑張りすぎていませんか？",
+                      });
+                    } else if (blockIdx === 1) {
+                      currentBlock.push({
+                        type: "question",
+                        content:
+                          "──あなたが最後に「心の底からやりたい」と思って、何かを選んだのはいつですか？",
+                      });
+                    } else if (blockIdx === 2) {
+                      currentBlock.push({
+                        type: "question",
+                        content:
+                          "──あなたの心の叫びは、今、何と言っていますか？",
+                      });
+                    } else if (blockIdx === 3) {
+                      currentBlock.push({
+                        type: "question",
+                        content:
+                          "あなたは本当はどうしたいんですか？と聞いたら、何と答えますか？",
+                      });
+                    }
                     blocks.push([...currentBlock]);
                     currentBlock = [];
+                    blockIdx++;
                   }
                 }
                 currentBlock.push(item);
@@ -371,8 +298,22 @@ const ProfilePage: React.FC = () => {
                             transition={{ duration: 0.7, delay: i * 0.05 }}
                             viewport={{ once: true }}
                           >
-                            {smartBreakJapanese(item.content, 25)}
+                            {item.content}
                           </motion.h3>
+                        );
+                      }
+                      if (item.type === "question") {
+                        return (
+                          <motion.p
+                            key={i}
+                            className="text-base font-bold text-[#e53935] mt-6 mb-2 text-center"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: i * 0.05 }}
+                            viewport={{ once: true }}
+                          >
+                            {item.content}
+                          </motion.p>
                         );
                       }
                       return (
@@ -381,14 +322,26 @@ const ProfilePage: React.FC = () => {
                           className={`${
                             item.className ? item.className : ""
                           } text-sm leading-normal`}
-                          dangerouslySetInnerHTML={{
-                            __html: smartBreakJapanese(item.content, 25),
-                          }}
                           initial={{ opacity: 0, y: 30 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.7, delay: i * 0.05 }}
                           viewport={{ once: true }}
-                        />
+                        >
+                          {item.content
+                            .split("\n\n")
+                            .map((paragraph, pIndex) => (
+                              <span key={pIndex}>
+                                {paragraph}
+                                {pIndex <
+                                  item.content.split("\n\n").length - 1 && (
+                                  <>
+                                    <br />
+                                    <br />
+                                  </>
+                                )}
+                              </span>
+                            ))}
+                        </motion.p>
                       );
                     })}
                   </motion.div>
@@ -397,21 +350,60 @@ const ProfilePage: React.FC = () => {
             })()}
           </section>
 
-          {/* ページ下部固定CTA */}
-          <div className="fixed bottom-0 left-0 w-full z-50 p-4 sm:p-6 bg-[#0a0a0a]/90 backdrop-blur-sm border-t border-[#d4af37]/30 flex justify-center items-center gap-4">
+          {/* ページ下部固定CTA → LINE・note誘導に差し替え */}
+          <div className="fixed bottom-0 left-0 w-full z-50 p-4 sm:p-6 bg-[#0a0a0a]/90 backdrop-blur-sm border-t border-[#d4af37]/30 flex flex-col sm:flex-row justify-center items-center gap-4">
+            {/* LINE登録ボタン */}
             <button
-              onClick={() => navigate("/contact")}
-              className="flex-1 sm:flex-none sm:w-auto px-4 py-3 sm:px-6 sm:py-3 bg-[#e53935] text-white font-bold rounded-xl shadow-lg hover:bg-[#ff6b6b] transition-all duration-300 text-base sm:text-lg text-center transform hover:scale-105"
+              onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
+              style={{ minWidth: 220 }}
             >
-              無料セッションに申し込む
+              <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                <rect width="40" height="40" rx="12" fill="#fff" />
+                <path
+                  d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                  fill="#06C755"
+                />
+                <path
+                  d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                  stroke="#fff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+              ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
             </button>
-            <button
-              onClick={() => navigate("/#home")}
-              className="flex-1 sm:flex-none sm:w-auto px-4 py-3 sm:px-6 sm:py-3 bg-gray-700 text-white font-bold rounded-xl shadow-lg hover:bg-gray-600 transition-all duration-300 text-base sm:text-lg text-center transform hover:scale-105"
+            {/* note誘導ボタン */}
+            <a
+              href="https://note.com/YOUR_NOTE_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base sm:text-lg shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
+              style={{ minWidth: 200 }}
             >
-              トップページに戻る
-            </button>
+              ＞＞ 物語の“本編”を読む（note第1話へ）
+            </a>
           </div>
+
+          {/* GCS認定コーチセクション（ページ最後に移動） */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10 mb-10 sm:mb-12 mt-16 pb-32">
+            <div className="p-6 sm:p-8 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-center">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#d4af37] mb-2">
+                GCS認定コーチ
+              </h2>
+              <p className="text-gray-300 text-base mb-4">
+                銀座コーチングスクールにて体系的なコーチングスキルを習得。厳格な基準をクリアした、プロのコーチです。
+                <a
+                  href="https://www.ginza-coach.com/coaches/view.cgi?username=2505FB4944"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[#d4af37] font-bold underline ml-2 hover:text-[#ffd700] transition-colors"
+                >
+                  ▶︎認定コーチ詳細を見る <span className="text-xs">↗</span>
+                </a>
+              </p>
+            </div>
+          </section>
 
           {/* Scroll to Top Button */}
           <motion.button

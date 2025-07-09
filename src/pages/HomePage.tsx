@@ -18,7 +18,7 @@ import VisualGuide from "../components/ui/VisualGuide";
 import MobileOptimizedButton from "../components/ui/MobileOptimizedButton";
 import OptimizedCTA from "../components/ui/OptimizedCTA";
 import SEO from "../components/SEO";
-import { smartBreakJapanese } from "../smartBreakJapanese";
+import { SUPPORT_TARGETS } from "../constants/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,25 +75,6 @@ const HomePage: React.FC = () => {
     }
   };
 
-  const supportTargets = [
-    {
-      text: "「このままじゃダメだ」と悩み、動き出せない方",
-      description: smartBreakJapanese("頭では分かってるのに、なぜか行動できない状態から脱出"),
-    },
-    {
-      text: "「もっと強くなりたい」と、新しい挑戦をしたい方",
-      description: smartBreakJapanese("現状に満足せず、さらなる高みを目指したい向上心ある方"),
-    },
-    {
-      text: "モチベーションが続かず、三日坊主で終わってしまう方",
-      description: smartBreakJapanese("やる気はあるのに継続できない悩みを根本から解決"),
-    },
-    {
-      text: "目標達成のために自己管理能力を磨きたい方",
-      description: smartBreakJapanese("時間・感情・習慣を統合的に管理する力を身につける"),
-    },
-  ];
-
   return (
     <>
       <SEO
@@ -141,15 +122,43 @@ const HomePage: React.FC = () => {
               transition={{ delay: 1.5, duration: 1 }}
               className="text-base sm:text-lg md:text-xl leading-relaxed space-y-3 sm:space-y-4 px-2 mb-8"
             >
-              <p className="jp-text-optimal text-balance">{smartBreakJapanese(`"このまま"で、本当にいいのか？──と問い続けるあなたへ。`)}</p>
+              <p className="jp-text-optimal text-balance">
+                "このまま"で、本当にいいのか？──と問い続けるあなたへ。
+              </p>
               <VisualGuide type="glow-border" delay={2.5}>
                 <p className="text-xl sm:text-2xl font-bold text-[#d4af37]">
                   "なりたい自分"を夢で終わらせない。
                 </p>
               </VisualGuide>
               <p>今の自分にモヤモヤしてるなら──</p>
-              <p>{smartBreakJapanese(`心と身体の両面から、"なりたい自分"に火をつける。`)}</p>
+              <p>心と身体の両面から、"なりたい自分"に火をつける。</p>
             </motion.div>
+
+            {/* --- 新CTA配置 --- */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+              {/* 主役CTA：LINE特典（LINE公式デザイン） */}
+              <button
+                onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
+                className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
+                style={{ minWidth: 280 }}
+              >
+                {/* LINE公式アイコンSVG（白抜き） */}
+                <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                  <rect width="40" height="40" rx="12" fill="#fff" />
+                  <path
+                    d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                    fill="#06C755"
+                  />
+                  <path
+                    d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                    stroke="#fff"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
+              </button>
+            </div>
           </motion.div>
         </section>
 
@@ -180,13 +189,21 @@ const HomePage: React.FC = () => {
 
                 <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                   <div className="mt-8 space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
-                    <p>{smartBreakJapanese(`20年間、公安警察官として生きてきた私は、常に"仮面"を被り、自分を押し殺してきました。「安定」と「期待」に応え続ける日々の中で、心の奥底ではずっと、「このままで、本当にいいのか？」という問いが消えませんでした。`)}</p>
+                    <p>
+                      20年間、公安警察官として生きてきた私は、常に"仮面"を被り、自分を押し殺してきました。「安定」と「期待」に応え続ける日々の中で、心の奥底ではずっと、「このままで、本当にいいのか？」という問いが消えませんでした。
+                    </p>
                     <p></p>
-                    <p>{smartBreakJapanese(`もっと自由に、自分らしく生きたい──。その強い想いに気づいたとき、心身は限界を迎えました。しかし、それは「壊れた」のではなく、「脱皮」だったのです。あのどん底を乗り越えたからこそ、私は独自の"ブランディング思考"を手に入れました。`)}</p>
+                    <p>
+                      もっと自由に、自分らしく生きたい──。その強い想いに気づいたとき、心身は限界を迎えました。しかし、それは「壊れた」のではなく、「脱皮」だったのです。あのどん底を乗り越えたからこそ、私は独自の"ブランディング思考"を手に入れました。
+                    </p>
                     <p></p>
-                    <p>{smartBreakJapanese(`今、私は自身の「挑戦」の象徴として、筋トレや格闘技を通じて理想の自分を体現しています。そして、そこで培った「継続力」や「自己変革」の経験を活かし、「人生を作品として生きる」人を増やす活動に情熱を注いでいます。`)}</p>
+                    <p>
+                      今、私は自身の「挑戦」の象徴として、筋トレや格闘技を通じて理想の自分を体現しています。そして、そこで培った「継続力」や「自己変革」の経験を活かし、「人生を作品として生きる」人を増やす活動に情熱を注いでいます。
+                    </p>
                     <p></p>
-                    <p>{smartBreakJapanese(`さあ、あなたの"本当の物語"を、私と一緒にデザインしませんか？──これは、あなただけの人生を取り戻す、記念すべき「最初のページ」です。`)}</p>
+                    <p>
+                      さあ、あなたの"本当の物語"を、私と一緒にデザインしませんか？──これは、あなただけの人生を取り戻す、記念すべき「最初のページ」です。
+                    </p>
                   </div>
                 </div>
 
@@ -201,6 +218,18 @@ const HomePage: React.FC = () => {
                       〜 PROFILE 〜
                     </MobileOptimizedButton>
                   </VisualGuide>
+                </div>
+                {/* noteへの導線追加 */}
+                <div className="flex justify-center mt-6">
+                  <a
+                    href="https://note.com/YOUR_NOTE_ID"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
+                    style={{ minWidth: 220 }}
+                  >
+                    ＞＞ 物語の“本編”を読む（note第1話へ）
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -227,7 +256,7 @@ const HomePage: React.FC = () => {
               </div>
 
               <div className="grid gap-4 sm:gap-6">
-                {supportTargets.map((target, index) => (
+                {SUPPORT_TARGETS.map((target, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -241,7 +270,7 @@ const HomePage: React.FC = () => {
                         <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                           {target.text}
                         </h3>
-                        <p className="text-sm sm:text-base text-gray-400 jp-text-optimal leading-relaxed">
+                        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                           {target.description}
                         </p>
                       </div>
@@ -286,7 +315,7 @@ const HomePage: React.FC = () => {
               </div>
 
               <VisualGuide type="glow-border" delay={0.5}>
-                <div className="text-[#d4af37] font-semibold mb-4 sm:mb-6 text-lg sm:text-xl bg-[#d4af37]/10 p-4 rounded-lg text-center jp-text-optimal text-balance">
+                <div className="text-[#d4af37] font-semibold mb-4 sm:mb-6 text-lg sm:text-xl bg-[#d4af37]/10 p-4 rounded-lg text-center">
                   あなたの「変わりたい」を、具体的な「行動」へ。
                 </div>
               </VisualGuide>
@@ -296,18 +325,19 @@ const HomePage: React.FC = () => {
                   {
                     title: "行動変容支援：",
                     description:
-                      smartBreakJapanese("「変わりたい」という漠然とした想いを、具体的な行動へと繋げ、着実に未来を切り拓く勇気を引き出します。"),
+                      "「変わりたい」という漠然とした想いを、具体的な行動へと繋げ、着実に未来を切り拓く勇気を引き出します。",
                     color: "#e53935",
                   },
                   {
                     title: "自己管理強化：",
-                    description: smartBreakJapanese("目標達成に不可欠な「継続する力」を、あなたのライフスタイルに合わせて最適化。揺るぎない習慣を構築します。"),
+                    description:
+                      "目標達成に不可欠な「継続する力」を、あなたのライフスタイルに合わせて最適化。揺るぎない習慣を構築します。",
                     color: "#d4af37",
                   },
                   {
                     title: "心と身体のサポート：",
                     description:
-                      smartBreakJapanese("筋トレや格闘技で培った経験を活かし、心身のバランスを整え、内面から輝く「魅せる自分」を創造します。"),
+                      "筋トレや格闘技で培った経験を活かし、心身のバランスを整え、内面から輝く「魅せる自分」を創造します。",
                     color: "#ffd700",
                   },
                 ].map((item, index) => (
@@ -376,46 +406,53 @@ const HomePage: React.FC = () => {
               ></VisualGuide>
 
               <div className="relative z-10">
-                {/* 緊急性を演出 */}
-                <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#e53935]/20 border border-[#e53935]/50 rounded-full text-[#e53935] text-sm font-bold mb-6 animate-pulse"
-                >
-                  ⏰ 今月限定3名様 - 初回セッション無料（通常10,000円）
-                </motion.div>
-
-                <VisualGuide type="pulse-dot" className="mx-auto mb-4" />
-
+                {/* --- LINE登録エリア --- */}
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4af37] mb-6 sm:mb-8 jp-text-optimal text-balance">
-                  さあ、あなたの人生を"覚醒"させよう。
+                  あなたの物語を、ここから始めませんか。
                 </h3>
-
-                <VisualGuide type="glow-border" delay={0.5}>
-                  <div className="bg-black/30 p-6 sm:p-8 rounded-lg mb-8 sm:mb-10">
-                    <p className="text-lg sm:text-xl text-gray-300 leading-relaxed jp-text-optimal text-balance">
-                      {smartBreakJapanese(`公安警察官として培った「洞察力」と「問題解決能力」。そして、筋トレや格闘技で得た「継続力」と「自己変革」の経験。これらを融合した独自のアプローチで、あなたの人生を力強くサポートします。`)}
-                    </p>
-                  </div>
-                </VisualGuide>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <OptimizedCTA
-                    onClick={() =>
-                      window.open(
-                        "https://line.me/R/ti/p/@YOUR_LINE_ID",
-                        "_blank"
-                      )
-                    }
-                    variant="urgent"
-                    size="xl"
-                    urgency="✨ LINE登録で限定特典GET！"
-                    socialProof="初回セッション完全無料"
-                  >
-                    LINEで人生を変える第一歩を踏み出す！
-                  </OptimizedCTA>
+                <div className="bg-black/30 p-6 sm:p-8 rounded-lg mb-8 sm:mb-10">
+                  <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
+                    この公式LINEは、単なる情報配信の場ではありません。
+                    <br />
+                    私が日々挑戦する中で得た気づきや、YouTubeでは語りきれない思考のプロセス。
+                    <br />
+                    そして、あなたと同じように「今の自分を変えたい」と願う人々に向けて、私が伝えたい大切なメッセージを、一つひとつ丁寧にお届けする場所です。
+                  </p>
+                  <p className="text-lg sm:text-xl text-[#ffd700] font-bold mb-2">
+                    登録してくださった方には、感謝のしるしとして、私が自分と向き合うために作成した
+                    <strong>『最初の一歩を踏み出すためのヒント』</strong>
+                    をプレゼントしています。
+                  </p>
+                  <p className="text-base text-gray-400">
+                    もちろん、無理な勧誘などは一切ありません。
+                    <br />
+                    あなたのペースで、私の言葉や活動に触れていただければ幸いです。
+                  </p>
                 </div>
-
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <button
+                    onClick={() =>
+                      window.open("https://lin.ee/MX41vXf", "_blank")
+                    }
+                    className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
+                    style={{ minWidth: 280 }}
+                  >
+                    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                      <rect width="40" height="40" rx="12" fill="#fff" />
+                      <path
+                        d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                        fill="#06C755"
+                      />
+                      <path
+                        d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                        stroke="#fff"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
+                  </button>
+                </div>
                 <div className="mt-6 text-sm text-gray-400">
                   ✓ 無理な勧誘は一切ありません　✓ 秘密厳守　✓ 24時間以内返信
                 </div>
@@ -434,6 +471,15 @@ const HomePage: React.FC = () => {
             トップへ戻る
           </MobileOptimizedButton>
         </div>
+        {/* フッター：個別作戦会議リンク */}
+        <footer className="text-center pb-8 text-xs text-gray-500">
+          <a
+            href="/strategy-session"
+            className="underline hover:text-[#e53935] transition-colors"
+          >
+            覚悟が決まった方へ：個別作戦会議の申し込み
+          </a>
+        </footer>
       </div>
     </>
   );
