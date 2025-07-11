@@ -1,51 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import {
-  Send,
-  Heart,
-  Shield,
-  Mail,
-  MapPin,
-  Clock,
-  Home,
-  ArrowUp,
-} from "lucide-react";
+import { Send, Heart, Shield, Mail } from "lucide-react";
 import SEO from "../components/SEO";
 import { CONTACT_INFO, ASSURANCES } from "../constants/content";
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 const ContactPage: React.FC = () => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const [isSubmitted] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white header-safe-padding pb-12 sm:pb-16 px-4 sm:px-6">
@@ -58,11 +18,14 @@ const ContactPage: React.FC = () => {
         {/* ヒーローセクション - スマホ最適化 */}
         <div className="text-center mb-12 sm:mb-16 pt-8 sm:pt-12">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-[#d4af37]">
-            CONTACT
+            LINE相談
           </h1>
           <div className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-2">
             あなたの"変わりたい"をここから。
           </div>
+          <p className="text-base sm:text-lg text-gray-400 mt-4">
+            お問い合わせはLINEでお気軽にどうぞ
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 jp-text-optimal text-balance">
@@ -80,83 +43,87 @@ const ContactPage: React.FC = () => {
                   ありがとうございます！
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                  {smartBreakJapanese(
-                    `お問い合わせを受け付けました。24時間以内にご返信いたします。`
-                  )}
+                  お問い合わせを受け付けました。24時間以内にご返信いたします。
                 </p>
               </motion.div>
             ) : (
               <>
                 <h2 className="text-xl sm:text-2xl font-bold text-[#d4af37] mb-6 flex items-center">
                   <Send className="mr-3" size={20} />
-                  お問い合わせフォーム
+                  LINEでお気軽にご相談ください
                 </h2>
-                <form
-                  onSubmit={handleSubmit}
-                  className="space-y-4 sm:space-y-6"
-                >
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base"
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-br from-[#06C755]/20 to-[#32e67f]/10 border border-[#06C755]/30 rounded-xl p-6">
+                    <h3 className="text-lg font-bold text-[#32e67f] mb-4">
+                      🎁 LINE特典付きでご相談ください
+                    </h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+                      LINEでご相談いただくと、以下の特典をお受け取りいただけます：
+                    </p>
+                    <ul className="space-y-2 text-gray-300 mb-6">
+                      <li className="flex items-center gap-2">
+                        <span className="text-[#32e67f]">✓</span>
+                        「変わりたい」を「変われる」に変える思考法
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-[#32e67f]">✓</span>
+                        継続力を身につける習慣化のコツ
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-[#32e67f]">✓</span>
+                        心と身体のバランスを整える方法
+                      </li>
+                    </ul>
+                    <button
+                      onClick={() =>
+                        window.open("https://lin.ee/MX41vXf", "_blank")
+                      }
+                      className="w-full flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold bg-[#06C755] text-white rounded-xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105"
                     >
-                      お名前 *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-3 py-3 sm:px-4 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/20 transition-all text-sm sm:text-base mobile-touch-target"
-                      placeholder="山田太郎"
-                    />
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                      >
+                        <rect width="40" height="40" rx="12" fill="#fff" />
+                        <path
+                          d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                          fill="#06C755"
+                        />
+                        <path
+                          d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                          stroke="#fff"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                      LINEで相談する（特典付き）
+                    </button>
                   </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base"
+
+                  <div className="text-center text-sm text-gray-400">
+                    <p>✓ 無理な勧誘は一切ありません</p>
+                    <p>✓ 秘密厳守</p>
+                    <p>✓ 24時間以内返信</p>
+                  </div>
+
+                  {/* メール相談の代替案 */}
+                  <div className="mt-6 p-4 bg-gray-800/50 border border-gray-600 rounded-lg">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">
+                      LINEをお使いでない方へ
+                    </h4>
+                    <p className="text-xs text-gray-400 mb-3">
+                      メールでのご相談も可能です。お気軽にお問い合わせください。
+                    </p>
+                    <a
+                      href="mailto:igatayatagai@hotmail.com?subject=コーチング相談"
+                      className="inline-flex items-center gap-2 text-xs text-[#d4af37] hover:text-[#ffd700] transition-colors"
                     >
-                      メールアドレス *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-3 py-3 sm:px-4 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/20 transition-all text-sm sm:text-base mobile-touch-target"
-                      placeholder="example@email.com"
-                    />
+                      📧 メールで相談する
+                    </a>
                   </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base"
-                    >
-                      お問い合わせ内容 *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="w-full px-3 py-3 sm:px-4 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/20 transition-all resize-vertical text-sm sm:text-base"
-                      placeholder="ご質問やご相談内容をお聞かせください..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] border-none rounded-full cursor-pointer transition-all duration-300 hover:from-[#fffbe6] hover:to-[#ffd700] hover:text-[#d4af37] hover:transform hover:scale-[1.02] mobile-touch-target"
-                  >
-                    <Send size={18} />
-                    送信する
-                  </button>
-                </form>
+                </div>
               </>
             )}
           </div>
@@ -185,6 +152,16 @@ const ContactPage: React.FC = () => {
                     </div>
                   );
                 })}
+                {/* メール連絡先を追加 */}
+                <div className="flex items-center text-gray-300 text-sm sm:text-base">
+                  <Mail
+                    className="text-[#d4af37] mr-3 sm:mr-4 flex-shrink-0"
+                    size={16}
+                  />
+                  <span className="jp-text-optimal leading-relaxed">
+                    メール: igatayatagai@hotmail.com
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -213,7 +190,7 @@ const ContactPage: React.FC = () => {
                 今すぐ行動を起こしませんか？
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                人生を変える最初の一歩は、このフォームを送信することから始まります。
+                人生を変える最初の一歩は、LINEでご相談いただくことから始まります。
               </p>
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#d4af37]">
                 あなたの物語は、まだ途中だ。

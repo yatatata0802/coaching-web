@@ -1,14 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Home, ArrowUp, Target, Eye, Zap, Users } from "lucide-react";
+import { Target, Eye, Zap, Users } from "lucide-react";
 import VisualGuide from "../components/ui/VisualGuide";
 import ParticleBackground from "../components/ParticleBackground";
 import SEO from "../components/SEO";
 
 const WhatIsCoachingPage: React.FC = () => {
-  const navigate = useNavigate();
-
   const sections = [
     {
       title: "コーチングとは",
@@ -39,10 +37,6 @@ const WhatIsCoachingPage: React.FC = () => {
       ],
     },
   ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] text-white header-safe-padding relative overflow-hidden">

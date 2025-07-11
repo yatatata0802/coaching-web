@@ -1,7 +1,9 @@
+import { LucideIcon } from "lucide-react";
+
 export interface NavItem {
   path: string;
   label: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
 }
 
 export interface FormData {
@@ -23,6 +25,6 @@ export interface StorySection {
 }
 
 export interface ContactInfo {
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
   text: string;
 }

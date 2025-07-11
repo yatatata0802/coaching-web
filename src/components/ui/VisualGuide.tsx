@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, Eye, Target } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 interface VisualGuideProps {
   type:

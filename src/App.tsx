@@ -8,15 +8,29 @@ import ProfilePage from "./pages/ProfilePage";
 import WhatIsCoachingPage from "./pages/WhatIsCoachingPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
+
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingSocial from "./components/ui/FloatingSocial";
 import FloatingCTA from "./components/FloatingCTA";
+import { usePageView } from "./hooks/usePageView";
+import PageViewCounter from "./components/PageViewCounter";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
 
 function App() {
+  // PVカウントフックを使用
+  usePageView();
+
   return (
     <>
       <ScrollToTop />
       <div className="w-full min-h-screen bg-[#0a0a0a] text-white font-sans">
+        {/* 累積PV表示 */}
+        <div className="fixed top-20 right-4 z-50">
+          <PageViewCounter />
+        </div>
+
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route
@@ -70,6 +84,27 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/blog"
+            element={
+              <>
+                <Header />
+                <BlogPage />
+                <FloatingSocial />
+              </>
+            }
+          />
+          <Route
+            path="/blog/:id"
+            element={
+              <>
+                <Header />
+                <BlogDetailPage />
+                <FloatingSocial />
+              </>
+            }
+          />
+          <Route path="/admin" element={<AdminDashboardPage />} />
         </Routes>
       </div>
     </>

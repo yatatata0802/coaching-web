@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, User, HelpCircle, Settings, Mail, Menu, X } from "lucide-react";
+import {
+  Home,
+  User,
+  HelpCircle,
+  Settings,
+  Mail,
+  BookOpen,
+  Menu,
+  X,
+} from "lucide-react";
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -13,6 +22,7 @@ const Header: React.FC = () => {
     { path: "/profile", label: "PROFILE", icon: User },
     { path: "/what-coaching", label: "WHAT'S COACHING", icon: HelpCircle },
     { path: "/services", label: "SERVICES", icon: Settings },
+    { path: "/blog", label: "BLOG", icon: BookOpen },
     { path: "/contact", label: "CONTACT", icon: Mail },
   ];
 

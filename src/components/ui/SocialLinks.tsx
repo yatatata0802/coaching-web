@@ -121,29 +121,6 @@ const TikTokIcon = (props: { size?: number; className?: string }) => (
   </svg>
 );
 
-// LINE公式カラーのカスタムSVGアイコン
-const LineIcon = (props: { size?: number; className?: string }) => (
-  <svg
-    width={props.size || 20}
-    height={props.size || 20}
-    viewBox="0 0 40 40"
-    fill="none"
-    className={props.className}
-  >
-    <rect width="40" height="40" rx="12" fill="#06C755" />
-    <path
-      d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
-      fill="#fff"
-    />
-    <path
-      d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
-      stroke="#06C755"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-  </svg>
-);
-
 interface SocialLinksProps {
   variant?: "horizontal" | "vertical" | "grid";
   size?: "sm" | "md" | "lg";

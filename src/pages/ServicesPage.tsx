@@ -1,30 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Target,
-  TrendingUp,
-  Heart,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  Zap,
-  ArrowRight,
-  Quote,
-  Award,
-  Shield,
-  MessageCircle,
-  Home,
-  ArrowUp,
-  ExternalLink,
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { Target, TrendingUp, Heart, CheckCircle, Clock } from "lucide-react";
 import SEO from "../components/SEO";
 import ParticleBackground from "../components/ParticleBackground";
+import SectionDivider from "../components/SectionDivider";
 
 const ServicesPage: React.FC = () => {
   const navigate = useNavigate();
-  const [activeService, setActiveService] = useState<number | null>(null);
 
   const services = [
     {
@@ -110,6 +93,7 @@ const ServicesPage: React.FC = () => {
         "基本的な習慣化サポート",
       ],
       popular: false,
+      description: "初めてコーチングを受ける方におすすめ",
     },
     {
       name: "スタンダード",
@@ -123,6 +107,7 @@ const ServicesPage: React.FC = () => {
         "継続的なモチベーション管理",
       ],
       popular: true,
+      description: "最も選ばれているプラン",
     },
     {
       name: "プレミアム",
@@ -136,12 +121,49 @@ const ServicesPage: React.FC = () => {
         "成果保証制度",
       ],
       popular: false,
+      description: "本気で変わりたい方へ",
     },
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // お客様の声・ビフォーアフター事例
+  const testimonials = [
+    {
+      name: "T.Mさん",
+      age: "30代",
+      job: "会社員",
+      before: "何をやっても続かず、自己嫌悪に陥る日々",
+      after: "3ヶ月で行動力が劇的に向上し、新しいことに挑戦できるようになった",
+      improvement: "習慣化成功率 90%",
+      duration: "3ヶ月コース",
+      category: "行動変容支援",
+      testimonial:
+        "今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。矢田谷さんの指導のおかげで、目標を達成する力が身につきました。",
+    },
+    {
+      name: "K.Sさん",
+      age: "40代",
+      job: "経営者",
+      before: "時間管理ができず、仕事とプライベートのバランスが取れない",
+      after: "毎日の習慣が身につき、仕事もプライベートも充実している",
+      improvement: "時間管理効率 150%向上",
+      duration: "6ヶ月コース",
+      category: "自己管理強化",
+      testimonial:
+        "毎日の習慣が身につき、仕事もプライベートも充実しています。矢田谷さんの継続的なサポートのおかげで、理想のライフスタイルを実現できました。",
+    },
+    {
+      name: "A.Hさん",
+      age: "20代",
+      job: "フリーランス",
+      before: "自信がなく、人前に立つのが苦手",
+      after: "見た目も心も変わって、周りからの反応が全然違う",
+      improvement: "自信度 200%向上",
+      duration: "12ヶ月コース",
+      category: "心と身体のサポート",
+      testimonial:
+        "見た目も心も変わって、周りからの反応が全然違います。矢田谷さんの心身両面からのサポートで、本当に変われました。",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0a0a0a] to-[#181818] text-white header-safe-padding pb-12 sm:pb-16 mobile-safe-area relative overflow-hidden">
@@ -277,249 +299,206 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
+        {/* 料金プランセクション - 改善版 */}
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4af37] mb-6 drop-shadow-lg">
+                料金プラン
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                あなたの目標とライフスタイルに合わせて、最適なプランをお選びいただけます。
+                <br className="hidden sm:block" />
+                継続的なサポートで、確実な変化を実現します。
+              </p>
+            </motion.div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {pricingPlans.map((plan, index) => (
+                <motion.div
+                  key={plan.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2, duration: 0.8 }}
+                  className={`relative rounded-2xl p-6 sm:p-8 border-2 transition-all duration-300 hover:scale-105 ${
+                    plan.popular
+                      ? "border-[#d4af37] bg-gradient-to-br from-[#d4af37]/10 to-[#ffd700]/5 shadow-2xl shadow-[#d4af37]/20"
+                      : "border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 hover:border-[#d4af37]/50"
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                        ⭐ 人気No.1
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-[#d4af37] mb-2">
+                      {plan.name}
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-4">
+                      {plan.description}
+                    </p>
+                    <div className="mb-4">
+                      <span className="text-3xl font-bold text-white">
+                        {plan.price}
+                      </span>
+                    </div>
+                    <span className="text-[#d4af37] font-medium">
+                      {plan.duration}
+                    </span>
+                  </div>
+
+                  <div className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <div
+                        key={featureIndex}
+                        className="flex items-start gap-3"
+                      >
+                        <CheckCircle
+                          className="text-[#d4af37] mt-1 flex-shrink-0"
+                          size={20}
+                        />
+                        <span className="text-gray-300 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => navigate("/contact")}
+                    className={`w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] hover:from-[#ffd700] hover:to-[#d4af37]"
+                        : "bg-gradient-to-r from-[#181818] to-[#333] text-[#d4af37] border-2 border-[#d4af37] hover:bg-[#d4af37] hover:text-[#181818]"
+                    }`}
+                  >
+                    このプランで始める
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <SectionDivider variant="wave" />
+
         {/* お客様の声・ビフォーアフター事例セクション */}
         <section className="py-12 sm:py-16 lg:py-20">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4 text-center drop-shadow-lg">
-              お客様の声・ビフォーアフター事例
-            </h2>
-            <p className="text-center text-gray-200 mb-8">
-              実際にコーチングを受けた方々の
-              <br className="sm:hidden" />
-              変化をご紹介
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4af37] mb-6 drop-shadow-lg">
+                お客様の声・ビフォーアフター事例
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                実際にコーチングを受けた方々の変化をご紹介します。
+                <br className="hidden sm:block" />
+                あなたも同じような変化を体験できるかもしれません。
+              </p>
+            </motion.div>
 
-            {/* Nさん */}
-            <div className="rounded-2xl border border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 shadow-xl p-4 sm:p-8 mb-12">
-              <div className="text-lg sm:text-xl font-bold text-[#ffd700] mb-2">
-                Nさん（30代・男性）｜自分を責めていた若手公務員
-              </div>
-              {/* Before */}
-              <div className="rounded-xl bg-gradient-to-br from-[#e53935]/30 to-[#181818]/60 border border-[#e53935]/40 p-4 mb-4">
-                <div className="text-lg font-bold text-[#e53935] mb-2">
-                  Before（セッション前）
-                </div>
-                <ul className="list-disc pl-5 space-y-2 text-gray-100 text-sm sm:text-base">
-                  <li>
-                    「自分のことがわかってない」「長所が見えない」という自己理解の不足。
-                  </li>
-                  <li>
-                    真面目で責任感が強い一方で、コミュニケーションに苦手意識があり、言葉に詰まることもしばしば。
-                  </li>
-                  <li>
-                    面接などでは「体力」「継続力」といった無難な回答しかできず、「しっくりこない」と感じていた。
-                  </li>
-                  <li>
-                    「自分にはユーモアがない」というリミッティングビリーフに縛られていた。
-                  </li>
-                </ul>
-              </div>
-              {/* コーチングによる変化（矢印） */}
-              <div className="flex justify-center my-4">
-                <div className="inline-flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-[#d4af37]/80 to-[#ffd700]/80 border border-[#d4af37]/60 text-[#181818] font-bold text-base shadow-md">
-                  コーチングによる変化
-                  <span className="ml-2 text-2xl">↓</span>
-                </div>
-              </div>
-              {/* After */}
-              <div className="rounded-xl bg-gradient-to-br from-[#1e3a1e]/80 to-[#181818]/60 border border-green-700/40 p-4 mb-4">
-                <div className="text-lg font-bold text-green-400 mb-2">
-                  After（セッション後）
-                </div>
-                <ul className="list-disc pl-5 space-y-2 text-gray-100 text-sm sm:text-base">
-                  <li>
-                    野球経験から「仲間を助けたい」という他者貢献の本質に気づき、自分の強みを再発見。
-                  </li>
-                  <li>
-                    心配性＝準備力、慎重さ＝冷静な判断力として"短所を長所に再定義"。
-                  </li>
-                  <li>
-                    「人前で話す」ではなく「1対1で堂々と話せるようになりたい」という現実的な目標へ軸が変化。
-                  </li>
-                  <li>
-                    「質問力を鍛える」ことの意味に気づき、コミュニケーションへの向き合い方が変化。
-                  </li>
-                  <li>
-                    「頼られる存在になりたい」と自信を持って語れるように。
-                  </li>
-                </ul>
-              </div>
-              {/* 印象的な台詞 */}
-              <div className="rounded-xl bg-gradient-to-br from-[#d4af37]/40 to-[#181818]/60 border border-[#d4af37]/40 p-4 mb-4">
-                <div className="text-base font-bold text-[#d4af37] mb-2">
-                  印象的な台詞
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  「これって強みになるんですか…？ただの心配性やと思ってました」
-                </div>
-              </div>
-              {/* 現在の様子 */}
-              <div className="rounded-xl bg-gradient-to-br from-[#181818]/80 to-[#333]/80 border border-gray-500/30 p-4 mb-4">
-                <div className="text-base font-bold text-gray-200 mb-2">
-                  現在の様子
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  職場で後輩から相談される場面が増え、自己肯定感が上がっている。自分の"取扱説明書"が分かったことで、人との関係性にも余裕が出てきた。
-                </div>
-              </div>
-              {/* コーチの関わりについて */}
-              <div className="rounded-xl bg-gradient-to-br from-[#e53935]/30 to-[#181818]/60 border border-[#e53935]/40 p-4">
-                <div className="text-base font-bold text-[#e53935] mb-2">
-                  コーチの関わりについて
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  「話を聴くだけじゃなく、思考の奥にある価値観まで一緒に掘ってくれる。あのセッションは宝物です」
-                </div>
-              </div>
-            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2, duration: 0.8 }}
+                  className="relative rounded-2xl border border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 shadow-xl p-6 hover:shadow-2xl hover:shadow-[#d4af37]/10 transition-all duration-300"
+                >
+                  {/* カテゴリバッジ */}
+                  <div className="absolute -top-3 left-6">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#d4af37]/20 text-[#d4af37]">
+                      {testimonial.category}
+                    </span>
+                  </div>
 
-            {/* Iさん */}
-            <div className="rounded-2xl border border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 shadow-xl p-4 sm:p-8 mb-12">
-              <div className="text-lg sm:text-xl font-bold text-[#ffd700] mb-2">
-                Iさん（40代・男性）｜家庭と仕事の間で悩む中間管理職
-              </div>
-              {/* Before */}
-              <div className="rounded-xl bg-gradient-to-br from-[#e53935]/30 to-[#181818]/60 border border-[#e53935]/40 p-4 mb-4">
-                <div className="text-lg font-bold text-[#e53935] mb-2">
-                  Before（セッション前）
-                </div>
-                <ul className="list-disc pl-5 space-y-2 text-gray-100 text-sm sm:text-base">
-                  <li>
-                    「何となく分かってるつもり」だった思考が、実は整理されていなかった。
-                  </li>
-                  <li>
-                    家庭・仕事・自分の今後に対するモヤモヤが重なり、優先順位や判断軸が不明確な状態。
-                  </li>
-                </ul>
-              </div>
-              {/* コーチングによる変化（矢印） */}
-              <div className="flex justify-center my-4">
-                <div className="inline-flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-[#d4af37]/80 to-[#ffd700]/80 border border-[#d4af37]/60 text-[#181818] font-bold text-base shadow-md">
-                  コーチングによる変化
-                  <span className="ml-2 text-2xl">↓</span>
-                </div>
-              </div>
-              {/* After */}
-              <div className="rounded-xl bg-gradient-to-br from-[#1e3a1e]/80 to-[#181818]/60 border border-green-700/40 p-4 mb-4">
-                <div className="text-lg font-bold text-green-400 mb-2">
-                  After（セッション後）
-                </div>
-                <ul className="list-disc pl-5 space-y-2 text-gray-100 text-sm sm:text-base">
-                  <li>「自分を見つめ直す時間は本当に大切だ」と痛感。</li>
-                  <li>
-                    長年曖昧だった価値観や方向性が言語化され、思考がスッキリ。
-                  </li>
-                  <li>
-                    コーチング後、「その日から即実践」と行動変容が見られた。
-                  </li>
-                </ul>
-              </div>
-              {/* 印象的な台詞 */}
-              <div className="rounded-xl bg-gradient-to-br from-[#d4af37]/40 to-[#181818]/60 border border-[#d4af37]/40 p-4 mb-4">
-                <div className="text-base font-bold text-[#d4af37] mb-2">
-                  印象的な台詞
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  「やたさんの変わりようにも驚いた。昔のギラギラがなくなってて、これがコーチングの力なんやなって思った」
-                </div>
-              </div>
-              {/* 現在の様子 */}
-              <div className="rounded-xl bg-gradient-to-br from-[#181818]/80 to-[#333]/80 border border-gray-500/30 p-4 mb-4">
-                <div className="text-base font-bold text-gray-200 mb-2">
-                  現在の様子
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  キャリアアップを目指し、試験勉強と行動計画を立てて実践中。変化に驚いた妻からも「本気なんやな」と応援の声。
-                </div>
-              </div>
-              {/* コーチの関わりについて */}
-              <div className="rounded-xl bg-gradient-to-br from-[#e53935]/30 to-[#181818]/60 border border-[#e53935]/40 p-4">
-                <div className="text-base font-bold text-[#e53935] mb-2">
-                  コーチの関わりについて
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  「対話を通じて丁寧に話を深掘ってくれるから、頭が整理されて迷いが消えていく。感覚じゃなく"納得"できたのが良かった」
-                </div>
-              </div>
-            </div>
+                  {/* お客様情報 */}
+                  <div className="text-center mb-6 pt-4">
+                    <h3 className="text-lg font-bold text-[#d4af37] mb-2">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-4">
+                      {testimonial.age}・{testimonial.job}
+                    </p>
+                    <div className="flex items-center justify-center gap-2 text-xs text-[#d4af37]">
+                      <Clock size={12} />
+                      <span>{testimonial.duration}</span>
+                    </div>
+                  </div>
 
-            {/* Mさん */}
-            <div className="rounded-2xl border border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 shadow-xl p-4 sm:p-8 mb-12">
-              <div className="text-lg sm:text-xl font-bold text-[#ffd700] mb-2">
-                Mさん（40代・男性）｜将来への不安と人間関係に悩む現バス運転手
-              </div>
-              {/* Before */}
-              <div className="rounded-xl bg-gradient-to-br from-[#e53935]/30 to-[#181818]/60 border border-[#e53935]/40 p-4 mb-4">
-                <div className="text-lg font-bold text-[#e53935] mb-2">
-                  Before（セッション前）
-                </div>
-                <ul className="list-disc pl-5 space-y-2 text-gray-100 text-sm sm:text-base">
-                  <li>
-                    転職を目指すも不採用。「年齢的にもう無理かも」という諦めが先行。
-                  </li>
-                  <li>
-                    住宅ローン、発達障害のある娘の育児、人間関係と課題が山積みで、どこから動いていいか分からない状態。
-                  </li>
-                </ul>
-              </div>
-              {/* コーチングによる変化（矢印） */}
-              <div className="flex justify-center my-4">
-                <div className="inline-flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-[#d4af37]/80 to-[#ffd700]/80 border border-[#d4af37]/60 text-[#181818] font-bold text-base shadow-md">
-                  コーチングによる変化
-                  <span className="ml-2 text-2xl">↓</span>
-                </div>
-              </div>
-              {/* After */}
-              <div className="rounded-xl bg-gradient-to-br from-[#1e3a1e]/80 to-[#181818]/60 border border-green-700/40 p-4 mb-4">
-                <div className="text-lg font-bold text-green-400 mb-2">
-                  After（セッション後）
-                </div>
-                <ul className="list-disc pl-5 space-y-2 text-gray-100 text-sm sm:text-base">
-                  <li>「強みを活かして人脈を広げる」という突破口を発見。</li>
-                  <li>
-                    セッション当日に迷っていた採用担当者へ連絡→即行動に移し、日程調整まで完了。
-                  </li>
-                  <li>
-                    「目標を高く設定するだけで、考え方も行動もガラッと変わる」と自覚。
-                  </li>
-                  <li>
-                    家族にもセッション内容を共有し、妻からも「ちゃんと考えてるやん」と前向きな反応が得られた。
-                  </li>
-                </ul>
-              </div>
-              {/* 印象的な台詞 */}
-              <div className="rounded-xl bg-gradient-to-br from-[#d4af37]/40 to-[#181818]/60 border border-[#d4af37]/40 p-4 mb-4">
-                <div className="text-base font-bold text-[#d4af37] mb-2">
-                  印象的な台詞
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  「なんか、想像もつかん方向から解決策が出てくる気がするねん」
-                </div>
-              </div>
-              {/* 現在の様子 */}
-              <div className="rounded-xl bg-gradient-to-br from-[#181818]/80 to-[#333]/80 border border-gray-500/30 p-4 mb-4">
-                <div className="text-base font-bold text-gray-200 mb-2">
-                  現在の様子
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  転職の選択肢を広げるべく人脈構築を継続中。数人の元同僚との再接触も成功。「また迷ったら頼むわ」と継続的な自己変革に前向き。
-                </div>
-              </div>
-              {/* コーチの関わりについて */}
-              <div className="rounded-xl bg-gradient-to-br from-[#e53935]/30 to-[#181818]/60 border border-[#e53935]/40 p-4">
-                <div className="text-base font-bold text-[#e53935] mb-2">
-                  コーチの関わりについて
-                </div>
-                <div className="text-gray-100 text-sm sm:text-base">
-                  「"やる気出せ"じゃなくて、"こう動けるやろ"って道筋を一緒に作ってくれた。コーチングってこういうことかと実感した」
-                </div>
-              </div>
+                  {/* Before */}
+                  <div className="rounded-xl bg-gradient-to-br from-[#e53935]/20 to-[#181818]/60 border border-[#e53935]/40 p-4 mb-4">
+                    <div className="text-sm font-bold text-[#e53935] mb-2">
+                      Before
+                    </div>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      {testimonial.before}
+                    </p>
+                  </div>
+
+                  {/* 変化の矢印 */}
+                  <div className="flex justify-center my-3">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#d4af37]/80 to-[#ffd700]/80 border border-[#d4af37]/60 text-[#181818] font-bold text-xs shadow-md">
+                      ↓ 変化
+                    </div>
+                  </div>
+
+                  {/* After */}
+                  <div className="rounded-xl bg-gradient-to-br from-[#1e3a1e]/20 to-[#181818]/60 border border-green-700/40 p-4 mb-4">
+                    <div className="text-sm font-bold text-green-400 mb-2">
+                      After
+                    </div>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      {testimonial.after}
+                    </p>
+                  </div>
+
+                  {/* 改善数値 */}
+                  <div className="rounded-xl bg-gradient-to-br from-[#d4af37]/20 to-[#181818]/60 border border-[#d4af37]/40 p-3 mb-4">
+                    <div className="text-sm font-bold text-[#d4af37] mb-1">
+                      改善結果
+                    </div>
+                    <p className="text-gray-300 text-xs">
+                      {testimonial.improvement}
+                    </p>
+                  </div>
+
+                  {/* お客様の声 */}
+                  <div className="rounded-xl bg-gradient-to-br from-[#181818]/80 to-[#333]/80 border border-gray-500/30 p-4">
+                    <div className="text-sm font-bold text-gray-200 mb-2">
+                      お客様の声
+                    </div>
+                    <p className="text-gray-300 text-xs leading-relaxed italic">
+                      "{testimonial.testimonial}"
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
 
             {/* 注意書き */}
-            <p className="text-xs text-gray-400 text-center mt-8">
-              ※すべて本人の同意のもと、内容の一部を再構成して掲載しています。
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mt-12"
+            >
+              <p className="text-xs text-gray-400">
+                ※すべて本人の同意のもと、内容の一部を再構成して掲載しています。
+              </p>
+            </motion.div>
           </div>
         </section>
 

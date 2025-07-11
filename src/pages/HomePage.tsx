@@ -3,20 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  User,
-  HelpCircle,
-  Settings,
-  Mail,
-  ArrowRight,
-  Target,
-  Eye,
-  MessageCircle,
-} from "lucide-react";
+import { User, HelpCircle, Settings, Target, Eye } from "lucide-react";
 import SectionDivider from "../components/SectionDivider";
 import VisualGuide from "../components/ui/VisualGuide";
 import MobileOptimizedButton from "../components/ui/MobileOptimizedButton";
-import OptimizedCTA from "../components/ui/OptimizedCTA";
+
 import SEO from "../components/SEO";
 import { SUPPORT_TARGETS } from "../constants/content";
 
@@ -38,7 +29,7 @@ const HomePage: React.FC = () => {
     );
 
     // セクションのスクロール連動アニメーション
-    sectionsRef.current.forEach((section, index) => {
+    sectionsRef.current.forEach((section) => {
       if (section) {
         gsap.fromTo(
           section,
@@ -139,11 +130,11 @@ const HomePage: React.FC = () => {
               {/* 主役CTA：LINE特典（LINE公式デザイン） */}
               <button
                 onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
-                className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
-                style={{ minWidth: 280 }}
+                className="flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-6 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105"
+                style={{ minWidth: 320 }}
               >
                 {/* LINE公式アイコンSVG（白抜き） */}
-                <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
                   <rect width="40" height="40" rx="12" fill="#fff" />
                   <path
                     d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
@@ -386,6 +377,80 @@ const HomePage: React.FC = () => {
 
         <SectionDivider variant="wave" flip />
 
+        {/* LINE登録エリア - 新設 */}
+        <section
+          ref={addToRefs}
+          className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
+        >
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="p-8 sm:p-12 lg:p-16 bg-gradient-to-br from-[#06C755]/20 via-[#32e67f]/10 to-[#06C755]/20 border border-[#06C755]/40 rounded-2xl sm:rounded-3xl text-center backdrop-blur-sm relative overflow-hidden"
+              whileHover={{ scale: 1.02 }}
+            >
+              {/* 背景アニメーション */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#06C755]/10 to-[#32e67f]/10 rounded-2xl sm:rounded-3xl blur-xl opacity-50" />
+
+              <div className="relative z-10">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
+                  🎁 LINE特典プレゼント
+                </h2>
+                <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
+                  あなたの「変わりたい」を具体的な行動に変える
+                  <br className="hidden sm:block" />
+                  <span className="text-[#32e67f] font-bold">無料特典</span>
+                  をプレゼント！
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center justify-center gap-3 text-left">
+                    <span className="text-[#32e67f] text-2xl">✓</span>
+                    <span className="text-white">
+                      「変わりたい」を「変われる」に変える思考法
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-3 text-left">
+                    <span className="text-[#32e67f] text-2xl">✓</span>
+                    <span className="text-white">
+                      継続力を身につける習慣化のコツ
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-3 text-left">
+                    <span className="text-[#32e67f] text-2xl">✓</span>
+                    <span className="text-white">
+                      心と身体のバランスを整える方法
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() =>
+                    window.open("https://lin.ee/MX41vXf", "_blank")
+                  }
+                  className="flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-6 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105 mx-auto"
+                  style={{ minWidth: 320 }}
+                >
+                  <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="12" fill="#fff" />
+                    <path
+                      d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                      fill="#06C755"
+                    />
+                    <path
+                      d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                      stroke="#fff"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  ＞＞ LINE特典を受け取る
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <SectionDivider variant="diagonal" />
+
         {/* 統合されたメインCTAセクション - 強力な訴求力 */}
         <section
           ref={addToRefs}
@@ -454,7 +519,7 @@ const HomePage: React.FC = () => {
                   </button>
                 </div>
                 <div className="mt-6 text-sm text-gray-400">
-                  ✓ 無理な勧誘は一切ありません　✓ 秘密厳守　✓ 24時間以内返信
+                  ✓ 無理な勧誘は一切ありません ✓ 秘密厳守 ✓ 24時間以内返信
                 </div>
               </div>
             </motion.div>
@@ -474,7 +539,7 @@ const HomePage: React.FC = () => {
         {/* フッター：個別作戦会議リンク */}
         <footer className="text-center pb-8 text-xs text-gray-500">
           <a
-            href="/strategy-session"
+            href="/contact"
             className="underline hover:text-[#e53935] transition-colors"
           >
             覚悟が決まった方へ：個別作戦会議の申し込み
