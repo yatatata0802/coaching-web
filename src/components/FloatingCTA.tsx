@@ -15,7 +15,7 @@ const FloatingCTA: React.FC = () => {
   }, []);
 
   const handleContact = () => {
-    navigate("/contact");
+    navigate("/contact?plan=無料相談");
   };
 
   return (

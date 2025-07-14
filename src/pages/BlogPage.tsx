@@ -261,7 +261,8 @@ const BlogPage: React.FC = () => {
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2 text-[#d4af37] font-bold text-lg">
-                📩【無料】LINE登録で"限定PDF"プレゼント中
+                📩
+                現在、元公安式・あなたの『人生脚本』タイプ別診断を鋭意作成中です。LINE登録いただいた方には、完成次第いち早くご案内します！
               </div>
               <button
                 onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}

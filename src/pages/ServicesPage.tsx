@@ -334,7 +334,9 @@ const ServicesPage: React.FC = () => {
                   </div>
 
                   <button
-                    onClick={() => navigate("/contact")}
+                    onClick={() =>
+                      navigate(`/contact?plan=${encodeURIComponent(plan.name)}`)
+                    }
                     className={`w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl ${
                       plan.popular
                         ? "bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] hover:from-[#ffd700] hover:to-[#d4af37]"
@@ -348,8 +350,6 @@ const ServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        <SectionDivider variant="wave" />
 
         {/* お客様の声・ビフォーアフター事例セクション */}
         <section className="py-12 sm:py-16 lg:py-20">

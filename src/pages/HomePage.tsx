@@ -119,9 +119,9 @@ const HomePage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 1 }}
-              className="text-base sm:text-lg md:text-xl leading-relaxed space-y-3 sm:space-y-4 px-2 mb-8"
+              className="text-base sm:text-lg md:text-xl leading-relaxed space-y-3 sm:space-y-4 px-4 sm:px-2 mb-8 max-w-full"
             >
-              <p className="jp-text-optimal text-balance">
+              <p className="jp-text-optimal text-balance break-words text-sm sm:text-base md:text-lg">
                 "このまま"で、本当にいいのか？──と問い続けるあなたへ。
               </p>
               <VisualGuide type="glow-border" delay={2.5}>
@@ -138,11 +138,15 @@ const HomePage: React.FC = () => {
               {/* 主役CTA：LINE特典（LINE公式デザイン） */}
               <button
                 onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
-                className="flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-6 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105"
-                style={{ minWidth: 320 }}
+                className="flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-6 rounded-2xl bg-[#06C755] text-white font-bold text-base sm:text-xl lg:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105"
+                style={{ minWidth: 280 }}
               >
                 {/* LINE公式アイコンSVG（白抜き） */}
-                <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <svg
+                  className="w-6 h-6 sm:w-8 sm:h-8"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
                   <rect width="40" height="40" rx="12" fill="#fff" />
                   <path
                     d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
@@ -160,8 +164,6 @@ const HomePage: React.FC = () => {
             </div>
           </motion.div>
         </section>
-
-        <SectionDivider variant="wave" />
 
         {/* My Storyセクション - 視線誘導最適化 */}
         <section
@@ -235,8 +237,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        <SectionDivider variant="diagonal" />
-
         {/* サポートセクション - シンプル表示 */}
         <section
           ref={addToRefs}
@@ -293,8 +293,6 @@ const HomePage: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
-        <SectionDivider variant="curve" />
 
         {/* サービスセクション - 視線誘導最適化 */}
         <section
@@ -383,9 +381,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        <SectionDivider variant="wave" flip />
-
-        {/* LINE登録エリア - 新設 */}
+        {/* LINE登録特典・あなたの物語セクションを統合 */}
         <section
           ref={addToRefs}
           className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
@@ -399,37 +395,16 @@ const HomePage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-[#06C755]/10 to-[#32e67f]/10 rounded-2xl sm:rounded-3xl blur-xl opacity-50" />
 
               <div className="relative z-10">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
-                  🎁 LINE特典プレゼント
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 jp-text-optimal text-balance">
+                  あなたの物語を、ここから始めませんか。
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-                  あなたの「変わりたい」を具体的な行動に変える
+                <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed jp-text-optimal">
+                  現在、元公安式・あなたの『人生脚本』タイプ別診断を鋭意作成中です。
                   <br className="hidden sm:block" />
-                  <span className="text-[#32e67f] font-bold">無料特典</span>
-                  をプレゼント！
+                  LINE登録いただいた方には、完成次第いち早くご案内します！
+                  <br className="hidden sm:block" />
+                  あなたの物語を、ここから始めませんか？
                 </p>
-
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center justify-center gap-3 text-left">
-                    <span className="text-[#32e67f] text-2xl">✓</span>
-                    <span className="text-white">
-                      「変わりたい」を「変われる」に変える思考法
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-center gap-3 text-left">
-                    <span className="text-[#32e67f] text-2xl">✓</span>
-                    <span className="text-white">
-                      継続力を身につける習慣化のコツ
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-center gap-3 text-left">
-                    <span className="text-[#32e67f] text-2xl">✓</span>
-                    <span className="text-white">
-                      心と身体のバランスを整える方法
-                    </span>
-                  </div>
-                </div>
-
                 <button
                   onClick={() =>
                     window.open("https://lin.ee/MX41vXf", "_blank")
@@ -457,83 +432,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        <SectionDivider variant="diagonal" />
-
-        {/* 統合されたメインCTAセクション - 強力な訴求力 */}
-        <section
-          ref={addToRefs}
-          className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
-        >
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="p-8 sm:p-12 lg:p-16 bg-gradient-to-br from-[#e53935]/20 via-[#d4af37]/20 to-[#ffd700]/20 border border-[#e53935]/40 rounded-2xl sm:rounded-3xl text-center backdrop-blur-sm relative overflow-hidden"
-              whileHover={{ scale: 1.02 }}
-            >
-              {/* 背景アニメーション */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#e53935]/20 to-[#ffd700]/20 rounded-2xl sm:rounded-3xl blur-xl opacity-50" />
-
-              {/* 注目を集める要素 */}
-              <VisualGuide
-                type="attention-grabber"
-                className="absolute top-4 right-4"
-              ></VisualGuide>
-
-              <div className="relative z-10">
-                {/* --- LINE登録エリア --- */}
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4af37] mb-6 sm:mb-8 jp-text-optimal text-balance">
-                  あなたの物語を、ここから始めませんか。
-                </h3>
-                <div className="bg-black/30 p-6 sm:p-8 rounded-lg mb-8 sm:mb-10">
-                  <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
-                    この公式LINEは、単なる情報配信の場ではありません。
-                    <br />
-                    私が日々挑戦する中で得た気づきや、YouTubeでは語りきれない思考のプロセス。
-                    <br />
-                    そして、あなたと同じように「今の自分を変えたい」と願う人々に向けて、私が伝えたい大切なメッセージを、一つひとつ丁寧にお届けする場所です。
-                  </p>
-                  <p className="text-lg sm:text-xl text-[#ffd700] font-bold mb-2">
-                    登録してくださった方には、感謝のしるしとして、私が自分と向き合うために作成した
-                    <strong>『最初の一歩を踏み出すためのヒント』</strong>
-                    をプレゼントしています。
-                  </p>
-                  <p className="text-base text-gray-400">
-                    もちろん、無理な勧誘などは一切ありません。
-                    <br />
-                    あなたのペースで、私の言葉や活動に触れていただければ幸いです。
-                  </p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <button
-                    onClick={() =>
-                      window.open("https://lin.ee/MX41vXf", "_blank")
-                    }
-                    className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
-                    style={{ minWidth: 280 }}
-                  >
-                    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-                      <rect width="40" height="40" rx="12" fill="#fff" />
-                      <path
-                        d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
-                        fill="#06C755"
-                      />
-                      <path
-                        d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
-                        stroke="#fff"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
-                  </button>
-                </div>
-                <div className="mt-6 text-sm text-gray-400">
-                  ✓ 無理な勧誘は一切ありません ✓ 秘密厳守 ✓ 24時間以内返信
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* トップへ戻る - 親指操作エリア最適化 */}
         <div className="text-center py-8 sm:py-12">
           <MobileOptimizedButton
@@ -546,12 +444,7 @@ const HomePage: React.FC = () => {
         </div>
         {/* フッター：個別作戦会議リンク */}
         <footer className="text-center pb-8 text-xs text-gray-500">
-          <a
-            href="/contact"
-            className="underline hover:text-[#e53935] transition-colors"
-          >
-            覚悟が決まった方へ：個別作戦会議の申し込み
-          </a>
+          {/* フッターの個別作戦会議リンクを削除 */}
         </footer>
       </div>
     </>
