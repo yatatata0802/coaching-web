@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Send, User, Mail } from "lucide-react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 interface MinimalFormProps {
   onSubmit: (data: { name: string; email: string; plan?: string }) => void;
