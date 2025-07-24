@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import ParticleBackground from "../components/ParticleBackground";
 import TypewriterText from "../components/TypewriterText";
+import AnimatedText from "../components/ui/AnimatedText";
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -74,7 +75,7 @@ const LandingPage: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
+          transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
           className="mb-8 sm:mb-12"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-8 leading-tight">
@@ -106,7 +107,7 @@ const LandingPage: React.FC = () => {
                       filter: "blur(0px)",
                     }}
                     transition={{
-                      delay: 2.5 + (lineIndex * line.length + charIndex) * 0.1,
+                      delay: 0.5 + (lineIndex * line.length + charIndex) * 0.1,
                       duration: 0.8,
                       ease: [0.25, 0.46, 0.45, 0.94],
                     }}
@@ -119,11 +120,10 @@ const LandingPage: React.FC = () => {
           </h1>
         </motion.div>
 
-        {/* サブタイトル - タイプライター効果（スマホ最適化） */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 4, duration: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
           className="text-lg sm:text-xl md:text-2xl text-[#d4af37] font-medium mb-6 sm:mb-8 space-y-2"
         >
           <div className="h-6 sm:h-8">
@@ -141,7 +141,7 @@ const LandingPage: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 5.5, duration: 1 }}
+          transition={{ delay: 2.5, duration: 1 }}
           className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-12 max-w-2xl leading-relaxed px-4 jp-text-optimal text-balance"
         >
           <p>「こんなはずじゃない」って、</p>
@@ -152,7 +152,7 @@ const LandingPage: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 7, duration: 0.8, ease: "backOut" }}
+          transition={{ delay: 4, duration: 0.8, ease: "backOut" }}
         >
           <motion.button
             onClick={handleStart}
@@ -175,22 +175,7 @@ const LandingPage: React.FC = () => {
           </motion.button>
         </motion.div>
 
-        {/* スクロールヒント - スマホ最適化 */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 8, duration: 1 }}
-          className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-[#d4af37] text-xs sm:text-sm flex flex-col items-center mobile-safe-area"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="mb-2"
-          >
-            ↓
-          </motion.div>
-          <span>クリックして物語を始める</span>
-        </motion.div>
+        {/* スクロールヒント部分を削除 */}
       </div>
 
       {/* アンビエントライト効果 */}

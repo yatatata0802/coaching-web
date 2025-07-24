@@ -101,20 +101,20 @@ export const SERVICES: ServiceFeature[] = [
 export const SUPPORT_TARGETS = [
   {
     text: "「このままじゃダメだ」と悩み、動き出せない方",
-    description: "頭では分かってるのに、なぜか行動できない状態から脱出"
+    description: "頭では分かってるのに、なぜか行動できない状態から脱出",
   },
   {
-    text: "「もっと強くなりたい」と、新しい挑戦をしたい方", 
-    description: "現状に満足せず、さらなる高みを目指したい向上心ある方"
+    text: "「もっと強くなりたい」と、新しい挑戦をしたい方",
+    description: "現状に満足せず、さらなる高みを目指したい向上心ある方",
   },
   {
     text: "モチベーションが続かず、三日坊主で終わってしまう方",
-    description: "やる気はあるのに継続できない悩みを根本から解決"
+    description: "やる気はあるのに継続できない悩みを根本から解決",
   },
   {
     text: "目標達成のために自己管理能力を磨きたい方",
-    description: "時間・感情・習慣を統合的に管理する力を身につける"
-  }
+    description: "時間・感情・習慣を統合的に管理する力を身につける",
+  },
 ];
 
 export const CONTACT_INFO: ContactInfo[] = [
@@ -126,6 +126,5 @@ export const CONTACT_INFO: ContactInfo[] = [
 export const ASSURANCES = [
   "無理な勧誘は一切いたしません",
   "ご相談内容・個人情報は秘密厳守",
-  "初回体験セッションは完全無料",
   "24時間以内に必ずご返信",
 ];

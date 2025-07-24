@@ -74,13 +74,7 @@ const HomePage: React.FC = () => {
         keywords="パーソナルコーチング, 矢田谷充則, 元公安警察官, コーチング, 変わりたい, やる気, 続かない, 目標達成, 行動変容, 自己実現, 筋トレ, 継続力, 大阪, 無料相談"
       />
       <div className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden">
-        {/* アンビエント背景効果 */}
-        <div className="fixed inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-[#d4af37]/5 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-red-500/5 rounded-full blur-3xl animate-pulse animation-delay-1000" />
-        </div>
-
-        {/* ヒーローセクション - ヘッダー高さを考慮 */}
+        {/* Heroセクション - シンプルなテキスト・CTAのみ */}
         <section
           ref={heroRef}
           className="relative min-h-screen flex flex-col justify-center items-center px-4 header-safe-padding sm:px-6 lg:px-8"
@@ -89,23 +83,8 @@ const HomePage: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-center max-w-4xl"
+            className="relative z-20 text-center max-w-4xl"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 bg-gradient-to-r from-white via-[#d4af37] to-white bg-clip-text text-transparent">
-              矢田谷 充則
-              <span className="block text-xl sm:text-2xl md:text-3xl text-[#d4af37] font-medium mt-2">
-                (Yatagai Mitsunori)
-              </span>
-            </h1>
-            {/* 顔写真（削除） */}
-            {/* <div className="flex justify-center mb-4">
-              <img
-                src="/profile.jpg"
-                alt="矢田谷充則"
-                className="w-32 h-40 object-cover shadow-lg border-4 border-[#d4af37]"
-              />
-            </div> */}
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -114,16 +93,21 @@ const HomePage: React.FC = () => {
             >
               魅セルジブン × 踊ルココロ
             </motion.div>
-
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 bg-gradient-to-r from-white via-[#d4af37] to-white bg-clip-text text-transparent">
+              矢田谷 充則
+              <span className="block text-xl sm:text-2xl md:text-3xl text-[#d4af37] font-medium mt-2">
+                (Yatagai Mitsunori)
+              </span>
+              <span className="block text-lg sm:text-xl md:text-2xl text-white font-semibold mt-1">
+                自己実現コーチ
+              </span>
+            </h1>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 1 }}
               className="text-base sm:text-lg md:text-xl leading-relaxed space-y-3 sm:space-y-4 px-4 sm:px-2 mb-8 max-w-full"
             >
-              <p className="jp-text-optimal text-balance break-words text-sm sm:text-base md:text-lg">
-                "このまま"で、本当にいいのか？──と問い続けるあなたへ。
-              </p>
               <VisualGuide type="glow-border" delay={2.5}>
                 <p className="text-xl sm:text-2xl font-bold text-[#d4af37]">
                   "なりたい自分"を夢で終わらせない。
@@ -132,7 +116,6 @@ const HomePage: React.FC = () => {
               <p>今の自分にモヤモヤしてるなら──</p>
               <p>心と身体の両面から、"なりたい自分"に火をつける。</p>
             </motion.div>
-
             {/* --- 新CTA配置 --- */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
               {/* 主役CTA：LINE特典（LINE公式デザイン） */}
@@ -191,19 +174,19 @@ const HomePage: React.FC = () => {
                 <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                   <div className="mt-8 space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                     <p>
-                      20年間、公安警察官として生きてきた私は、常に"仮面"を被り、自分を押し殺してきました。「安定」と「期待」に応え続ける日々の中で、心の奥底ではずっと、「このままで、本当にいいのか？」という問いが消えませんでした。
+                      タトゥーの針が肌に刺さる瞬間、20年の警察人生に終止符を打った。
                     </p>
-                    <p></p>
                     <p>
-                      もっと自由に、自分らしく生きたい──。その強い想いに気づいたとき、心身は限界を迎えました。しかし、それは「壊れた」のではなく、「脱皮」だったのです。あのどん底を乗り越えたからこそ、私は独自の"ブランディング思考"を手に入れました。
+                      「警察官はこうあるべき」──そう信じて、ずっと“偽りの自分”を演じてきた。
+                      清廉潔白、正しさ、期待に応える優等生。
+                      気づけば、人生の脚本はすべて“他人”が書いていた。
+                      仮面と鎧を身にまとい続けた結果、心も身体も限界を迎え、うつ状態と診断された。
+                      そこからすべてを手放し、コーチングによりゼロから自分の人生を取り戻すまでのリアルな物語があります。
                     </p>
-                    <p></p>
                     <p>
-                      今、私は自身の「挑戦」の象徴として、筋トレや格闘技を通じて理想の自分を体現しています。そして、そこで培った「継続力」や「自己変革」の経験を活かし、「人生を作品として生きる」人を増やす活動に情熱を注いでいます。
-                    </p>
-                    <p></p>
-                    <p>
-                      さあ、あなたの"本当の物語"を、私と一緒にデザインしませんか？──これは、あなただけの人生を取り戻す、記念すべき「最初のページ」です。
+                      「このままで、本当にいいのか？」
+                      もし、あなたの心の奥でそう声がしているなら──
+                      脚本を“誰か”に書かれた人生から、自分で書き直す人生へ。
                     </p>
                   </div>
                 </div>
@@ -399,34 +382,34 @@ const HomePage: React.FC = () => {
                   あなたの物語を、ここから始めませんか。
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed jp-text-optimal">
-                  現在、元公安式・あなたの『人生脚本』タイプ別診断を鋭意作成中です。
-                  <br className="hidden sm:block" />
-                  LINE登録いただいた方には、完成次第いち早くご案内します！
+                  LINEにご登録いただいた方限定で、公安式・『人生脚本』タイプ別診断をプレゼント中！
                   <br className="hidden sm:block" />
                   あなたの物語を、ここから始めませんか？
                 </p>
-                <button
-                  onClick={() =>
-                    window.open("https://lin.ee/MX41vXf", "_blank")
-                  }
-                  className="flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-6 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105 mx-auto"
-                  style={{ minWidth: 320 }}
-                >
-                  <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="12" fill="#fff" />
-                    <path
-                      d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
-                      fill="#06C755"
-                    />
-                    <path
-                      d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  ＞＞ LINE特典を受け取る
-                </button>
+                <div className="flex flex-col items-center gap-4 justify-center mt-8">
+                  <button
+                    onClick={() =>
+                      window.open("https://lin.ee/MX41vXf", "_blank")
+                    }
+                    className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105 mx-auto"
+                    style={{ minWidth: 220 }}
+                  >
+                    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                      <rect width="40" height="40" rx="12" fill="#fff" />
+                      <path
+                        d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                        fill="#06C755"
+                      />
+                      <path
+                        d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                        stroke="#fff"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    特典を受け取る
+                  </button>
+                </div>
               </div>
             </motion.div>
           </div>

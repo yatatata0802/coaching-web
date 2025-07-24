@@ -15,7 +15,7 @@ const ProfilePage: React.FC = () => {
     "1983年生まれ／大阪府大阪市在住",
     "関西外国語大学 卒業",
     "元・大阪府警警察官（20年間勤務）",
-    "GCS認定コーチ",
+    "自己実現コーチ（GCS認定コーチ）",
     "趣味：筋トレ/ゲーム/美容と健康オタク",
     "家族構成：妻・娘（小1）の3人暮らし",
   ];
@@ -43,77 +43,321 @@ const ProfilePage: React.FC = () => {
 
   const profileStoryContent = [
     {
-      type: "paragraph",
-      content: `"偽りの自分"を脱ぎ捨てて──\n\n人生を作品に変える、元公安コーチの物語`,
-      className: "text-center text-xl sm:text-2xl font-semibold text-[#e53935]",
+      type: "heading",
+      level: 3,
+      content:
+        "タトゥーの針が肌に刺さる瞬間、私は20年間の警察人生に終止符を打った。",
     },
     {
       type: "paragraph",
-      content: `「このままで、本当にいいのか？」──そう問いかけながら、見えない"何か"に、じわじわと首を締められているような感覚。\n\n自分の人生なのに、誰かのレールを歩かされてるような感覚。\n\nもしあなたが、そんな"見えない鎖"に気づき始めているなら──この物語は、あなたのために書きました。`,
-    },
-    {
-      type: "paragraph",
-      content: `はじめまして。矢田谷充則（やたがいみつのり）です。私は、20年間公安警察官として働きながら、ずっと"偽りの自分"を演じ続けていました。\n\nでも今は違う。今は、"自分の人生を、自分でデザインする"という生き方を、全力で選び、全力で生きています。\n\nここでは、そんな私が"どうやって自分を取り戻してきたか"を、本音でお話しします。`,
+      content: `現職の公安警察官が、
+自らの身体に刺青を
+入れる——。
+
+その瞬間、私は確信しました。
+「もう、後戻りはできない」__BR__
+
+元公安警察官として
+20年間“仮面”を被り
+続けた私が、
+なぜ今、あなたの人生の
+“脚本”書き換えを
+サポートするのか。
+その全てを、ここに記します。
+
+最初は憧れだった
+警察官の制服が、
+だんだんと重たい鎧に
+変わっていきました。
+
+「警察官は、真面目で
+清廉潔白でなければ
+ならない」__BR__
+──社会が私に着せた、
+その重たい"鎧"と、
+任務が要求する
+「完璧な別人格」という、
+"偽り"の仮面を被って。
+
+これは、そんな私が、
+すべてを捨てる覚悟で、
+20年分の鎧と仮面を
+脱ぎ捨て、
+自分の手で人生の脚本を
+書き換えるまでの、
+泥臭い記録です。`,
     },
     {
       type: "heading",
       level: 3,
-      content: '【1】"強くなれ"の呪縛：誰かの期待に応え続けた幼少期',
+      content: '【第一章】空手の道着という名の"制服"と、失われた主導権',
     },
     {
       type: "paragraph",
-      content: `4歳で空手を始めたのは、自分の意志ではありませんでした。兄の影響、親の期待、"強くなれ"の言葉。\n\n勝てば褒められる。負ければ叱られる。"喜ばれるために頑張る"ことが、いつの間にか人生のベースになっていました。\n\n小5の全国大会。チームは優勝。でも俺だけ1勝もしていない。「これ、俺じゃなくてもよかったんちゃうか？」\n\nそのとき初めて、自分という存在の"薄さ"を感じたんです。「頑張ってるのに、心が満たされない」そんな違和感が、胸の奥にずっと残り続けました。`,
+      content: `空手の道着は、私が４歳の時に最初に身につけた "制服"でした。
+
+兄の背中を追い、
+父の「強くなれ」という
+言葉を疑うこともなく、
+ただただ必死でした。
+気づけば、中学3年生まで
+毎週道場に通い続けて
+いました。
+
+誇りでした。
+強さの象徴でした。
+でもいつからか、
+重く感じるように
+なりました。
+「行きたくない」
+
+でも辞めませんでした。
+いや、辞められなかった。
+中学卒業と同時に
+空手をやめたとき、
+心から解放された気持ちが
+強く、「やっと自由に
+なれた！」という開放感が
+ありました。
+
+空手をやめて自由に
+なった反動で、
+好きなことだけをしたい
+という気持ちが湧き
+上がりました。
+その結果、少しヤンチャ
+したり、不良じみた生活を
+楽しむようになりましたが、
+縛られない自分でいたい
+という思いが根底に
+ありました。`,
     },
     {
       type: "heading",
       level: 3,
-      content: '【2】"やらされる人生"から、"選ぶ人生"へ',
+      content:
+        '【第二章】再びの"鎧"と"仮面"──公安警察、トリプルフェイスの深き葛藤',
     },
     {
       type: "paragraph",
-      content: `中学卒業と同時に、空手を辞めた。それは、人生で初めて"自分の意思で選んだ別れ"でした。\n\nそこから一気に広がった自由。でも同時に、自分が空っぽであることにも気づかされました。\n\nそんなとき出会ったのが、ブレイクダンス。「これや！めちゃくちゃかっこええ！」自分の意思で、音に合わせて動く。誰の評価も関係ない。"生きてる感覚"が、一気に身体に流れ込んできました。\n\nロサンゼルスへの留学で見た、"自由を誇る人間たち"の姿。「表現していいんや、自分を出していいんや」と、深く刻まれた瞬間でした。`,
+      content: `大学を卒業し、
+私は再び"制服"を
+身に纏いました。
+
+今度は、警察官という
+誇り高い制服です。
+私生活においても、
+心の中では常にこの制服を
+着用し続けなければ
+なりませんでした。
+
+警察学校で学んだことは
+「出る杭は打たれる」
+「一番手より二番手」
+という哲学でした。
+学生時代の私は
+「調子乗り」で
+「目立ちたがり屋」でした。
+しかし、その個性は一枚、
+また一枚と、
+分厚い鉄板の下に
+封印されていきました。
+
+世間の目、組織の正義、
+沈黙という名のルール…。
+憧れだったはずの"制服"は、
+いつしか私の心を縛り、
+動きを鈍らせる、
+何重もの重たい"鎧"へと
+変貌を遂げていったのです。
+
+そして、配属された
+「公安」という秘匿性の
+高い世界で、
+私はその鎧の上から、
+さらに何枚もの"仮面"を
+被ることを要求されました。
+
+分かりやすく例えるなら、
+名探偵コナンの「安室透」です。
+私立探偵「安室透」、
+黒ずくめの組織の一員
+「バーボン」、
+そして公安警察官「降谷零」。
+彼は3つの顔（トリプルフェイス）を完璧に使い分けます。
+
+私が送っていた日々は、
+まさにそれでした。
+
+1. 「正義」の仮面を被った、警察官としての顔
+2. 「別の誰か」を完璧に演じる、公安としての顔
+3. すべての仮面を脱いだ後、鏡の前に立つ、"生身の私"としての顔__BR__
+
+この三つの顔の境界線は、
+次第に曖昧になっていきました。
+
+気づけば私は再び、
+誰かが書いた「脚本」で
+「正解」を演じるだけの
+役者になっていました。`,
     },
     {
       type: "heading",
       level: 3,
-      content: '【3】再びの仮面：公安警察という"静かな牢獄"',
+      content: "【第三章】未来が、現在を殺しに来た日",
     },
     {
       type: "paragraph",
-      content: `大学を出て警察官になった私は、再び仮面をかぶり始めました。特に公安という世界は、"目立たないこと"「空気になること」が求められる組織。\n\n目立たないように、失敗しないように、波風立てないように。自分を押し殺すことが、プロとしての"正解"とされていた。\n\nでも俺の本質は、表現者。目立ちたがりで、自分を出したい人間。\n\n心のどこかで、ずっと叫び続けていたんです。「このまま人生終わらせてええんか？」「俺って、誰やねん？」\n\nその"叫び"は、年を追うごとに大きくなっていきました。`,
+      content: `人生の転機は、
+妻から教わった
+「コーチング」との
+出会いでした。
+
+最初は正直、
+「なんか怪しいなぁ」と
+半信半疑でした。
+しかし、YouTubeで偶然
+見つけたコーチングの動画が、
+私の人生を根底から
+揺るがすことになったのです。
+
+自分自身と向き合う中で、
+私は見てしまいました。
+**"未来の自分"**の姿を。
+
+それは、警察官の"鎧"を
+脱ぎ捨て、自分の言葉で、
+自分の経験で、
+誰かの人生に火をつけている
+私の姿でした。
+
+その「ありたい自分」の姿が、
+あまりにも鮮明に、
+あまりにもリアルに、
+私の心に焼き付いて
+しまいました。
+
+心理学では、これを
+「コンフォートゾーン
+（快適な領域）が未来に移行する」
+と呼ぶそうです。
+
+しかし、私にとってそれは、
+そんな生易しいものでは
+ありませんでした。
+未来が、現在を"殺し"に
+来たのです。
+
+理想の未来がリアルに
+なればなるほど、
+今の現実が耐え難いほどの
+地獄に変わっていきました。
+真面目を演じ、
+自分を押し殺している
+「警察官としての現在」が、
+まるで拷問のように
+感じられたのです。
+
+「本当にこのままでいいのか？」
+そんなぬるい問いでは
+ありません。
+「なぜ、私はまだ、
+こんな場所にいるんだ？」
+
+「ありたい自分」と
+「あるべき自分」の間で、
+私の心は引き裂かれそうでした。
+思っていることと、
+やっていることの致命的な矛盾。
+
+身体は、正直でした。
+私の魂の悲鳴を、
+忠実に代弁し始めました。
+動悸、呼吸の浅さ、
+睡眠障害…。
+
+そして、私は鬱状態になり、
+1ヶ月間休職することに
+なりました。
+コーチングが、私に
+「本当の地獄」を見せたのです。`,
     },
     {
       type: "heading",
       level: 3,
-      content: '【4】コーチングとの出会い：隠していた"本音"に火がついた',
+      content: '【第四章】反逆のタトゥーと、最後の"制服"',
     },
     {
       type: "paragraph",
-      content: `ある日、コーチングセッションを受けました。たった一つの問いで、頭が真っ白になった。\n\n「で、あなたは本当はどうしたいんですか？」\n\n答えられなかった。自分の本音が、どこにあるのかすら分からなかった。\n\nその瞬間、すべての仮面が揺らぎました。──あぁ、俺、ずっと無理してたんや。\n\n本当は、もっと自分らしく、もっと自由に生きたかったんや。\n\nそう気づいた瞬間、20年間の"安定"が、鎖に見えた。`,
+      content: `結局、復帰することなく
+退職を決意しました。
+
+退職の報告をするや否や、私はタトゥーショップに予約の連絡を入れました。
+
+まだ正式な退職日も
+決まっていないのに、
+現職の警察官が自らの身体に
+刺青を入れました。
+
+やっと自由になれる。
+解放された。
+空手をやめた時と似たような、
+あの懐かしい感覚でした。
+
+コーチングは地獄を見せた
+のではなく、
+現実を前に進めてくれたのです。
+
+「なりたい姿を明確に
+思い続けていたら、
+必ず現実化する」
+その言葉を、私は、
+自らの身体で証明しました。`,
+    },
+    {
+      type: "question",
+      content: "──もし、今の自分を変えるとしたら、最初に何をしますか？",
     },
     {
       type: "heading",
       level: 3,
-      content: "【5】鬱という脱皮：止まったことで、始まった人生",
+      content: '【最終章】人生を"作品"に変える『あなた』へ',
     },
     {
       type: "paragraph",
-      content: `気づけば、心が悲鳴を上げていました。仕事中、動悸が止まらない。笑えない。眠れない。\n\n「でも、ようやく止まれる」──そう思った自分もいました。\n\nそれから私は、警察を辞める決意をします。退職金も、年金も、安定も、すべてを手放して。\n\nでも、心はずっと軽くなった。「やっと、自分の人生が始まる」と感じました。`,
+      content: `特別な人間だから、
+できたわけではありません。
+
+ただ、もうこの役を演じるのが
+限界だった。それだけです。
+
+これは、私が"脚本"を
+この手で書き換えるまでの、
+泥臭い記録です。
+
+もう、誰かの言いなりに
+なることは終わりです。
+
+そして今、自分の人生の"脚本"を
+見失っているあなたが、
+新しいページを書き始めるための
+物語です。
+
+私の役目は、あなたの物語が
+最高の輝きを放つよう、
+隣でサポートすることです。
+
+さあ、次はあなたの番です。
+あなたの人生という、
+最高の作品の、
+最初の1ページを書き始めましょう。
+
+矢田谷充則があなたの人生の
+脚本を書き換えるお手伝いをします。`,
     },
     {
-      type: "heading",
-      level: 3,
-      content: '【6】人生を"作品"に変える──それが、俺のミッション',
-    },
-    {
-      type: "paragraph",
-      content: `鬱になったことも、過去の仮面も、全部"ネタ"にできる。それが、俺の"ブランディング思考"の原点。\n\n痛みを隠すんじゃない。語り直せば、それは誰かの希望になる。\n\n公安警察で培った"洞察力"「分析力」「限界突破力」全部、今では"誰かの人生を動かす武器"に変わった。\n\nだから、俺の使命は一つだけ。\n\n▶︎ あなたの人生を、"作品"にしよう。今までずっと、"誰かの期待"で生きてきたあなたへ。`,
-      className: "font-bold",
-    },
-    {
-      type: "paragraph",
-      content: `もう、仮面はいらない。自分の人生を、自分の言葉で語り直していい。\n\nそれが、"本当のスタートライン"や。\n\n▶︎ 初回無料セッションはこちらから。あなたの物語の"本音"を、一緒に見つけに行こう。`,
-      className: "font-bold",
+      type: "question",
+      content: "──まずは、あなたの心の声に 耳を傾けることから始めませんか？",
     },
   ];
 
@@ -220,35 +464,13 @@ const ProfilePage: React.FC = () => {
           {/* My Story セクション */}
           <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10 jp-text-optimal text-balance">
             {/* タイトルのみ大きく表示 */}
-            <div className="text-center text-2xl sm:text-3xl font-bold text-[#d4af37] mb-10">
-              <p className="mb-4">「このままで、本当にいいのか？」</p>
-              <p className="mb-4">
-                もし、あなたの心の奥で、そんな"声"が聞こえ始めているなら──
-                <br />
-                この物語は、きっと、あなたのためのものだ。
-              </p>
-              <p className="mb-4">
-                はじめまして。矢田谷充則（やたがいみつのり）です。
-              </p>
-              <p className="mb-4">
-                私は、20年間「公安警察官」という仮面を被り、自分を押し殺してきました。
-              </p>
-              <p className="mb-4">
-                しかし、ある日を境に、全てを捨てて
-                <strong>“自分の人生を演じる”</strong>ことを決意しました。
-              </p>
-              <p className="mb-4">
-                ここでは、私がどうやって重たい鎧を脱ぎ捨て、自分を取り戻してきたのか。
-                <br />
-                その泥臭い「脱皮」の全記録を、包み隠さずお話しします。
-              </p>
-            </div>
+
             {/* headingごとにグループ化して四角で囲む */}
             {(() => {
               const blocks = [];
               let currentBlock = [];
               let blockIdx = 0;
-              for (let i = 1; i < profileStoryContent.length; i++) {
+              for (let i = 0; i < profileStoryContent.length; i++) {
                 const item = profileStoryContent[i];
                 if (item.type === "heading") {
                   if (currentBlock.length > 0) {
@@ -256,26 +478,25 @@ const ProfilePage: React.FC = () => {
                     if (blockIdx === 0) {
                       currentBlock.push({
                         type: "question",
-                        content:
-                          "──あなたは今、誰の期待に応えるために、頑張りすぎていませんか？",
+                        content: "──あなたが本当に「やりたいこと」は何ですか？",
                       });
                     } else if (blockIdx === 1) {
                       currentBlock.push({
                         type: "question",
                         content:
-                          "──あなたが最後に「心の底からやりたい」と思って、何かを選んだのはいつですか？",
+                          "──あなたは今、誰の期待に応えるために生きていますか？",
                       });
                     } else if (blockIdx === 2) {
                       currentBlock.push({
                         type: "question",
                         content:
-                          "──あなたの心の叫びは、今、何と言っていますか？",
+                          "──あなたが今、社会で演じている『役』は、本当にあなたが望んだものですか？",
                       });
                     } else if (blockIdx === 3) {
                       currentBlock.push({
                         type: "question",
                         content:
-                          "あなたは本当はどうしたいんですか？と聞いたら、何と答えますか？",
+                          "──もし、今の自分を変えるとしたら、最初に何をしますか？",
                       });
                     }
                     blocks.push([...currentBlock]);
@@ -300,7 +521,7 @@ const ProfilePage: React.FC = () => {
                         return (
                           <motion.h3
                             key={i}
-                            className="text-xl sm:text-2xl font-bold text-[#d4af37] mt-2 mb-4 leading-normal"
+                            className="text-lg sm:text-xl md:text-2xl font-bold text-[#d4af37] mt-2 mb-4 leading-normal"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: i * 0.05 }}
@@ -324,33 +545,147 @@ const ProfilePage: React.FC = () => {
                           </motion.p>
                         );
                       }
-                      return (
-                        <motion.p
-                          key={i}
-                          className={`${
-                            item.className ? item.className : ""
-                          } text-sm leading-normal`}
-                          initial={{ opacity: 0, y: 30 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.7, delay: i * 0.05 }}
-                          viewport={{ once: true }}
-                        >
-                          {item.content
-                            .split("\n\n")
-                            .map((paragraph, pIndex) => (
-                              <span key={pIndex}>
-                                {paragraph}
-                                {pIndex <
-                                  item.content.split("\n\n").length - 1 && (
-                                  <>
+                      if (item.type === "paragraph") {
+                        // さらに多くの区切り語や接続詞、感嘆符・疑問符の後、2文以上続いた場合にも空行を入れる
+                        const breakAfter = [
+                          "はじめまして。",
+                          "あなたは今、",
+                          "その瞬間、",
+                          "記録です。",
+                          "サポートするのか。",
+                          "ここに記します。",
+                          '【第一章】空手の道着という名の"制服"と、失われた主導権',
+                          '【第二章】再びの"鎧"と"仮面"──公安警察、トリプルフェイスの深き葛藤',
+                          "【第三章】未来が、現在を殺しに来た日",
+                          "私は確信しました。",
+                          "これは、そんな私が、",
+                          "その結果、",
+                          "その後、",
+                          "そして、",
+                          "しかし、",
+                          "気づけば",
+                          "自分自身と向き合う中で",
+                          "そのとき、",
+                          "つまり、",
+                          "一方で、",
+                          "なぜなら、",
+                          "本当は、",
+                          "実は、",
+                          "もちろん、",
+                          "例えば、",
+                          "やがて、",
+                          "だからこそ、",
+                          "今思えば、",
+                          "ふと、",
+                          "ある日、",
+                          "さて、",
+                          "こうして、",
+                          "ついに、",
+                          "また、",
+                          "さらに、",
+                          "まず、",
+                          "次に、",
+                          "最後に",
+                        ];
+                        let text = item.content;
+                        // 「1.」「2.」「3.」の直前で改行
+                        text = text.replace(/(1\.)/g, "__BR__$1");
+                        text = text.replace(/(2\.)/g, "__BR__$1");
+                        text = text.replace(/(3\.)/g, "__BR__$1");
+                        // さらに多くの区切りフレーズの直前または直後で空行を挿入
+                        text = text.replace(/(でもいつからか)/, "__BR__$1");
+                        text = text.replace(/(空手をやめて自由に)/, "__BR__$1");
+                        // breakAfterリストのキーワードの後に空行を挿入（ただし「気づけば、」は区切らない）
+                        breakAfter.forEach((keyword) => {
+                          if (
+                            keyword === "気づけば" ||
+                            keyword === "自分自身と向き合う中で"
+                          ) {
+                            text = text.replace(
+                              new RegExp(keyword + "(、?)", "g"),
+                              (match, p1) => (p1 ? match : keyword + "__BR__")
+                            );
+                          } else {
+                            text = text.split(keyword).join(keyword + "__BR__");
+                          }
+                        });
+                        // 「！」や「？」の後にも改行（ただし直後が「」」の場合は改行しない）
+                        text = text.replace(
+                          /([！？])(?!」)([^<])/g,
+                          "$1__BR__$2"
+                        );
+                        // 2文以上続いた場合に自動で空行を入れる（簡易的な段落分け）
+                        text = text.replace(/(。[^。]{20,}。)/g, "$1__BR__");
+                        // 強調キーワードをspanでラップ
+                        const highlightWords = ["覚悟", "地獄", "自由"];
+                        highlightWords.forEach((word) => {
+                          text = text
+                            .split(word)
+                            .join(
+                              `<span class='font-bold text-[#e53935]'>${word}</span>`
+                            );
+                        });
+                        // 「。」または文末の「──」の後に改行
+                        const parts: string[] = text.split(/(。|──|__BR__)/);
+                        // 強調ワードを含む場合はdangerouslySetInnerHTMLで描画
+                        if (
+                          /<span class='font-bold text=\[#e53935\]'>/.test(
+                            parts[0]
+                          )
+                        ) {
+                          return (
+                            <span
+                              key={i}
+                              dangerouslySetInnerHTML={{ __html: parts[0] }}
+                            />
+                          );
+                        }
+                        return (
+                          <motion.p
+                            key={i}
+                            className={`text-sm leading-normal`}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: i * 0.05 }}
+                            viewport={{ once: true }}
+                          >
+                            {parts.map((part, idx) => {
+                              if (part === "──") {
+                                return null;
+                              }
+                              if (part === "。") {
+                                return (
+                                  <React.Fragment key={idx}>
+                                    {part}
                                     <br />
-                                    <br />
-                                  </>
-                                )}
-                              </span>
-                            ))}
-                        </motion.p>
-                      );
+                                  </React.Fragment>
+                                );
+                              }
+                              if (part === "__BR__") {
+                                return <br key={idx} />;
+                              }
+                              // 強調ワードを含む場合はdangerouslySetInnerHTMLで描画
+                              if (
+                                part.includes(
+                                  "<span class='font-bold text-[#e53935]'>"
+                                )
+                              ) {
+                                return (
+                                  <span
+                                    key={idx}
+                                    dangerouslySetInnerHTML={{ __html: part }}
+                                  />
+                                );
+                              }
+                              return (
+                                <React.Fragment key={idx}>
+                                  {part}
+                                </React.Fragment>
+                              );
+                            })}
+                          </motion.p>
+                        );
+                      }
                     })}
                   </motion.div>
                 </VisualGuide>
@@ -358,30 +693,8 @@ const ProfilePage: React.FC = () => {
             })()}
           </section>
 
-          {/* ページ下部固定CTA → LINE・note誘導に差し替え */}
-          <div className="fixed bottom-0 left-0 w-full z-50 p-4 sm:p-6 bg-[#0a0a0a]/90 backdrop-blur-sm border-t border-[#d4af37]/30 flex flex-col sm:flex-row justify-center items-center gap-4">
-            {/* LINE登録ボタン */}
-            <button
-              onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
-              className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
-              style={{ minWidth: 220 }}
-            >
-              <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-                <rect width="40" height="40" rx="12" fill="#fff" />
-                <path
-                  d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
-                  fill="#06C755"
-                />
-                <path
-                  d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
-                  stroke="#fff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
-            </button>
-            {/* note誘導ボタン */}
+          {/* ページ下部固定CTA → note誘導ボタンのみ残す */}
+          <div className="fixed bottom-0 left-0 w-full z-50 p-4 sm:p-6 bg-[#0a0a0a]/90 backdrop-blur-sm border-t border-[#d4af37]/30 flex justify-center items-center">
             <a
               href="https://note.com/YOUR_NOTE_ID"
               target="_blank"
@@ -393,7 +706,7 @@ const ProfilePage: React.FC = () => {
             </a>
           </div>
 
-          {/* GCS認定コーチセクション（ページ最後に移動） */}
+          {/* GCS認定コーチセクション（LINE特典ボタンより上に移動） */}
           <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10 mb-10 sm:mb-12 mt-16 pb-32">
             <div className="p-6 sm:p-8 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-center">
               <h2 className="text-xl sm:text-2xl font-bold text-[#d4af37] mb-2">
@@ -412,6 +725,30 @@ const ProfilePage: React.FC = () => {
               </p>
             </div>
           </section>
+
+          {/* LINE特典ボタンをGCS認定コーチセクションの下に配置 */}
+          <div className="flex justify-center my-8">
+            <button
+              onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
+              className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105 max-w-xs"
+              style={{ minWidth: 220 }}
+            >
+              <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                <rect width="40" height="40" rx="12" fill="#fff" />
+                <path
+                  d="M20 8C12.268 8 6 13.477 6 20.222c0 3.77 2.49 7.09 6.32 9.13l-1.01 3.7a1 1 0 0 0 1.45 1.13l4.09-2.23c1.01.14 2.06.22 3.15.22 7.732 0 14-5.477 14-12.222C34 13.477 27.732 8 20 8Z"
+                  fill="#06C755"
+                />
+                <path
+                  d="M27.5 19.5h-2m-3 0h-2m-3 0h-2"
+                  stroke="#fff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+              LINEで特典を受け取る
+            </button>
+          </div>
 
           {/* Scroll to Top Button */}
           <motion.button

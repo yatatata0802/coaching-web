@@ -1,6 +1,5 @@
 import React from "react";
 
-
 interface SEOProps {
   title: string;
   description: string;
@@ -33,7 +32,7 @@ const SEO: React.FC<SEOProps> = ({
   lastModifiedDate,
 }) => {
   const fullTitle = `${title} | コーチングサービス`;
-  const fullDescription = `${description} 筋トレ経験を活かした独自のコーチングで、あなたの「変わりたい」を行動に繋げます。初回セッション無料。`;
+  const fullDescription = `${description} 筋トレ経験を活かした独自のコーチングで、あなたの「変わりたい」を行動に繋げます。`;
   const currentUrl = canonical || window.location.href;
 
   const schemaData = {

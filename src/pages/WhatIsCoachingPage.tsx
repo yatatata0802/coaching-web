@@ -162,11 +162,14 @@ const WhatIsCoachingPage: React.FC = () => {
         </div>
 
         {/* ナビゲーションボタン削除済み。LINE・noteボタンのみ残す */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center my-8">
-          {/* LINE登録ボタン */}
+        {/* 必要に応じてLINE特典案内を追加する場合は、以下のように挿入できます */}
+        {/* <div className="text-center text-[#d4af37] font-bold text-lg mb-4">
+          LINEにご登録いただいた方限定で、公安式・『人生脚本』タイプ別診断をプレゼント中！
+        </div> */}
+        <div className="flex flex-col items-center gap-4 justify-center my-8">
           <button
             onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
-            className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
+            className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105 mx-auto"
             style={{ minWidth: 220 }}
           >
             <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
@@ -182,18 +185,8 @@ const WhatIsCoachingPage: React.FC = () => {
                 strokeLinecap="round"
               />
             </svg>
-            ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
+            LINEで特典を受け取る
           </button>
-          {/* note誘導ボタン */}
-          <a
-            href="https://note.com/YOUR_NOTE_ID"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base sm:text-lg shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
-            style={{ minWidth: 200 }}
-          >
-            ＞＞ 物語の“本編”を読む（note第1話へ）
-          </a>
         </div>
 
         <div className="h-20"></div>

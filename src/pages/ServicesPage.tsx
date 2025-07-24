@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Target, TrendingUp, Heart, CheckCircle, Clock } from "lucide-react";
+import { Target, TrendingUp, Heart, CheckCircle, Clock, ArrowDown } from "lucide-react";
 import SEO from "../components/SEO";
 import ParticleBackground from "../components/ParticleBackground";
 import SectionDivider from "../components/SectionDivider";
@@ -134,40 +134,40 @@ const ServicesPage: React.FC = () => {
   // お客様の声・ビフォーアフター事例
   const testimonials = [
     {
-      name: "T.Mさん",
+      name: "Nさん",
       age: "30代",
-      job: "会社員",
-      before: "何をやっても続かず、自己嫌悪に陥る日々",
-      after: "3ヶ月で行動力が劇的に向上し、新しいことに挑戦できるようになった",
-      improvement: "習慣化成功率 90%",
-      duration: "3ヶ月コース",
-      category: "行動変容支援",
+      job: "若手公務員",
+      before: "「自分のことがわかってない」「長所が見えない」という自己理解の不足。真面目で責任感が強い一方で、コミュニケーションに苦手意識があり、言葉に詰まることもしばしば。面接などでは「体力」「継続力」といった無難な回答しかできず、「しっくりこない」と感じていた。「自分にはユーモアがない」というリミッティングビリーフに縛られていた。",
+      after: "野球経験から「仲間を助けたい」という他者貢献の本質に気づき、自分の強みを再発見。心配性＝準備力、慎重さ＝冷静な判断力として“短所を長所に再定義”。「人前で話す」ではなく「1対1で堂々と話せるようになりたい」という現実的な目標へ軸が変化。「質問力を鍛える」ことの意味に気づき、コミュニケーションへの向き合い方が変化。「頼られる存在になりたい」と自信を持って語れるように。",
+      improvement: "自己肯定感アップ",
+      duration: "コーチングセッション",
+      category: "自己理解",
       testimonial:
-        "今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。矢田谷さんの指導のおかげで、目標を達成する力が身につきました。",
+        "「これって強みになるんですか…？ただの心配性やと思ってました」",
     },
     {
-      name: "K.Sさん",
+      name: "Iさん",
       age: "40代",
-      job: "経営者",
-      before: "時間管理ができず、仕事とプライベートのバランスが取れない",
-      after: "毎日の習慣が身につき、仕事もプライベートも充実している",
-      improvement: "時間管理効率 150%向上",
-      duration: "6ヶ月コース",
-      category: "自己管理強化",
+      job: "中間管理職",
+      before: "「何となく分かってるつもり」だった思考が、実は整理されていなかった。家庭・仕事・自分の今後に対するモヤモヤが重なり、優先順位や判断軸が不明確な状態。",
+      after: "「自分を見つめ直す時間は本当に大切だ」と痛感。長年曖昧だった価値観や方向性が言語化され、思考がスッキリ。コーチング後、「その日から即実践」と行動変容が見られた。",
+      improvement: "思考の整理",
+      duration: "コーチングセッション",
+      category: "キャリアデザイン",
       testimonial:
-        "毎日の習慣が身につき、仕事もプライベートも充実しています。矢田谷さんの継続的なサポートのおかげで、理想のライフスタイルを実現できました。",
+        "「やたさんの変わりようにも驚いた。昔のギラギラがなくなってて、これがコーチングの力なんやなって思った」",
     },
     {
-      name: "A.Hさん",
-      age: "20代",
-      job: "フリーランス",
-      before: "自信がなく、人前に立つのが苦手",
-      after: "見た目も心も変わって、周りからの反応が全然違う",
-      improvement: "自信度 200%向上",
-      duration: "12ヶ月コース",
-      category: "心と身体のサポート",
+      name: "Mさん",
+      age: "40代",
+      job: "現バス運転手",
+      before: "転職を目指すも不採用。「年齢的にもう無理かも」という諦めが先行。住宅ローン、発達障害のある娘の育児、人間関係と課題が山積みで、どこから動いていいか分からない状態。",
+      after: "「強みを活かして人脈を広げる」という突破口を発見。セッション当日に迷っていた採用担当者へ連絡→即行動に移し、日程調整まで完了。「目標を高く設定するだけで、考え方も行動もガラッと変わる」と自覚。家族にもセッション内容を共有し、妻からも「ちゃんと考えてるやん」と前向きな反応が得られた。",
+      improvement: "行動力向上",
+      duration: "コーチングセッション",
+      category: "転職支援",
       testimonial:
-        "見た目も心も変わって、周りからの反応が全然違います。矢田谷さんの心身両面からのサポートで、本当に変われました。",
+        "「なんか、想像もつかん方向から解決策が出てくる気がするねん」",
     },
   ];
 
@@ -334,9 +334,14 @@ const ServicesPage: React.FC = () => {
                   </div>
 
                   <button
-                    onClick={() =>
-                      navigate(`/contact?plan=${encodeURIComponent(plan.name)}`)
-                    }
+                    onClick={() => {
+                      const formBase =
+                        "https://docs.google.com/forms/d/e/1FAIpQLScoWlJM_N0VxRsQr0AkX6sqysjT0Gec9GS7Erp2J2IqP8FsOQ/viewform?usp=header";
+                      // Googleフォームの事前入力用パラメータ（フォーム側で設定が必要）
+                      // 例: const planParam = `&entry.1234567890=${encodeURIComponent(plan.name)}`;
+                      // window.open(formBase + planParam, "_blank");
+                      window.open(formBase, "_blank");
+                    }}
                     className={`w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl ${
                       plan.popular
                         ? "bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] hover:from-[#ffd700] hover:to-[#d4af37]"
@@ -348,6 +353,45 @@ const ServicesPage: React.FC = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* セッションの実施方法セクション */}
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4af37] mb-6 drop-shadow-lg">
+                セッションの実施方法
+              </h2>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="rounded-2xl border border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 shadow-xl p-6 sm:p-8"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">場所</h3>
+                  <p className="text-gray-300">対面セッション</p>
+                  <p className="text-gray-400 text-sm mt-1">京橋駅（大阪）周辺のカフェ等</p>
+                  <p className="text-gray-500 text-xs mt-2">※詳細な場所はご相談の上、決定します。</p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">対応可能日時</h3>
+                  <p className="text-gray-300"><span className="font-semibold">平日:</span> 10:00～14:00 / 16:00～19:00</p>
+                  <p className="text-gray-300 mt-1"><span className="font-semibold">土日祝:</span> 10:00～19:00</p>
+                  <p className="text-gray-400 text-xs mt-3">※平日は、地域の見守り活動のため、通学時間帯はセッションをお休みしております。</p>
+                  <p className="text-400 text-xs mt-1">※上記以外の日時についても、お気軽にご相談ください。</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -412,9 +456,21 @@ const ServicesPage: React.FC = () => {
 
                   {/* 変化の矢印 */}
                   <div className="flex justify-center my-3">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#d4af37]/80 to-[#ffd700]/80 border border-[#d4af37]/60 text-[#181818] font-bold text-xs shadow-md">
-                      ↓ 変化
-                    </div>
+                    <motion.div
+                      animate={{
+                        y: [0, 5, 0],
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                      }}
+                    >
+                      <ArrowDown
+                        className="text-[#d4af37]"
+                        size={32}
+                      />
+                    </motion.div>
                   </div>
 
                   {/* After */}
@@ -465,11 +521,10 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* ナビゲーションボタン削除済み。LINE・noteボタンのみ残す */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center my-8">
-          {/* LINE登録ボタン */}
+        <div className="flex flex-col items-center gap-4 justify-center my-8">
           <button
             onClick={() => window.open("https://lin.ee/MX41vXf", "_blank")}
-            className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#06C755] text-white font-bold text-lg sm:text-xl shadow-lg hover:bg-[#32e67f] transition-all duration-300"
+            className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#06C755] text-white font-bold text-xl sm:text-2xl shadow-2xl hover:bg-[#32e67f] transition-all duration-300 transform hover:scale-105 mx-auto"
             style={{ minWidth: 220 }}
           >
             <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
@@ -485,18 +540,8 @@ const ServicesPage: React.FC = () => {
                 strokeLinecap="round"
               />
             </svg>
-            ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
+            LINEで特典を受け取る
           </button>
-          {/* note誘導ボタン */}
-          <a
-            href="https://note.com/YOUR_NOTE_ID"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base sm:text-lg shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
-            style={{ minWidth: 200 }}
-          >
-            ＞＞ 物語の“本編”を読む（note第1話へ）
-          </a>
         </div>
       </div>
     </div>

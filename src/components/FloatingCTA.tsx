@@ -94,10 +94,6 @@ const FloatingCTA: React.FC = () => {
                   <div className="bg-[#d4af37]/10 rounded-lg p-3 mb-4">
                     <div className="flex items-center mb-2">
                       <div className="flex text-[#ffd700] text-xs">★★★★★</div>
-                      <span className="text-gray-300 text-xs ml-2 flex items-center">
-                        <Users size={12} className="mr-1" />
-                        初回セッション無料
-                      </span>
                     </div>
                     <p className="text-gray-400 text-xs">
                       "人生が変わりました！" - 30代男性
@@ -105,7 +101,12 @@ const FloatingCTA: React.FC = () => {
                   </div>
 
                   <motion.button
-                    onClick={handleContact}
+                    onClick={() =>
+                      window.open(
+                        "https://docs.google.com/forms/d/e/1FAIpQLScoWlJM_N0VxRsQr0AkX6sqysjT0Gec9GS7Erp2J2IqP8FsOQ/viewform?usp=header",
+                        "_blank"
+                      )
+                    }
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full bg-gradient-to-r from-[#e53935] via-[#d4af37] to-[#ffd700] text-white font-bold py-4 rounded-lg transition-all duration-300 mobile-touch-target text-sm sm:text-base relative overflow-hidden"
@@ -121,12 +122,8 @@ const FloatingCTA: React.FC = () => {
                   {/* 安心要素 */}
                   <div className="text-center mt-3">
                     <p className="text-gray-500 text-xs">
-                      🔒 完全無料・秘密厳守・24時間以内返信
+                      🔒 秘密厳守・24時間以内返信
                     </p>
-                  </div>
-
-                  <div className="text-xs text-gray-400 mt-2">
-                    初回セッション完全無料
                   </div>
                 </motion.div>
               )}
