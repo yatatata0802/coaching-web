@@ -551,3 +551,30 @@ export const getFunnelAnalytics = async (): Promise<FunnelData[]> => {
     .map(([source, data]) => ({ source, ...data }))
     .sort((a, b) => b.inflow - a.inflow);
 };
+
+// 分析データをリセット（管理者用）
+export const resetAnalyticsData = () => {
+  try {
+    // Supabase側のデータリセットは未実装
+    if (isSupabaseConfigured) {
+      console.warn("Supabaseのデータリセットは手動で行う必要があります。");
+    }
+
+    // ローカルストレージのデータを削除
+    Object.keys(localStorage).forEach((key) => {
+      if (key.startsWith("page_views_")) {
+        localStorage.removeItem(key);
+      }
+    });
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("user_meta");
+    localStorage.removeItem("line_conversion_events");
+
+    console.log("ローカルストレージの分析データをリセットしました。");
+    alert("分析データをリセットしました。ページをリロードします。");
+    window.location.reload();
+  } catch (error) {
+    console.error("分析データのリセット中にエラーが発生しました:", error);
+    alert("リセット中にエラーが発生しました。");
+  }
+};

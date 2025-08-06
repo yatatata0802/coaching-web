@@ -1,0 +1,1469 @@
+
+> coaching-web@1.0.0 dev
+> vite
+
+
+  VITE v5.4.19  ready in 102 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+11:00:02 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+11:00:02 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Expected corresponding JSX closing tag for <main>. (471:6)
+
+  469 |         </div>
+  470 |         
+> 471 |       </div>
+      |       ^
+  472 |     </>
+  473 |   );
+  474 | };
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx:471:6
+  469|          </div>
+  470|          
+  471|        </div>
+     |        ^
+  472|      </>
+  473|    );
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4757:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4728:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4779:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4789:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:39
+      at TypeScriptParserMixin.tryParse (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6935:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:18)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12427:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12494:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11674:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12101:24)
+      at TypeScriptParserMixin.parseArrowExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12076:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11686:12)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+11:00:46 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx
+11:00:46 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Expected corresponding JSX closing tag for <main>. (471:6)
+
+  469 |         </div>
+  470 |         
+> 471 |       </div>
+      |       ^
+  472 |     </>
+  473 |   );
+  474 | };
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx:471:6
+  469|          </div>
+  470|          
+  471|        </div>
+     |        ^
+  472|      </>
+  473|    );
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4757:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4728:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4779:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4789:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:39
+      at TypeScriptParserMixin.tryParse (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6935:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:18)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12427:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12494:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11674:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12101:24)
+      at TypeScriptParserMixin.parseArrowExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12076:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11686:12)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+11:01:09 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+11:01:40 [vite] Pre-transform error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Expected corresponding JSX closing tag for <main>. (471:6)
+
+  469 |         </div>
+  470 |         
+> 471 |       </div>
+      |       ^
+  472 |     </>
+  473 |   );
+  474 | };
+11:01:40 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Expected corresponding JSX closing tag for <main>. (471:6)
+
+  469 |         </div>
+  470 |         
+> 471 |       </div>
+      |       ^
+  472 |     </>
+  473 |   );
+  474 | };
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx:471:6
+  469|          </div>
+  470|          
+  471|        </div>
+     |        ^
+  472|      </>
+  473|    );
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4757:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4728:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4779:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4789:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:39
+      at TypeScriptParserMixin.tryParse (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6935:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:18)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12427:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12494:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11674:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12101:24)
+      at TypeScriptParserMixin.parseArrowExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12076:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11686:12)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+11:01:51 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+11:01:51 [vite] Pre-transform error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Unterminated JSX contents. (471:13)
+
+  469 |         </div>
+  470 |         
+> 471 |       </main>
+      |              ^
+  472 |   );
+  473 | };
+  474 |
+11:01:51 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Unterminated JSX contents. (471:13)
+
+  469 |         </div>
+  470 |         
+> 471 |       </main>
+      |              ^
+  472 |   );
+  473 | };
+  474 |
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx:471:13
+  469|          </div>
+  470|          
+  471|        </main>
+     |               ^
+  472|    );
+  473|  };
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.jsxReadToken (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4478:20)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4804:12)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:5810:10)
+      at TypeScriptParserMixin.next (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:5720:10)
+      at TypeScriptParserMixin.eat (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:5724:12)
+      at TypeScriptParserMixin.expect (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6926:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4710:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4725:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4728:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4779:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4789:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:39
+      at TypeScriptParserMixin.tryParse (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6935:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:18)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12427:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12494:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11674:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+11:02:06 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+11:02:06 [vite] Pre-transform error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Unterminated JSX contents. (471:12)
+
+  469 |         </div>
+  470 |         
+> 471 |       </div>
+      |             ^
+  472 |   );
+  473 | };
+  474 |
+11:02:06 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx: Unterminated JSX contents. (471:12)
+
+  469 |         </div>
+  470 |         
+> 471 |       </div>
+      |             ^
+  472 |   );
+  473 | };
+  474 |
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/pages/HomePage.tsx:471:12
+  469|          </div>
+  470|          
+  471|        </div>
+     |              ^
+  472|    );
+  473|  };
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.jsxReadToken (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4478:20)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4804:12)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:5810:10)
+      at TypeScriptParserMixin.next (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:5720:10)
+      at TypeScriptParserMixin.eat (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:5724:12)
+      at TypeScriptParserMixin.expect (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6926:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4710:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4725:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4728:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4779:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4789:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:39
+      at TypeScriptParserMixin.tryParse (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6935:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9790:18)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12427:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12494:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11674:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+11:04:16 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+12:11:26 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+12:11:33 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+12:11:42 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+12:14:45 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+12:14:54 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+12:17:58 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+12:20:59 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+12:25:44 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+12:33:21 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+12:44:21 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+12:46:17 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+12:48:15 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+12:49:15 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+12:54:49 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+12:56:26 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+12:56:45 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css
+12:58:24 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css
+12:59:58 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css
+13:00:50 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css
+13:03:16 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+13:03:37 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+13:09:45 [vite] hmr update /src/App.tsx, /src/index.css
+13:36:09 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:36:23 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:36:35 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:36:48 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:37:00 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:37:12 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:37:25 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:47:16 [vite] hmr update /src/pages/BlogDetailPage.tsx, /src/index.css
+14:20:13 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/pages/BlogDetailPage.tsx: Unterminated regular expression. (177:34)
+
+  175 |       } else {
+  176 |         processList();
+> 177 |         const parts = line.split(/(\*\*[^
+      |                                   ^
+  178 | \*\*]+\*\*)/g); // **で囲まれた部分を分割
+  179 |         elements.push(
+  180 |           <p key={index} className="text-gray-300 mb-4 leading-relaxed">
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/pages/BlogDetailPage.tsx:177:34
+  175|        } else {
+  176|          processList();
+  177|          const parts = line.split(/(\*\*[^
+     |                                    ^
+  178|  \*\*]+\*\*)/g); // **で囲まれた部分を分割
+  179|          elements.push(
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.readRegexp (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6356:20)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11308:16)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12427:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12494:17)
+      at TypeScriptParserMixin.parseExprListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12176:18)
+      at TypeScriptParserMixin.parseCallExpressionArguments (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11247:22)
+      at TypeScriptParserMixin.parseCoverCallAndAsyncArrowHead (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11181:29)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11115:19)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9353:18)
+      at TypeScriptParserMixin.parseSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11089:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11080:17)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseVar (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13384:91)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13230:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9493:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12851:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12858:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementOrSloppyAnnexBFunctionDeclaration (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12757:17)
+14:20:19 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/pages/BlogDetailPage.tsx: Unterminated regular expression. (177:34)
+
+  175 |       } else {
+  176 |         processList();
+> 177 |         const parts = line.split(/(\*\*[^
+      |                                   ^
+  178 | \*\*]+\*\*)/g); // **で囲まれた部分を分割
+  179 |         elements.push(
+  180 |           <p key={index} className="text-gray-300 mb-4 leading-relaxed">
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/pages/BlogDetailPage.tsx:177:34
+  175|        } else {
+  176|          processList();
+  177|          const parts = line.split(/(\*\*[^
+     |                                    ^
+  178|  \*\*]+\*\*)/g); // **で囲まれた部分を分割
+  179|          elements.push(
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.readRegexp (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6356:20)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11308:16)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12427:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12494:17)
+      at TypeScriptParserMixin.parseExprListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12176:18)
+      at TypeScriptParserMixin.parseCallExpressionArguments (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11247:22)
+      at TypeScriptParserMixin.parseCoverCallAndAsyncArrowHead (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11181:29)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11115:19)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9353:18)
+      at TypeScriptParserMixin.parseSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11089:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11080:17)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseVar (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13384:91)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13230:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9493:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12851:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12858:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementOrSloppyAnnexBFunctionDeclaration (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12757:17)
+14:20:41 [vite] hmr update /src/pages/BlogDetailPage.tsx, /src/index.css
+14:20:47 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:21:02 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:21:02 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+14:21:02 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:
+     |               ^
+  359|        "「この先、もう何ページも増えないんじゃないか」と不安を感じていませんか？過去の経験に縛られず、あなたの“意思”一つで未来を書き換える具体的なステップを解説。",
+  360|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:21:15 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:21:16 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:
+     |               ^
+  359|        "「この先、もう何ページも増えないんじゃないか」と不安を感じていませんか？過去の経験に縛られず、あなたの“意思”一つで未来を書き換える具体的なステップを解説。",
+  360|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:21:16 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+14:21:22 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:21:22 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:
+     |               ^
+  359|        "「この先、もう何ページも増えないんじゃないか」と不安を感じていませんか？過去の経験に縛られず、あなたの“意思”一つで未来を書き換える具体的なステップを解説。",
+  360|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:21:22 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+14:22:13 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:
+     |               ^
+  359|        "「この先、もう何ページも増えないんじゃないか」と不安を感じていませんか？過去の経験に縛られず、あなたの“意思”一つで未来を書き換える具体的なステップを解説。",
+  360|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:22:14 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:
+     |               ^
+  359|        "「この先、もう何ページも増えないんじゃないか」と不安を感じていませんか？過去の経験に縛られず、あなたの“意思”一つで未来を書き換える具体的なステップを解説。",
+  360|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:22:19 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:
+     |               ^
+  359|        "「この先、もう何ページも増えないんじゃないか」と不安を感じていませんか？過去の経験に縛られず、あなたの“意思”一つで未来を書き換える具体的なステップを解説。",
+  360|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+
+Could not open main.js in the editor.
+The editor process exited with an error: spawn cursor ENOENT ('cursor' command does not exist in 'PATH').
+
+14:22:37 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:22:37 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+14:22:37 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:,
+     |               ^
+  359|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  360|      category: "mindset",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:22:51 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13: ERROR: Expected "}" but found ":"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:358:13
+  
+  Expected "}" but found ":"
+  356|        "【元公安が伝授】人生を逆転させる『未来逆算思考』：過去の延長線から抜け出す方法",
+  357|      excerpt:
+  358|        excerpt:,
+     |               ^
+  359|      content: `あなたの人生の物語は、どこまで書かれているでしょうか？\n毎日同じことの繰り返しで、**「この先、もう何ページも増えないんじゃないか」**と、不安に感じてはいないでしょうか？\n多くの人が、過去の経験を振り返り、その延長線上に、ぼんやりとした未来を描こうとします。\nそれは、まるで、**「一度買ってしまった脚本だから、仕方なく演じ続ける」**ようなものだと、私は感じています。\nしかし、私は断言します。\n人生は、あなたの“意思”一つで、全く新しい結末へと書き換えられるのです。\n今日は、従来の思考法とは真逆のアプローチ──**未来から現在へと時間を逆行する、『逆算思考』**について、私の経験を交えて語りましょう。\nこれを知れば、あなたの「ありえない」が、「必然」に変わるかもしれません。\n\n## 過去の延長線に縛られる罠：なぜ私たちは「変わりたい」のに変われないのか？\n私たちは、なぜ過去の延長線から抜け出せないのでしょうか？\n* 「過去の成功体験」という鎖:\n    * 「あの時、こうやったらうまくいったから、今回も同じようにすれば…」\n    * その思考は、新しい挑戦や変化を阻みます。過去の成功が、現状維持の居心地の良い“沼”にあなたを引き戻すのです。\n* 「過去の失敗」という呪縛:\n    * 「どうせ、また失敗するだろう」「私には才能がないから」\n    * 過去の失敗体験が、無意識のうちにあなたの行動にブレーキをかけ、新しい可能性の芽を摘んでしまいます。\nどちらも、あなたの未来を過去の牢獄に閉じ込める、見えない“鎖”です。\nその鎖を断ち切らなければ、あなたはいつまでも、誰かが書いた退屈な脚本を演じ続けることになるでしょう。\n\n## 『未来逆算思考』の核心：理想の未来を「現在地」にする方法\n逆算思考とは、シンプルです。\nまず、**「あなたが本当に望む、完璧な未来（理想のゴール）」を、詳細に描きます。\nそして、その「未来のゴール」を、現在のあなたにとっての「コンフォートゾーン」**にしてしまうのです。\n人間は、コンフォートゾーンから外れると、戻ろうとします。\nであれば、あなたの「居心地の良い場所」を未来の理想に設定すれば、脳は勝手に、そこへ戻ろうとするモチベーション、つまり「行動力」を生み出し始めるのです。\n私が警察官として、特に公安の現場で、**錯綜した情報の中から「真実」を導き出す際、**この「逆算思考」は不可欠なツールでした。\n例えば、対象者の「些細な行動記録（いつ、どこで、誰と会ったか）」という、膨大な情報の断片が、毎日手元に集まります。一見、無意味な行動に見えても、**「〇〇という目的を達成するためには、どのような情報が必要で、次にどんな行動が想定されるか」**を未来から逆算し、その断片を精査していくのです。\nそうすることで、「あの時のあの行動は、こういう意味があったのか」と、**点が線になり、線が面となり、やがて、相手の「真の目的」と「次の行動」が浮き彫りになる。**この思考法は、あなたの人生においても、目標達成への最適な道筋を見出す力があると、私は確信しています。\n\n## 【実践】未来を“力ずくで”引き寄せる3つのステップ\nでは、この逆算思考を、あなたの人生にどう落とし込むのか。\nステップ1：『完璧な未来』を、五感で味わえ。\n* 目標: 誰の真似でもない、あなただけの「理想の未来」を、脳に焼き付ける。\n* 行動:\n    * 「1年後、あなたはどんな一日を送っていたいか？」\n    * 「どんな場所で、誰と、何を話し、どんな感情を味わっていたいか？」\n    * 五感をフル活用し、映画のワンシーンのように、詳細に言語化し、紙に書き出してください。写真や絵を貼るのも効果的です。\nステップ2：『最速の逆算ルート』を、一点集中で特定せよ。\n* 目標: 理想の未来と、現在のあなたの間に存在する「最も大きな壁」を特定し、それを破壊するための最初の一手を導き出す。\n* 行動:\n    * ステップ1で描いた理想の未来を、達成するための「大きな中間目標」を3つ設定する。\n    * その中間目標を達成するために、「今、この瞬間に、最も効果的な行動は何か？」を逆算する。\n    * 多くのことをやろうとしない。**「最もインパクトのある、たった一つの行動」**に焦点を当ててください。\nステップ3：『今日』から、未来を“召喚”しろ。\n* 目標: 理想の未来にいる自分を、現在に引き寄せる。\n* 行動:\n    * ステップ2で特定した「たった一つの行動」を、今日から毎日、必ず実行する。\n    * 「モチベーションが上がらないからできない」という言い訳は通用しません。あなたの脳に、「これが新しいコンフォートゾーンだ」と、強制的に覚え込ませるのです。\n    * **「理想の未来にいる自分なら、この状況でどう振る舞うか？」**と考え、そのように「演じて」みてください。脳は、その「演技」を、やがて「本物」だと認識し始めます。\n\n最後に：あなたの人生の“脚本”は、白紙だ。\n過去の延長線上に、あなたの未来を描くのは、もう終わりにしましょう。\nあなたは、その人生の“脚本家”であり、“監督”であり、“主役”なのです。\nあなたの人生の「最終章」は、どんな結末ですか？\nその結末から逆算した時、あなたは「今日」、何をすべきでしょうか？\nさあ、あなたの人生の“舞台”は、もう幕を開けています。\n台本を握りしめ、誰の真似でもない、あなただけの“最高の役”を、今日から堂々と演じ抜きましょう。`,
+  360|      category: "mindset",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:23:16 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:23:44 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:24:35 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:27:35 [vite] hmr update /src/pages/BlogDetailPage.tsx, /src/index.css
+14:29:14 [vite] hmr update /src/pages/BlogPage.tsx, /src/index.css
+14:29:24 [vite] hmr update /src/pages/BlogPage.tsx, /src/index.css
+14:29:36 [vite] hmr update /src/pages/BlogDetailPage.tsx, /src/index.css
+14:32:04 [vite] hmr update /src/pages/BlogPage.tsx, /src/index.css
+14:36:00 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:36:00 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:36:00 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+14:37:13 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:37:13 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:37:13 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+14:39:32 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:40:33 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:41:17 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:42:18 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:42:18 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+14:42:19 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:42:43 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:42:43 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+14:42:43 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:43:19 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:43:20 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:43:35 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:43:35 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+14:43:36 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:45:10 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:45:30 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:45:30 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+14:45:30 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:46:00 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:46:23 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:46:24 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+14:46:24 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:384:2
+  
+  Unexpected "}"
+  382|      punchline: "脳は、“演じた自分”を“本物”だと認識する",
+  383|    },
+  384|    },
+     |    ^
+  385|    {
+  386|      id: "20250806-prepayment-of-cost",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+14:47:07 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:10:48 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:45:20 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:47:55 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:48:44 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:50:46 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:52:45 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:52:45 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:446:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:446:2
+  
+  Expected identifier but found "{"
+  444|    },
+  445|    {
+  446|    {
+     |    ^
+  447|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  448|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:52:45 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:446:2: ERROR: Expected identifier but found "{"
+15:53:04 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:446:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:446:2
+  
+  Expected identifier but found "{"
+  444|    },
+  445|    {
+  446|    {
+     |    ^
+  447|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  448|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:53:06 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:446:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:446:2
+  
+  Expected identifier but found "{"
+  444|    },
+  445|    {
+  446|    {
+     |    ^
+  447|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  448|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:54:20 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:54:21 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+15:54:21 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2
+  
+  Expected identifier but found "{"
+  440|    },
+  441|    {
+  442|    {
+     |    ^
+  443|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  444|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:54:27 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:54:27 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+15:54:27 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2
+  
+  Expected identifier but found "{"
+  440|    },
+  441|    {
+  442|    {
+     |    ^
+  443|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  444|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:54:34 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:54:34 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+15:54:34 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2
+  
+  Expected identifier but found "{"
+  440|    },
+  441|    {
+  442|    {
+     |    ^
+  443|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  444|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:55:02 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:55:03 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+15:55:03 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2
+  
+  Expected identifier but found "{"
+  440|    },
+  441|    {
+  442|    {
+     |    ^
+  443|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  444|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:56:01 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2
+  
+  Expected identifier but found "{"
+  440|    },
+  441|    {
+  442|    {
+     |    ^
+  443|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  444|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:57:08 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2
+  
+  Expected identifier but found "{"
+  440|    },
+  441|    {
+  442|    {
+     |    ^
+  443|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  444|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:57:09 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:442:2
+  
+  Expected identifier but found "{"
+  440|    },
+  441|    {
+  442|    {
+     |    ^
+  443|      id: "20250727-prepayment-of-cost", // 新しい記事のID
+  444|      title: "【元公安が語る】人生を“動かす”究極のスイッチ：代償の先払い、対価の後受け",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:58:31 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+15:58:31 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2: ERROR: Expected identifier but found "{"
+15:58:31 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2
+  
+  Expected identifier but found "{"
+  445|    },
+  446|    {
+  447|    {
+     |    ^
+  448|      id: "20250806-goal-setting",
+  449|      title: "【元公安が警告】ゴールなき未来は「今のまま」確定する。",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:58:56 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2
+  
+  Expected identifier but found "{"
+  445|    },
+  446|    {
+  447|    {
+     |    ^
+  448|      id: "20250806-goal-setting",
+  449|      title: "【元公安が警告】ゴールなき未来は「今のまま」確定する。",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+15:59:27 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2
+  
+  Expected identifier but found "{"
+  445|    },
+  446|    {
+  447|    {
+     |    ^
+  448|      id: "20250806-goal-setting",
+  449|      title: "【元公安が警告】ゴールなき未来は「今のまま」確定する。",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+16:00:16 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2
+  
+  Expected identifier but found "{"
+  445|    },
+  446|    {
+  447|    {
+     |    ^
+  448|      id: "20250806-goal-setting",
+  449|      title: "【元公安が警告】ゴールなき未来は「今のまま」確定する。",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+16:00:17 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+16:00:17 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2: ERROR: Expected identifier but found "{"
+16:00:17 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2: ERROR: Expected identifier but found "{"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:447:2
+  
+  Expected identifier but found "{"
+  445|    },
+  446|    {
+  447|    {
+     |    ^
+  448|      id: "20250806-goal-setting",
+  449|      title: "【元公安が警告】ゴールなき未来は「今のまま」確定する。",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+16:00:55 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+16:02:55 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+16:06:04 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx

@@ -1,9 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Mail, MapPin, Clock, CheckCircle } from "lucide-react";
 import SEO from "../components/SEO";
+import { CONTACT_INFO, ASSURANCES } from "../constants/content";
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] py-16 px-4 mt-20">
+    <div className="min-h-[60vh] py-16 px-4 mt-20">
       <SEO
         title="お問い合わせ・お申込み"
         description="コーチングサービスのお問い合わせ・お申込みはこちらから。"
@@ -32,9 +35,11 @@ const ContactPage: React.FC = () => {
         <p className="text-lg text-gray-200 mb-2">
           コーチングサービスへのお申込み・無料相談・お問い合わせは、
           <br className="hidden sm:block" />
-          下記のGoogleフォームよりお願いいたします。
+          下記のGoogleフォームまたはLINEよりお願いいたします。
         </p>
       </div>
+
+      
 
       <div className="flex flex-col items-center gap-3 justify-center mt-2 mb-0">
         <a
@@ -68,6 +73,28 @@ const ContactPage: React.FC = () => {
           LINEで特典を受け取る
         </a>
       </div>
+
+      {/* 安心保証セクション */}
+      <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-[#1a1a1a] border border-[#d4af37]/30 rounded-xl p-6 sm:p-8 shadow-lg"
+        >
+          <h2 className="text-2xl font-bold text-[#d4af37] mb-6 text-center">
+            安心のサポート体制
+          </h2>
+          <ul className="space-y-4">
+            {ASSURANCES.map((assurance, index) => (
+              <li key={index} className="flex items-start gap-4">
+                <CheckCircle size={24} className="text-[#d4af37] flex-shrink-0 mt-1" />
+                <p className="text-lg text-gray-200">{assurance}</p>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </section>
     </div>
   );
 };

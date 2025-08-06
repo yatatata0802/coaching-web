@@ -1,178 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Target, TrendingUp, Heart, CheckCircle, Clock, ArrowDown } from "lucide-react";
 import SEO from "../components/SEO";
 import ParticleBackground from "../components/ParticleBackground";
-import SectionDivider from "../components/SectionDivider";
+import ServiceTestimonialCard from "../components/ui/ServiceTestimonialCard";
+import { SERVICES_PAGE_DATA, PRICING_PLANS, SERVICE_PAGE_TESTIMONIALS } from "../constants/content";
+import { Target, TrendingUp, Heart, CheckCircle, Clock } from "lucide-react";
 
 const ServicesPage: React.FC = () => {
   const navigate = useNavigate();
 
-  const services = [
-    {
-      title: "行動変容支援",
-      subtitle: "「変わりたい」を「変われる」に",
-      description:
-        "頭では分かってるのに行動できない。そんなあなたの心の壁を取り除き、確実に一歩を踏み出せるようサポートします。",
-      icon: Target,
-      color: "#e53935",
-      features: [
-        "目標設定とアクションプランの作成",
-        "行動の障壁となる思考パターンの特定",
-        "小さな成功体験の積み重ね",
-        "継続的なモチベーション管理",
-      ],
-      benefits: [
-        "3ヶ月で行動力が劇的に向上",
-        "先延ばし癖が改善される",
-        "自信を持って挑戦できるようになる",
-      ],
-      testimonial: {
-        text: "今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。",
-        author: "30代 会社員 T.Mさん",
-      },
-    },
-    {
-      title: "自己管理強化",
-      subtitle: "継続する力を身につける",
-      description:
-        "三日坊主から卒業し、目標達成に不可欠な「継続する力」を科学的アプローチで育てます。",
-      icon: TrendingUp,
-      color: "#d4af37",
-      features: [
-        "習慣化のメカニズム理解",
-        "時間管理とエネルギー管理",
-        "セルフモニタリング技術",
-        "挫折からの立ち直り方",
-      ],
-      benefits: [
-        "習慣化成功率90%以上",
-        "時間の使い方が劇的に改善",
-        "ストレス耐性が向上",
-      ],
-      testimonial: {
-        text: "毎日の習慣が身につき、仕事もプライベートも充実しています。",
-        author: "40代 経営者 K.Sさん",
-      },
-    },
-    {
-      title: "心と身体のサポート",
-      subtitle: "内面と外見の両方から変革",
-      description:
-        "筋トレや運動を通じて得た継続のコツを活かし、メンタルとフィジカルの両面からバランスの取れたサポートを提供します。",
-      icon: Heart,
-      color: "#4caf50",
-      features: [
-        "メンタルとフィジカルの相互作用理解",
-        "ストレス管理とリカバリー",
-        "パフォーマンス向上のための生活習慣",
-        "自信構築のためのボディメイク",
-      ],
-      benefits: [
-        "心身ともに健康的な変化",
-        "自信と魅力が大幅アップ",
-        "エネルギーレベルが向上",
-      ],
-      testimonial: {
-        text: "見た目も心も変わって、周りからの反応が全然違います。",
-        author: "20代 フリーランス A.Hさん",
-      },
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "ベーシック",
-      originalPrice: "月額 20,000円",
-      salePrice: "月額 15,000円",
-      discount: "25%OFF",
-      duration: "3ヶ月コース",
-      features: [
-        "月1回のセッション（60分）",
-        "チャットサポート",
-        "目標設定・進捗管理",
-        "基本的な習慣化サポート",
-      ],
-      popular: false,
-      description: "初めてコーチングを受ける方におすすめ",
-    },
-    {
-      name: "スタンダード",
-      originalPrice: "月額 35,000円",
-      salePrice: "月額 25,000円",
-      discount: "29%OFF",
-      duration: "6ヶ月コース",
-      features: [
-        "月2回のセッション（60分）",
-        "24時間チャットサポート",
-        "目標設定・進捗管理",
-        "習慣化サポート",
-        "継続的なモチベーション管理",
-      ],
-      popular: true,
-      description: "最も選ばれているプラン",
-    },
-    {
-      name: "プレミアム",
-      originalPrice: "月額 50,000円",
-      salePrice: "月額 40,000円",
-      discount: "20%OFF",
-      duration: "12ヶ月コース",
-      features: [
-        "月3回のセッション（90分）",
-        "24時間優先チャットサポート",
-        "完全オーダーメイドプログラム",
-        "継続的なモチベーション管理",
-        "成果保証制度",
-      ],
-      popular: false,
-      description: "本気で変わりたい方へ",
-    },
-  ];
-
-  // お客様の声・ビフォーアフター事例
-  const testimonials = [
-    {
-      name: "Nさん",
-      age: "30代",
-      job: "若手公務員",
-      before: "「自分のことがわかってない」「長所が見えない」という自己理解の不足。真面目で責任感が強い一方で、コミュニケーションに苦手意識があり、言葉に詰まることもしばしば。面接などでは「体力」「継続力」といった無難な回答しかできず、「しっくりこない」と感じていた。「自分にはユーモアがない」というリミッティングビリーフに縛られていた。",
-      after: "野球経験から「仲間を助けたい」という他者貢献の本質に気づき、自分の強みを再発見。心配性＝準備力、慎重さ＝冷静な判断力として“短所を長所に再定義”。「人前で話す」ではなく「1対1で堂々と話せるようになりたい」という現実的な目標へ軸が変化。「質問力を鍛える」ことの意味に気づき、コミュニケーションへの向き合い方が変化。「頼られる存在になりたい」と自信を持って語れるように。",
-      improvement: "自己肯定感アップ",
-      duration: "コーチングセッション",
-      category: "自己理解",
-      testimonial:
-        "「これって強みになるんですか…？ただの心配性やと思ってました」",
-    },
-    {
-      name: "Iさん",
-      age: "40代",
-      job: "中間管理職",
-      before: "「何となく分かってるつもり」だった思考が、実は整理されていなかった。家庭・仕事・自分の今後に対するモヤモヤが重なり、優先順位や判断軸が不明確な状態。",
-      after: "「自分を見つめ直す時間は本当に大切だ」と痛感。長年曖昧だった価値観や方向性が言語化され、思考がスッキリ。コーチング後、「その日から即実践」と行動変容が見られた。",
-      improvement: "思考の整理",
-      duration: "コーチングセッション",
-      category: "キャリアデザイン",
-      testimonial:
-        "「やたさんの変わりようにも驚いた。昔のギラギラがなくなってて、これがコーチングの力なんやなって思った」",
-    },
-    {
-      name: "Mさん",
-      age: "40代",
-      job: "現バス運転手",
-      before: "転職を目指すも不採用。「年齢的にもう無理かも」という諦めが先行。住宅ローン、発達障害のある娘の育児、人間関係と課題が山積みで、どこから動いていいか分からない状態。",
-      after: "「強みを活かして人脈を広げる」という突破口を発見。セッション当日に迷っていた採用担当者へ連絡→即行動に移し、日程調整まで完了。「目標を高く設定するだけで、考え方も行動もガラッと変わる」と自覚。家族にもセッション内容を共有し、妻からも「ちゃんと考えてるやん」と前向きな反応が得られた。",
-      improvement: "行動力向上",
-      duration: "コーチングセッション",
-      category: "転職支援",
-      testimonial:
-        "「なんか、想像もつかん方向から解決策が出てくる気がするねん」",
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0a0a0a] to-[#181818] text-white header-safe-padding pb-12 sm:pb-16 mobile-safe-area relative overflow-hidden">
+    <div className="min-h-screen header-safe-padding pb-12 sm:pb-16 mobile-safe-area relative overflow-hidden">
       <SEO
         title="コーチングサービス | 矢田谷充則の提供サービスと料金"
         description="矢田谷充則が提供する行動変容支援、自己管理強化、心と身体のサポートといったコーチングサービスの詳細と料金プランをご紹介します。あなたの「変わりたい」を現実にする最適なプランを見つけてください。"
@@ -188,7 +27,7 @@ const ServicesPage: React.FC = () => {
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         {/* ヒーローセクション */}
-        <section className="text-center py-12 sm:py-16 lg:py-20">
+        <section className="text-center py-12 sm:py-16 lg:py-20 pt-[var(--header-top-desktop)] md:pt-[var(--header-top-mobile)]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -268,7 +107,7 @@ const ServicesPage: React.FC = () => {
             </motion.div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {pricingPlans.map((plan, index) => (
+              {PRICING_PLANS.map((plan, index) => (
                 <motion.div
                   key={plan.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -379,16 +218,16 @@ const ServicesPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">場所</h3>
-                  <p className="text-gray-300">対面セッション</p>
-                  <p className="text-gray-400 text-sm mt-1">京橋駅（大阪）周辺のカフェ等</p>
+                  <p className="text-gray-300">対面セッション：</p>
+                  <p className="text-gray-400 text-sm mt-1">プライベートセッションルーム（京橋駅より徒歩3分）</p>
+                  <p className="text-gray-400 text-sm mt-1">または京橋駅（大阪）周辺のカフェ等</p>
                   <p className="text-gray-500 text-xs mt-2">※詳細な場所はご相談の上、決定します。</p>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">対応可能日時</h3>
-                  <p className="text-gray-300"><span className="font-semibold">平日:</span> 10:00～14:00 / 16:00～19:00</p>
+                  <p className="text-gray-300"><span className="font-semibold">平日:</span> 10:00～20:00</p>
                   <p className="text-gray-300 mt-1"><span className="font-semibold">土日祝:</span> 10:00～19:00</p>
-                  <p className="text-gray-400 text-xs mt-3">※平日は、地域の見守り活動のため、通学時間帯はセッションをお休みしております。</p>
-                  <p className="text-400 text-xs mt-1">※上記以外の日時についても、お気軽にご相談ください。</p>
+                  <p className="text-gray-400 text-xs mt-3">※上記以外の日時についても、お気軽にご相談ください。</p>
                 </div>
               </div>
             </motion.div>
@@ -415,94 +254,8 @@ const ServicesPage: React.FC = () => {
             </motion.div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.8 }}
-                  className="relative rounded-2xl border border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 shadow-xl p-6 hover:shadow-2xl hover:shadow-[#d4af37]/10 transition-all duration-300"
-                >
-                  {/* カテゴリバッジ */}
-                  <div className="absolute -top-3 left-6">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#d4af37]/20 text-[#d4af37]">
-                      {testimonial.category}
-                    </span>
-                  </div>
-
-                  {/* お客様情報 */}
-                  <div className="text-center mb-6 pt-4">
-                    <h3 className="text-lg font-bold text-[#d4af37] mb-2">
-                      {testimonial.name}
-                    </h3>
-                    <p className="text-gray-400 text-sm mb-4">
-                      {testimonial.age}・{testimonial.job}
-                    </p>
-                    <div className="flex items-center justify-center gap-2 text-xs text-[#d4af37]">
-                      <Clock size={12} />
-                      <span>{testimonial.duration}</span>
-                    </div>
-                  </div>
-
-                  {/* Before */}
-                  <div className="rounded-xl bg-gradient-to-br from-[#e53935]/20 to-[#181818]/60 border border-[#e53935]/40 p-4 mb-4">
-                    <div className="text-sm font-bold text-[#e53935] mb-2">
-                      Before
-                    </div>
-                    <p className="text-gray-300 text-xs leading-relaxed">
-                      {testimonial.before}
-                    </p>
-                  </div>
-
-                  {/* 変化の矢印 */}
-                  <div className="flex justify-center my-3">
-                    <motion.div
-                      animate={{
-                        y: [0, 5, 0],
-                      }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                      }}
-                    >
-                      <ArrowDown
-                        className="text-[#d4af37]"
-                        size={32}
-                      />
-                    </motion.div>
-                  </div>
-
-                  {/* After */}
-                  <div className="rounded-xl bg-gradient-to-br from-[#1e3a1e]/20 to-[#181818]/60 border border-green-700/40 p-4 mb-4">
-                    <div className="text-sm font-bold text-green-400 mb-2">
-                      After
-                    </div>
-                    <p className="text-gray-300 text-xs leading-relaxed">
-                      {testimonial.after}
-                    </p>
-                  </div>
-
-                  {/* 改善数値 */}
-                  <div className="rounded-xl bg-gradient-to-br from-[#d4af37]/20 to-[#181818]/60 border border-[#d4af37]/40 p-3 mb-4">
-                    <div className="text-sm font-bold text-[#d4af37] mb-1">
-                      改善結果
-                    </div>
-                    <p className="text-gray-300 text-xs">
-                      {testimonial.improvement}
-                    </p>
-                  </div>
-
-                  {/* お客様の声 */}
-                  <div className="rounded-xl bg-gradient-to-br from-[#181818]/80 to-[#333]/80 border border-gray-500/30 p-4">
-                    <div className="text-sm font-bold text-gray-200 mb-2">
-                      お客様の声
-                    </div>
-                    <p className="text-gray-300 text-xs leading-relaxed italic">
-                      "{testimonial.testimonial}"
-                    </p>
-                  </div>
-                </motion.div>
+              {SERVICE_PAGE_TESTIMONIALS.map((testimonial, index) => (
+                <ServiceTestimonialCard key={index} testimonial={testimonial} index={index} />
               ))}
             </div>
 

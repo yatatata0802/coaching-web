@@ -1,30 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Home,
-  User,
-  HelpCircle,
-  Settings,
-  Mail,
-  BookOpen,
-  Menu,
-  X,
-} from "lucide-react";
+import { NAV_ITEMS } from "../constants/navigation";
+import { Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const navItems = [
-    { path: "/main", label: "HOME", icon: Home },
-    { path: "/profile", label: "PROFILE", icon: User },
-    { path: "/what-coaching", label: "WHAT'S COACHING", icon: HelpCircle },
-    { path: "/services", label: "SERVICES", icon: Settings },
-    { path: "/blog", label: "BLOG", icon: BookOpen },
-    { path: "/contact", label: "CONTACT", icon: Mail },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +62,7 @@ const Header: React.FC = () => {
           {/* デスクトップナビゲーション - 中央配置 */}
           <div className="hidden md:flex justify-center items-center">
             <ul className="flex space-x-6 lg:space-x-8">
-              {navItems.map((item, index) => {
+              {NAV_ITEMS.map((item, index) => {
                 const IconComponent = item.icon;
                 const isActive = location.pathname === item.path;
 
@@ -160,7 +143,7 @@ const Header: React.FC = () => {
               className="md:hidden bg-black/95 backdrop-blur-xl border-t border-[#d4af37]/20"
             >
               <div className="px-4 py-4 space-y-1 max-h-[70vh] overflow-y-auto">
-                {navItems.map((item, index) => {
+                {NAV_ITEMS.map((item, index) => {
                   const IconComponent = item.icon;
                   const isActive = location.pathname === item.path;
 

@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { User, HelpCircle, Settings, Target, Eye } from "lucide-react";
+import { User, HelpCircle, Settings, Target, Eye, Star } from "lucide-react";
 import SectionDivider from "../components/SectionDivider";
 import VisualGuide from "../components/ui/VisualGuide";
 import MobileOptimizedButton from "../components/ui/MobileOptimizedButton";
+import TestimonialCard from "../components/ui/TestimonialCard"; // 追加
 
 import SEO from "../components/SEO";
-import { SUPPORT_TARGETS } from "../constants/content";
+import { SUPPORT_TARGETS, TESTIMONIALS } from "../constants/content"; // 追加
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,11 +74,11 @@ const HomePage: React.FC = () => {
         description="元公安警察官として培った洞察力と問題解決能力を活かし、矢田谷充則があなたの「変わりたい」を力強くサポート。目標達成、行動変容、自己実現を目指すパーソナルコーチングを提供します。初回無料相談受付中。"
         keywords="パーソナルコーチング, 矢田谷充則, 元公安警察官, コーチング, 変わりたい, やる気, 続かない, 目標達成, 行動変容, 自己実現, 筋トレ, 継続力, 大阪, 無料相談"
       />
-      <div className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden">
+      <main className="min-h-screen font-sans relative overflow-hidden">
         {/* Heroセクション - シンプルなテキスト・CTAのみ */}
         <section
           ref={heroRef}
-          className="relative min-h-screen flex flex-col justify-center items-center px-4 header-safe-padding sm:px-6 lg:px-8"
+          className="relative min-h-screen flex flex-col justify-center items-center px-4 pt-[var(--header-top-desktop)] sm:px-6 lg:px-8 md:pt-[var(--header-top-mobile)]"
         >
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -85,6 +86,20 @@ const HomePage: React.FC = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="relative z-20 text-center max-w-4xl"
           >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 1 }}
+              className="mb-4 text-lg sm:text-xl md:text-2xl text-red-500 font-semibold"
+              style={{
+                textShadow: `
+                  0 0 10px rgba(255, 0, 0, 0.7),
+                  0 0 20px rgba(255, 0, 0, 0.5)
+                `,
+              }}
+            >
+              「このままじゃ、終わりたくない」
+            </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -142,7 +157,7 @@ const HomePage: React.FC = () => {
                     strokeLinecap="round"
                   />
                 </svg>
-                ＞＞ LINEで、最初の一歩を踏み出すヒントを受け取る
+                LINE登録で、人生脚本診断を無料プレゼント！
               </button>
             </div>
           </motion.div>
@@ -171,8 +186,7 @@ const HomePage: React.FC = () => {
                   <VisualGuide type="pulse-dot" className="ml-4" />
                 </div>
 
-                <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
-                  <div className="mt-8 space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
+                <div className="mt-8 space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                     <p>
                       タトゥーの針が肌に刺さる瞬間、20年の警察人生に終止符を打った。
                     </p>
@@ -189,7 +203,6 @@ const HomePage: React.FC = () => {
                       脚本を“誰か”に書かれた人生から、自分で書き直す人生へ。
                     </p>
                   </div>
-                </div>
 
                 <div className="flex justify-center mt-8 sm:mt-10">
                   <VisualGuide type="arrow-right" delay={1}>
@@ -206,17 +219,46 @@ const HomePage: React.FC = () => {
                 {/* noteへの導線追加 */}
                 <div className="flex justify-center mt-6">
                   <a
-                    href="https://note.com/YOUR_NOTE_ID"
+                    href="https://note.com/coach_yatagai"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
                     style={{ minWidth: 220 }}
                   >
-                    ＞＞ 物語の“本編”を読む（note第1話へ）
+                    noteで、元公安警察官の『人生逆転劇』を読む
                   </a>
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* お客様の声セクション */}
+        <section
+          ref={addToRefs}
+          className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-black/20"
+        >
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 flex items-center justify-center gap-3">
+                <Star className="text-[#d4af37]" size={32}/>
+                お客様の声
+                <Star className="text-[#d4af37]" size={32}/>
+              </h2>
+              <p className="text-lg text-gray-400">コーチングで人生が変わった方々のリアルな体験談</p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {TESTIMONIALS.map((testimonial, index) => (
+                <TestimonialCard key={index} testimonial={testimonial} index={index} />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -371,11 +413,11 @@ const HomePage: React.FC = () => {
         >
           <div className="max-w-4xl mx-auto">
             <motion.div
-              className="p-8 sm:p-12 lg:p-16 bg-gradient-to-br from-[#06C755]/20 via-[#32e67f]/10 to-[#06C755]/20 border border-[#06C755]/40 rounded-2xl sm:rounded-3xl text-center backdrop-blur-sm relative overflow-hidden"
+              className="p-8 sm:p-12 lg:p-16 bg-gradient-to-br from-[#d4af37]/20 via-[#ffd700]/10 to-[#d4af37]/20 border border-[#d4af37]/40 rounded-2xl sm:rounded-3xl text-center backdrop-blur-sm relative overflow-hidden"
               whileHover={{ scale: 1.02 }}
             >
               {/* 背景アニメーション */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#06C755]/10 to-[#32e67f]/10 rounded-2xl sm:rounded-3xl blur-xl opacity-50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#d4af37]/10 to-[#ffd700]/10 rounded-2xl sm:rounded-3xl blur-xl opacity-50" />
 
               <div className="relative z-10">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 jp-text-optimal text-balance">
@@ -425,11 +467,8 @@ const HomePage: React.FC = () => {
             トップへ戻る
           </MobileOptimizedButton>
         </div>
-        {/* フッター：個別作戦会議リンク */}
-        <footer className="text-center pb-8 text-xs text-gray-500">
-          {/* フッターの個別作戦会議リンクを削除 */}
-        </footer>
-      </div>
+        
+      </main>
     </>
   );
 };
