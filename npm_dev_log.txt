@@ -1467,3 +1467,7 @@ The editor process exited with an error: spawn cursor ENOENT ('cursor' command d
 16:00:55 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
 16:02:55 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
 16:06:04 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+16:24:15 [vite] page reload public/google1d88b45e3211c5db (1).html
+16:25:22 [vite] page reload public/google1d88b45e3211c5db.html
+16:27:57 [vite] page reload public/google1d88b45e3211c5db (1).html
+16:38:20 [vite] page reload index.html
