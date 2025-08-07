@@ -217,11 +217,14 @@ const ServicesPage: React.FC = () => {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">場所</h3>
-                  <p className="text-gray-300">対面セッション：</p>
-                  <p className="text-gray-400 text-sm mt-1">プライベートセッションルーム（京橋駅より徒歩3分）</p>
-                  <p className="text-gray-400 text-sm mt-1">または京橋駅（大阪）周辺のカフェ等</p>
-                  <p className="text-gray-500 text-xs mt-2">※詳細な場所はご相談の上、決定します。</p>
+                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">セッションの実施形式</h3>
+                  <p className="text-gray-300">当コーチングは、対面形式でのセッションを基本としております。オンラインでの実施は現在行っておりません。</p>
+                  <p className="text-gray-300 mt-2">以下のいずれかの場所をお選びいただけます。</p>
+                  <ul className="list-disc list-inside text-gray-400 text-sm mt-2 ml-4">
+                    <li>私の自宅（京橋駅より徒歩3分）</li>
+                    <li>京橋駅（大阪）周辺の喫茶店</li>
+                  </ul>
+                  <p className="text-gray-500 text-xs mt-2">※詳細な場所は、お申し込み後に個別にご案内いたします。</p>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">対応可能日時</h3>

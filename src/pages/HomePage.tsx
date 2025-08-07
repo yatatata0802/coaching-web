@@ -3,14 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { User, HelpCircle, Settings, Target, Eye, Star } from "lucide-react";
-import SectionDivider from "../components/SectionDivider";
+import { User, HelpCircle, Settings, Target, Eye } from "lucide-react";
 import VisualGuide from "../components/ui/VisualGuide";
 import MobileOptimizedButton from "../components/ui/MobileOptimizedButton";
-import TestimonialCard from "../components/ui/TestimonialCard"; // 追加
-
 import SEO from "../components/SEO";
-import { SUPPORT_TARGETS, TESTIMONIALS } from "../constants/content"; // 追加
+import { SUPPORT_TARGETS } from "../constants/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +17,6 @@ const HomePage: React.FC = () => {
   const sectionsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    // ヒーローセクションシネマティック登場
     const tl = gsap.timeline();
 
     tl.fromTo(
@@ -29,7 +25,6 @@ const HomePage: React.FC = () => {
       { opacity: 1, y: 0, duration: 1.5, ease: "power3.out" }
     );
 
-    // セクションのスクロール連動アニメーション
     sectionsRef.current.forEach((section) => {
       if (section) {
         gsap.fromTo(
@@ -78,7 +73,7 @@ const HomePage: React.FC = () => {
         {/* Heroセクション - シンプルなテキスト・CTAのみ */}
         <section
           ref={heroRef}
-          className="relative min-h-screen flex flex-col justify-center items-center px-4 pt-[var(--header-top-desktop)] sm:px-6 lg:px-8 md:pt-[var(--header-top-mobile)]"
+          className="relative min-h-screen flex flex-col justify-center items-center px-4 pt-24 md:pt-20 sm:px-6 lg:px-8"
         >
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -157,7 +152,7 @@ const HomePage: React.FC = () => {
                     strokeLinecap="round"
                   />
                 </svg>
-                LINE登録で、人生脚本診断を無料プレゼント！
+                LINEで「人生脚本」無料診断を受ける
               </button>
             </div>
           </motion.div>
@@ -212,28 +207,14 @@ const HomePage: React.FC = () => {
                       variant="primary"
                       size="lg"
                     >
-                      〜 PROFILE 〜
+                      すべての物語を読む
                     </MobileOptimizedButton>
                   </VisualGuide>
-                </div>
-                {/* noteへの導線追加 */}
-                <div className="flex justify-center mt-6">
-                  <a
-                    href="https://note.com/coach_yatagai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
-                    style={{ minWidth: 220 }}
-                  >
-                    より詳しい物語は、noteで
-                  </a>
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
-
-        
 
         {/* サポートセクション - シンプル表示 */}
         <section

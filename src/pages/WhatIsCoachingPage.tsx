@@ -79,7 +79,7 @@ const WhatIsCoachingPage: React.FC = () => {
                     >
                       <Icon size={32} className="text-[#d4af37]" />
                     </motion.div>
-                    <h2 className="text-4xl font-bold text-[#d4af37] font-serif md:text-2xl">
+                    <h2 className="text-3xl font-bold text-[#d4af37] font-serif md:text-2xl">
                       {section.title}
                     </h2>
                   </div>
