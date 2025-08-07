@@ -22,8 +22,7 @@ export const useProcessProfileStory = (storyContent: ProfileStoryItem[]) => {
       ) : (
         part
       )
-    );
-  };
+    );  };
 
   // コンテンツを解析してReact要素を生成（可読性向上のためreduceを使用）
   const processedContent = useMemo(() => {
@@ -46,20 +45,7 @@ export const useProcessProfileStory = (storyContent: ProfileStoryItem[]) => {
           );
           break;
 
-        case 'paragraph':
-          element = (
-            <motion.p
-              key={i}
-              className="text-sm leading-loose whitespace-pre-line"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              {highlightText(item.content)}
-            </motion.p>
-          );
-          break;
+        case 'paragraph':          element = (            <motion.div key={i}> {/* Added a key to this wrapper div */}              {item.content.split('\n\n').map((paragraph, pIndex) => (                <motion.p                  key={`${i}-${pIndex}`}                  className="text-sm text-left mb-4"                  initial={{ opacity: 0, y: 20 }}                  whileInView={{ opacity: 1, y: 0 }}                  transition={{ duration: 0.7, delay: 0.2 + pIndex * 0.1 }}                  viewport={{ once: true }}                >                  {highlightText(paragraph)}                </motion.p>              ))}            </motion.div>          );          break;
 
         case 'question':
           element = (

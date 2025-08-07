@@ -65,7 +65,7 @@
 
   /* 日本語テキストの改行制御 */
   .jp-text-optimal {
-    word-break: keep-all;
+    word-break: normal;
     overflow-wrap: break-word;
     line-break: normal;
     hanging-punctuation: allow-end;

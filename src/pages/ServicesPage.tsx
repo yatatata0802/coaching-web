@@ -27,7 +27,7 @@ const ServicesPage: React.FC = () => {
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         {/* ヒーローセクション */}
-        <section className="text-center py-12 sm:py-16 lg:py-20 pt-[var(--header-top-desktop)] md:pt-[var(--header-top-mobile)]">
+        <section className="text-center py-12 sm:py-16 lg:py-20 pt-24 md:pt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

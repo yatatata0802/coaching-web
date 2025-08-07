@@ -83,7 +83,7 @@ export default {
         'safe-left': 'env(safe-area-inset-left)',
         'safe-right': 'env(safe-area-inset-right)',
         'header-top-desktop': 'calc(80px + env(safe-area-inset-top))',
-        'header-top-mobile': 'calc(72px + env(safe-area-inset-top))',
+        'header-top-mobile': 'calc(88px + env(safe-area-inset-top))',
       },
     },
   },

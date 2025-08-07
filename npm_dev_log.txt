@@ -1471,3 +1471,1407 @@ The editor process exited with an error: spawn cursor ENOENT ('cursor' command d
 16:25:22 [vite] page reload public/google1d88b45e3211c5db.html
 16:27:57 [vite] page reload public/google1d88b45e3211c5db (1).html
 16:38:20 [vite] page reload index.html
+7:41:45 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:41:59 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:42:15 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:42:29 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:42:42 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:42:53 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:44:46 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:44:58 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:45:13 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:45:28 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:45:40 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:45:53 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:46:42 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:46:42 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:46:42 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:46:55 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:46:55 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:46:55 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:47:09 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:47:09 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:47:09 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:47:09 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:47:23 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:47:23 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:47:23 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:47:31 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:47:31 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:49:21 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:51:19 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:51:33 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:51:49 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:52:05 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:53:26 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:53:39 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:53:56 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:54:12 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:54:26 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:54:40 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:55:13 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:55:13 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:55:13 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:55:28 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:55:28 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:55:28 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:55:44 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:55:44 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:55:44 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:56:03 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:56:03 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:56:03 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:56:19 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:56:19 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:56:19 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:56:34 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+7:56:34 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:56:34 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:58:30 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:58:33 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:58:36 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+7:58:37 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+7:58:38 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:00:15 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:02:38 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:02:54 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:03:14 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:03:34 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:03:50 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:04:10 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:10:21 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:10:21 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:620:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:620:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  618|      {
+  619|        type: "paragraph",
+  620|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。
+     |                                  ^
+  621|  
+  622|  元公安警察官として20年間“仮面”を被り続けた私が、なぜ今、あなたの人生の“脚本”書き換えをサポートするのか。その全てを、ここに記します。
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:10:21 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:620:32: ERROR: Expected "}" but found "現職の公安警察官が"
+8:11:26 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:11:26 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+8:11:26 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:11:44 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:11:44 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:11:44 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+8:12:06 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:12:07 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:12:07 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+8:12:28 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:12:28 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+8:12:28 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:12:48 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:12:48 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:12:48 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+8:13:07 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:13:07 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4
+  
+  Unexpected "}"
+  628|  これは、そんな私が、すべてを捨てる覚悟で、20年分の鎧と仮面を脱ぎ捨て、自分の手で人生の脚本を書き換えるまでの、泥臭い記録です。`,
+  629|      },
+  630|      },
+     |      ^
+  631|      {
+  632|        type: "heading",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:13:07 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:630:4: ERROR: Unexpected "}"
+8:13:57 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:15:53 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:16:15 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:16:39 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:17:02 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:17:22 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:17:48 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:18:42 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+8:27:48 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:28:09 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:28:34 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:28:59 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:28:59 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:704:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:704:4
+  
+  Unexpected "}"
+  702|  身体は、正直でした。私の魂の悲鳴を、忠実に代弁し始めました。動悸、呼吸の浅さ、睡眠障害…。そして、私は鬱状態になり、1ヶ月間休職することになりました。コーチングが、私に「本当の地獄」を見せたのです。`,
+  703|      },
+  704|      },
+     |      ^
+  705|      {
+  706|        type: "question",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:28:59 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:704:4: ERROR: Unexpected "}"
+8:29:50 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+8:29:50 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:704:4: ERROR: Unexpected "}"
+8:30:26 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:704:4: ERROR: Unexpected "}"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:704:4
+  
+  Unexpected "}"
+  702|  身体は、正直でした。私の魂の悲鳴を、忠実に代弁し始めました。動悸、呼吸の浅さ、睡眠障害…。そして、私は鬱状態になり、1ヶ月間休職することになりました。コーチングが、私に「本当の地獄」を見せたのです。`,
+  703|      },
+  704|      },
+     |      ^
+  705|      {
+  706|        type: "question",
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:32:50 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:32:51 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:32:51 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:33:20 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:33:21 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:33:21 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:33:46 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:33:47 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:33:47 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:34:19 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:34:19 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:34:19 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:34:43 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:34:43 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:34:43 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:35:05 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:35:05 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:35:06 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:35:57 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:35:57 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:35:57 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:40:12 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+8:40:12 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+8:40:12 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+8:40:32 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+9:25:50 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+9:48:23 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:622:16
+  
+  Expected "}" but found "現職の公安警察官が"
+  620|        content: `    {
+  621|        type: "paragraph",
+  622|        content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                  ^
+  623|      },
+  624|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+9:48:56 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+9:49:04 [vite] page reload src/main.tsx
+10:05:24 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+10:05:24 [vite] Pre-transform error: /Users/gben/Downloads/コーチングWEB改/src/hooks/useProcessProfileStory.tsx: Unexpected token (30:51)
+
+  28 |   // コンテンツを解析してReact要素を生成（可読性向上のためreduceを使用）
+  29 |   const processedContent = useMemo(() => {
+> 30 |     const blocks = storyContent.reduce<JSX.Element[][]>((acc, item, i) => {
+     |                                                    ^
+  31 |       let element: JSX.Element | null = null;
+  32 |
+  33 |       switch (item.type) {
+10:05:24 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/hooks/useProcessProfileStory.tsx: Unexpected token (30:51)
+
+  28 |   // コンテンツを解析してReact要素を生成（可読性向上のためreduceを使用）
+  29 |   const processedContent = useMemo(() => {
+> 30 |     const blocks = storyContent.reduce<JSX.Element[][]>((acc, item, i) => {
+     |                                                    ^
+  31 |       let element: JSX.Element | null = null;
+  32 |
+  33 |       switch (item.type) {
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/hooks/useProcessProfileStory.tsx:30:51
+  28 |    // コンテンツを解析してReact要素を生成（可読性向上のためreduceを使用）
+  29 |    const processedContent = useMemo(() => {
+  30 |      const blocks = storyContent.reduce<JSX.Element[][]>((acc, item, i) => {
+     |                                                     ^
+  31 |        let element: JSX.Element | null = null;
+  32 |  
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.unexpected (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6647:16)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11442:16)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseMember (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11134:28)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11119:21)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9353:18)
+      at TypeScriptParserMixin.parseSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11089:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11080:17)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10981:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10976:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10942:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9389:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10903:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseVar (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13384:91)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13230:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9493:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12851:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12101:24)
+      at TypeScriptParserMixin.parseArrowExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12076:10)
+10:07:49 [vite] Internal server error: /Users/gben/Downloads/コーチングWEB改/src/hooks/useProcessProfileStory.tsx: Unexpected token (30:51)
+
+  28 |   // コンテンツを解析してReact要素を生成（可読性向上のためreduceを使用）
+  29 |   const processedContent = useMemo(() => {
+> 30 |     const blocks = storyContent.reduce<JSX.Element[][]>((acc, item, i) => {
+     |                                                    ^
+  31 |       let element: JSX.Element | null = null;
+  32 |
+  33 |       switch (item.type) {
+  Plugin: vite:react-babel
+  File: /Users/gben/Downloads/コーチングWEB改/src/hooks/useProcessProfileStory.tsx:30:51
+  28 |    // コンテンツを解析してReact要素を生成（可読性向上のためreduceを使用）
+  29 |    const processedContent = useMemo(() => {
+  30 |      const blocks = storyContent.reduce<JSX.Element[][]>((acc, item, i) => {
+     |                                                     ^
+  31 |        let element: JSX.Element | null = null;
+  32 |  
+      at constructor (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6627:19)
+      at TypeScriptParserMixin.unexpected (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:6647:16)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11442:16)
+      at TypeScriptParserMixin.parseExprAtom (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseMember (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11134:28)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11119:21)
+      at TypeScriptParserMixin.parseSubscript (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9353:18)
+      at TypeScriptParserMixin.parseSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11089:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11080:17)
+      at TypeScriptParserMixin.parseUpdate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10981:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10976:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10942:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9389:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10903:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9801:20)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:10795:17)
+      at TypeScriptParserMixin.parseVar (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13384:91)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13230:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9493:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12851:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12101:24)
+      at TypeScriptParserMixin.parseArrowExpression (/Users/gben/Downloads/コーチングWEB改/node_modules/@babel/parser/lib/index.js:12076:10)
+10:08:20 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+10:16:08 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:16:22 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:17:06 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:17:25 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:17:45 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:18:02 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:50:49 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:53:23 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:53:51 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+10:53:51 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "特別な人間だから"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "特別な人間だから"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `特別な人間だから、できたわけではありません。ただ、もうこの役を演じるのが限界だった。それだけです。
+     |                                  ^
+  693|  
+  694|  これは、私が"脚本"をこの手で書き換えるまでの、泥臭い記録です。もう、誰かの言いなりになることは終わりです。
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+10:53:51 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "特別な人間だから"
+11:00:16 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+11:00:16 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+11:00:16 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+11:10:48 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+11:10:48 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+12:00:04 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+12:04:05 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+12:27:12 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+12:35:36 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+12:56:24 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+13:32:41 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+13:34:21 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+13:34:22 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+13:34:26 [vite] Pre-transform error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+13:34:26 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+13:34:28 [vite] Internal server error: Transform failed with 1 error:
+/Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32: ERROR: Expected "}" but found "現職の公安警察官が"
+  Plugin: vite:esbuild
+  File: /Users/gben/Downloads/コーチングWEB改/src/constants/content.ts:692:32
+  
+  Expected "}" but found "現職の公安警察官が"
+  690|      {
+  691|        type: "paragraph",
+  692|        content: `      content: `現職の公安警察官が、自らの身体に刺青を入れる——。その瞬間、私は確信しました。「もう、後戻りはできない」。`,
+     |                                  ^
+  693|      },
+  694|      {
+  
+      at failureErrorWithLog (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:1472:15)
+      at /Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/Users/gben/Downloads/コーチングWEB改/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+13:34:40 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:40:33 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+13:42:00 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+13:42:38 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+13:46:33 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:01:00 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:02:19 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:05:01 [vite] hmr update /src/pages/AdminPage.tsx, /src/index.css
+14:09:45 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:15:34 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:17:24 [vite] hmr update /src/index.css, /src/pages/ProfilePage.tsx
+14:20:13 [vite] hmr update /src/index.css
+14:23:39 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:26:15 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:28:45 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:30:29 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:43:47 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+14:45:47 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+14:45:47 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+14:49:47 [vite] page reload tailwind.config.js
+14:49:55 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+14:49:56 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+14:51:44 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+14:51:44 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+15:02:41 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+15:04:09 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+15:07:06 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+15:07:20 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css
+15:14:48 [vite] hmr update /src/pages/HomePage.tsx, /src/index.css

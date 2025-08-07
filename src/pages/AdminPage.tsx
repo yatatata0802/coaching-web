@@ -10,8 +10,6 @@ import {
   Eye,
   Calendar,
   Activity,
-  GitFork,
-  Share2,
 } from "lucide-react";
 import { isAdmin } from "../lib/admin";
 import {
@@ -21,13 +19,7 @@ import {
   getBrowserAnalytics,
   getAnalyticsData,
   getTotalViews,
-  getDailyAnalytics,
-  getMonthlyAnalytics,
-  getWeeklyAnalytics,
-  getReferrerAnalytics,
-  getFunnelAnalytics,
   resetAnalyticsData,
-  getLineConversions,
 } from "../lib/supabase";
 import {
   HourlyData,
@@ -35,18 +27,8 @@ import {
   DeviceData,
   BrowserData,
   AnalyticsData,
-  DailyData,
-  MonthlyData,
-  WeeklyData,
-  ReferrerData,
-  FunnelData,
 } from "../types/analytics";
 import SEO from "../components/SEO";
-import { generateAIInsights } from "../lib/ai-insights";
-import AdminAnalyticsDashboard from "../components/AdminAnalyticsDashboard";
-
-import { analyzeSourcePerformance } from "../lib/analytics-insights";
-import SourceConversionTable from "../components/SourceConversionTable";
 
 const AdminPage: React.FC = () => {
   const [hourlyData, setHourlyData] = useState<HourlyData[]>([]);
@@ -55,17 +37,9 @@ const AdminPage: React.FC = () => {
   const [browserData, setBrowserData] = useState<BrowserData[]>([]);
   const [totalViews, setTotalViews] = useState<number>(0);
   const [recentData, setRecentData] = useState<AnalyticsData[]>([]);
-  const [dateData, setDateData] = useState<DailyData[]>([]);
-  const [monthlyData, setMonthlyData] = useState<MonthlyData[]>([]);
-  const [weeklyData, setWeeklyData] = useState<WeeklyData[]>([]);
-  const [referrerData, setReferrerData] = useState<ReferrerData[]>([]);
-  const [funnelData, setFunnelData] = useState<FunnelData[]>([]);
-  const [aiInsight, setAiInsight] = useState<any>(null);
-  const [pageViewData, setPageViewData] = useState<{ path: string; count: number }[]>([]);
-  
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<
-    "overview" | "hourly" | "daily" | "device" | "browser" | "recent" | "pageViews" | "referrer"
+    "overview" | "hourly" | "daily" | "device" | "browser" | "recent"
   >("overview");
 
   useEffect(() => {
@@ -82,68 +56,22 @@ const AdminPage: React.FC = () => {
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        const [
-          hourly,
-          daily,
-          device,
-          browser,
-          total,
-          recent,
-          date,
-          monthly,
-          weekly,
-          referrer,
-          funnel,
-        ] = await Promise.all([
-          getHourlyAnalytics(),
-          getDayOfWeekAnalytics(),
-          getDeviceAnalytics(),
-          getBrowserAnalytics(),
-          getTotalViews(),
-          getAnalyticsData(),
-          getDailyAnalytics(),
-          getMonthlyAnalytics(),
-          getWeeklyAnalytics(),
-          getReferrerAnalytics(),
-          getFunnelAnalytics(),
-        ]);
+        const [hourly, daily, device, browser, total, recent] =
+          await Promise.all([
+            getHourlyAnalytics(),
+            getDayOfWeekAnalytics(),
+            getDeviceAnalytics(),
+            getBrowserAnalytics(),
+            getTotalViews(),
+            getAnalyticsData(),
+          ]);
 
         setHourlyData(hourly);
         setDailyData(daily);
         setDeviceData(device);
         setBrowserData(browser);
         setTotalViews(total);
-        setRecentData(recent.slice(0, 20));
-        setDateData(date);
-        setMonthlyData(monthly);
-        setWeeklyData(weekly);
-        setReferrerData(referrer);
-        setFunnelData(funnel);
-
-        // ページビューデータを集計
-        const pageViews: { [key: string]: number } = {};
-        recent.forEach((item) => {
-          pageViews[item.page_path] = (pageViews[item.page_path] || 0) + 1;
-        });
-        const sortedPageViews = Object.entries(pageViews)
-          .map(([path, count]) => ({ path, count }))
-          .sort((a, b) => b.count - a.count);
-        setPageViewData(sortedPageViews);
-
-        // AIインサイト生成
-        const insights = generateAIInsights({
-          dateData: date,
-          monthlyData: monthly,
-          weeklyData: weekly,
-          referrerData: referrer,
-          deviceData: device,
-          browserData: browser,
-          totalViews: total,
-          funnelData: funnel,
-        });
-        setAiInsight(insights);
-
-        
+        setRecentData(recent.slice(0, 20)); // 最新20件
       } catch (error) {
         console.error("分析データ取得エラー:", error);
       } finally {
@@ -235,15 +163,6 @@ const AdminPage: React.FC = () => {
         </div>
       </div>
 
-      {/* AIサマリー */}
-      {aiInsight && (
-        <AdminAnalyticsDashboard
-          summary={aiInsight.summary}
-          suggestion={aiInsight.suggestion}
-          anomaly={aiInsight.anomaly}
-        />
-      )}
-
       {/* ナビゲーション */}
       <div className="bg-black/30 backdrop-blur-sm border-b border-[#d4af37]/20 p-4">
         <div className="max-w-7xl mx-auto">
@@ -314,29 +233,6 @@ const AdminPage: React.FC = () => {
               <Users size={16} />
               最近のアクセス
             </button>
-            <button
-              onClick={() => setActiveTab("pageViews")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all whitespace-nowrap ${
-                activeTab === "pageViews"
-                  ? "bg-[#d4af37] text-[#181818]"
-                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-              }`}
-            >
-              <Share2 size={16} />
-              ページ分析
-            </button>
-            <button
-              onClick={() => setActiveTab("referrer")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all whitespace-nowrap ${
-                activeTab === "referrer"
-                  ? "bg-[#d4af37] text-[#181818]"
-                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-              }`}
-            >
-              <GitFork size={16} />
-              流入元分析
-            </button>
-            
           </div>
         </div>
       </div>
@@ -588,48 +484,6 @@ const AdminPage: React.FC = () => {
                 </div>
               </div>
             )}
-
-            {activeTab === "pageViews" && (
-              <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
-                <h2 className="text-xl font-bold text-[#d4af37] mb-6">
-                  ページ別PV数ランキング
-                </h2>
-                <div className="space-y-4">
-                  {pageViewData.map((item, index) => (
-                    <div key={index} className="bg-gray-800/50 rounded-lg p-4 flex justify-between items-center">
-                      <div className="text-white font-medium">
-                        {item.path}
-                      </div>
-                      <div className="text-[#d4af37] font-bold text-xl">
-                        {item.count}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {activeTab === "referrer" && (
-              <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
-                <h2 className="text-xl font-bold text-[#d4af37] mb-6">
-                  流入元別アクセス数
-                </h2>
-                <div className="space-y-4">
-                  {referrerData.map((item, index) => (
-                    <div key={index} className="bg-gray-800/50 rounded-lg p-4 flex justify-between items-center">
-                      <div className="text-white font-medium">
-                        {item.source === "direct" ? "直接アクセス" : item.source}
-                      </div>
-                      <div className="text-[#d4af37] font-bold text-xl">
-                        {item.count}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            
           </motion.div>
         </AnimatePresence>
       </div>

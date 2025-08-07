@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
               transition={{ delay: 1, duration: 1 }}
               className="text-lg sm:text-xl md:text-2xl text-[#d4af37] font-semibold mb-6 sm:mb-8"
             >
-              魅セルジブン × 踊ルココロ
+              元公安警察官が、あなたの人生の"脚本"を書き換える。
             </motion.div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 bg-gradient-to-r from-white via-[#d4af37] to-white bg-clip-text text-transparent">
               矢田谷 充則
@@ -225,7 +225,7 @@ const HomePage: React.FC = () => {
                     className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
                     style={{ minWidth: 220 }}
                   >
-                    noteで、元公安警察官の『人生逆転劇』を読む
+                    より詳しい物語は、noteで
                   </a>
                 </div>
               </div>
@@ -233,34 +233,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* お客様の声セクション */}
-        <section
-          ref={addToRefs}
-          className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-black/20"
-        >
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 flex items-center justify-center gap-3">
-                <Star className="text-[#d4af37]" size={32}/>
-                お客様の声
-                <Star className="text-[#d4af37]" size={32}/>
-              </h2>
-              <p className="text-lg text-gray-400">コーチングで人生が変わった方々のリアルな体験談</p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {TESTIMONIALS.map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} index={index} />
-              ))}
-            </div>
-          </div>
-        </section>
+        
 
         {/* サポートセクション - シンプル表示 */}
         <section
