@@ -10,8 +10,10 @@ import {
   Eye,
   Calendar,
   Activity,
+  RefreshCw,
+  Funnel,
 } from "lucide-react";
-import { isAdmin } from "../lib/admin";
+import { isAdmin, logoutAdmin } from "../lib/admin";
 import {
   getHourlyAnalytics,
   getDayOfWeekAnalytics,
@@ -20,6 +22,9 @@ import {
   getAnalyticsData,
   getTotalViews,
   resetAnalyticsData,
+  incrementPageView,
+  getFunnelAnalytics,
+  getReferrerAnalytics,
 } from "../lib/supabase";
 import {
   HourlyData,
@@ -27,6 +32,8 @@ import {
   DeviceData,
   BrowserData,
   AnalyticsData,
+  FunnelData,
+  ReferrerData,
 } from "../types/analytics";
 import SEO from "../components/SEO";
 
@@ -37,9 +44,12 @@ const AdminPage: React.FC = () => {
   const [browserData, setBrowserData] = useState<BrowserData[]>([]);
   const [totalViews, setTotalViews] = useState<number>(0);
   const [recentData, setRecentData] = useState<AnalyticsData[]>([]);
+  const [funnelData, setFunnelData] = useState<FunnelData[]>([]);
+  const [referrerData, setReferrerData] = useState<ReferrerData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const [activeTab, setActiveTab] = useState<
-    "overview" | "hourly" | "daily" | "device" | "browser" | "recent"
+    "overview" | "hourly" | "daily" | "device" | "browser" | "recent" | "funnel"
   >("overview");
 
   useEffect(() => {
@@ -53,34 +63,68 @@ const AdminPage: React.FC = () => {
     checkAdminStatus();
   }, []);
 
+  const fetchAnalytics = async () => {
+    try {
+      const [hourly, daily, device, browser, total, recent, funnel, referrer] =
+        await Promise.all([
+          getHourlyAnalytics(),
+          getDayOfWeekAnalytics(),
+          getDeviceAnalytics(),
+          getBrowserAnalytics(),
+          getTotalViews(),
+          getAnalyticsData(),
+          getFunnelAnalytics(),
+          getReferrerAnalytics(),
+        ]);
+
+      setHourlyData(hourly);
+      setDailyData(daily);
+      setDeviceData(device);
+      setBrowserData(browser);
+      setTotalViews(total);
+      setRecentData(recent.slice(0, 20)); // 最新20件
+      setFunnelData(funnel);
+      setReferrerData(referrer);
+    } catch (error) {
+      console.error("分析データ取得エラー:", error);
+    } finally {
+      setIsLoading(false);
+      setIsRefreshing(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchAnalytics = async () => {
-      try {
-        const [hourly, daily, device, browser, total, recent] =
-          await Promise.all([
-            getHourlyAnalytics(),
-            getDayOfWeekAnalytics(),
-            getDeviceAnalytics(),
-            getBrowserAnalytics(),
-            getTotalViews(),
-            getAnalyticsData(),
-          ]);
-
-        setHourlyData(hourly);
-        setDailyData(daily);
-        setDeviceData(device);
-        setBrowserData(browser);
-        setTotalViews(total);
-        setRecentData(recent.slice(0, 20)); // 最新20件
-      } catch (error) {
-        console.error("分析データ取得エラー:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
     fetchAnalytics();
   }, []);
+
+  // 5分ごとに自動更新
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isLoading) {
+        setIsRefreshing(true);
+        fetchAnalytics();
+      }
+    }, 5 * 60 * 1000); // 5分
+
+    return () => clearInterval(interval);
+  }, [isLoading]);
+
+  const handleRefresh = () => {
+    setIsRefreshing(true);
+    fetchAnalytics();
+  };
+
+  const handleTestPageView = async () => {
+    try {
+      await incrementPageView("/admin");
+      alert(
+        "テストページビューを記録しました。更新ボタンを押して確認してください。"
+      );
+    } catch (error) {
+      console.error("テストページビューエラー:", error);
+      alert("テストページビューの記録に失敗しました。");
+    }
+  };
 
   const getDayName = (day: number): string => {
     const days = ["日", "月", "火", "水", "木", "金", "土"];
@@ -147,10 +191,27 @@ const AdminPage: React.FC = () => {
                 <div className="text-sm text-gray-400">累積PV</div>
               </div>
               <button
-                onClick={() => (window.location.href = "/")}
+                onClick={handleRefresh}
+                disabled={isRefreshing}
+                className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                <RefreshCw
+                  size={16}
+                  className={isRefreshing ? "animate-spin" : ""}
+                />
+                {isRefreshing ? "更新中..." : "更新"}
+              </button>
+              <button
+                onClick={handleTestPageView}
+                className="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition-colors"
+              >
+                テストPV追加
+              </button>
+              <button
+                onClick={logoutAdmin}
                 className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
               >
-                ホームに戻る
+                ログアウト
               </button>
               <button
                 onClick={resetAnalyticsData}
@@ -233,6 +294,17 @@ const AdminPage: React.FC = () => {
               <Users size={16} />
               最近のアクセス
             </button>
+            <button
+              onClick={() => setActiveTab("funnel")}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all whitespace-nowrap ${
+                activeTab === "funnel"
+                  ? "bg-[#d4af37] text-[#181818]"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+              }`}
+            >
+              <Funnel size={16} />
+              ファネル分析
+            </button>
           </div>
         </div>
       </div>
@@ -248,54 +320,111 @@ const AdminPage: React.FC = () => {
             transition={{ duration: 0.3 }}
           >
             {activeTab === "overview" && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                {/* 統計カード */}
-                <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
-                  <div className="flex items-center gap-3">
-                    <Eye size={24} className="text-[#d4af37]" />
-                    <div>
-                      <div className="text-2xl font-bold text-white">
-                        {totalViews.toLocaleString()}
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                  {/* 統計カード */}
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                    <div className="flex items-center gap-3">
+                      <Eye size={24} className="text-[#d4af37]" />
+                      <div>
+                        <div className="text-2xl font-bold text-white">
+                          {totalViews.toLocaleString()}
+                        </div>
+                        <div className="text-sm text-gray-400">累積PV</div>
                       </div>
-                      <div className="text-sm text-gray-400">累積PV</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                    <div className="flex items-center gap-3">
+                      <Users size={24} className="text-[#d4af37]" />
+                      <div>
+                        <div className="text-2xl font-bold text-white">
+                          {recentData.length}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          最近のアクセス
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                    <div className="flex items-center gap-3">
+                      <Monitor size={24} className="text-[#d4af37]" />
+                      <div>
+                        <div className="text-2xl font-bold text-white">
+                          {deviceData.length}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          デバイス種類
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                    <div className="flex items-center gap-3">
+                      <TrendingUp size={24} className="text-[#d4af37]" />
+                      <div>
+                        <div className="text-2xl font-bold text-white">
+                          {browserData.length}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          ブラウザ種類
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
-                  <div className="flex items-center gap-3">
-                    <Users size={24} className="text-[#d4af37]" />
-                    <div>
-                      <div className="text-2xl font-bold text-white">
-                        {recentData.length}
-                      </div>
-                      <div className="text-sm text-gray-400">
-                        最近のアクセス
+                {/* マーケティング指標 */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                    <div className="flex items-center gap-3">
+                      <Funnel size={24} className="text-[#d4af37]" />
+                      <div>
+                        <div className="text-2xl font-bold text-white">
+                          {funnelData.length}
+                        </div>
+                        <div className="text-sm text-gray-400">流入元数</div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
-                  <div className="flex items-center gap-3">
-                    <Monitor size={24} className="text-[#d4af37]" />
-                    <div>
-                      <div className="text-2xl font-bold text-white">
-                        {deviceData.length}
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                    <div className="flex items-center gap-3">
+                      <Users size={24} className="text-[#d4af37]" />
+                      <div>
+                        <div className="text-2xl font-bold text-white">
+                          {
+                            referrerData.filter(
+                              (r) =>
+                                r.source === "instagram" ||
+                                r.source === "x" ||
+                                r.source === "tiktok"
+                            ).length
+                          }
+                        </div>
+                        <div className="text-sm text-gray-400">SNS流入</div>
                       </div>
-                      <div className="text-sm text-gray-400">デバイス種類</div>
                     </div>
                   </div>
-                </div>
 
-                <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
-                  <div className="flex items-center gap-3">
-                    <TrendingUp size={24} className="text-[#d4af37]" />
-                    <div>
-                      <div className="text-2xl font-bold text-white">
-                        {browserData.length}
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                    <div className="flex items-center gap-3">
+                      <TrendingUp size={24} className="text-[#d4af37]" />
+                      <div>
+                        <div className="text-2xl font-bold text-white">
+                          {
+                            referrerData.filter(
+                              (r) =>
+                                r.source === "google" || r.source === "yahoo"
+                            ).length
+                          }
+                        </div>
+                        <div className="text-sm text-gray-400">検索流入</div>
                       </div>
-                      <div className="text-sm text-gray-400">ブラウザ種類</div>
                     </div>
                   </div>
                 </div>
@@ -481,6 +610,111 @@ const AdminPage: React.FC = () => {
                       </div>
                     </div>
                   ))}
+                </div>
+              </div>
+            )}
+
+            {activeTab === "funnel" && (
+              <div className="space-y-6">
+                {/* ファネル分析 */}
+                <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                  <h2 className="text-xl font-bold text-[#d4af37] mb-6">
+                    流入元別ファネル分析
+                  </h2>
+                  <div className="space-y-4">
+                    {funnelData.map((item) => (
+                      <div
+                        key={item.source}
+                        className="bg-gray-800/50 rounded-lg p-4"
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-lg font-medium text-white">
+                            {item.platform}
+                          </span>
+                          <span className="text-sm text-gray-400">
+                            {item.source}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-3 gap-4 text-center">
+                          <div>
+                            <div className="text-2xl font-bold text-[#d4af37]">
+                              {item.inflow}
+                            </div>
+                            <div className="text-sm text-gray-400">流入数</div>
+                          </div>
+                          <div>
+                            <div className="text-2xl font-bold text-blue-400">
+                              {item.view}
+                            </div>
+                            <div className="text-sm text-gray-400">閲覧数</div>
+                          </div>
+                          <div>
+                            <div className="text-2xl font-bold text-green-400">
+                              {item.conversion}
+                            </div>
+                            <div className="text-sm text-gray-400">
+                              コンバージョン
+                            </div>
+                          </div>
+                        </div>
+                        {item.inflow > 0 && (
+                          <div className="mt-3">
+                            <div className="text-sm text-gray-400 mb-1">
+                              コンバージョン率:{" "}
+                              {((item.conversion / item.inflow) * 100).toFixed(
+                                1
+                              )}
+                              %
+                            </div>
+                            <div className="bg-gray-700 rounded-full h-2">
+                              <div
+                                className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
+                                style={{
+                                  width: `${
+                                    (item.conversion / item.inflow) * 100
+                                  }%`,
+                                }}
+                              />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* リファラー分析 */}
+                <div className="bg-black/50 backdrop-blur-sm border border-[#d4af37]/30 rounded-xl p-6">
+                  <h2 className="text-xl font-bold text-[#d4af37] mb-6">
+                    リファラー別アクセス数
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {referrerData.map((item) => {
+                      const percentage =
+                        (item.count /
+                          Math.max(...referrerData.map((r) => r.count), 1)) *
+                        100;
+                      return (
+                        <div
+                          key={item.source}
+                          className="bg-gray-800/50 rounded-lg p-4"
+                        >
+                          <div className="text-lg font-medium text-white mb-3">
+                            {item.platform}
+                          </div>
+                          <div className="text-2xl font-bold text-[#d4af37] mb-2">
+                            {item.count}
+                          </div>
+                          <div className="bg-gray-700 rounded-full h-2">
+                            <div
+                              className="bg-gradient-to-r from-[#d4af37] to-[#ffd700] h-2 rounded-full transition-all duration-500"
+                              style={{ width: `${percentage}%` }}
+                            />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             )}

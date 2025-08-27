@@ -17,8 +17,6 @@ const WhatIsCoachingPage: React.FC = () => {
       {/* Enhanced Background Effects */}
       <ParticleBackground />
 
-      {/* Additional Background Elements (Removed as redundant with ParticleBackground) */}
-
       <div className="max-w-5xl mx-auto px-8 relative z-20 md:px-4">
         {/* Enhanced Hero Section */}
         <motion.section
@@ -29,7 +27,7 @@ const WhatIsCoachingPage: React.FC = () => {
         >
           <VisualGuide type="pulse-dot" className="mx-auto mb-6" />
           <motion.h1
-            className="text-6xl font-bold text-[#d4af37] mb-4 font-serif md:text-4xl"
+            className="text-3xl font-bold text-[#d4af37] mb-4 font-serif text-center md:text-5xl"
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 3, repeat: Infinity }}
           >
@@ -45,6 +43,42 @@ const WhatIsCoachingPage: React.FC = () => {
           </motion.p>
         </motion.section>
 
+        {/* New Section 1: コーチングの定義 */}
+        <section className="py-8 sm:py-12">
+          <div className="max-w-4xl mx-auto p-6 sm:p-8 bg-white/5 border border-[#d4af37]/20 rounded-2xl shadow-lg">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#d4af37] mb-4 text-center">
+              コーチングとは、あなたの『答え』を引き出す対話。
+            </h2>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4 text-center">
+              コーチングは、答えを教える「ティーチング」でも、問題解決策を提示する「コンサルティング」でもありません。
+            </p>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4 text-center">
+              あなたの内側に眠る可能性を信じ、対話を通じて「本当の望み」や「解決策」をあなた自身が発見できるよう、徹底的にサポートするプロセスです。
+            </p>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed text-center">
+              私たちは、あなたの「伴走者」として、目標達成まで共に歩みます。
+            </p>
+          </div>
+        </section>
+
+        {/* New Section 2: 元公安警察官の独自性 */}
+        <section className="py-8 sm:py-12">
+          <div className="max-w-4xl mx-auto p-6 sm:p-8 bg-white/5 border border-[#d4af37]/20 rounded-2xl shadow-lg">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#d4af37] mb-4 text-center">
+              元公安警察官だからこそできる、あなたの『人生脚本』の書き換え。
+            </h2>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4 text-center">
+              20年間、人の心と行動の裏側を見続けてきた経験は、私のコーチングの根幹です。
+            </p>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4 text-center">
+              表面的な悩みだけでなく、無意識にあなたを縛る「思い込み」や「パターン」を見抜き、根本から「人生の脚本」を書き換えるお手伝いをします。
+            </p>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed text-center">
+              論理的思考力と、人の本質を見抜く洞察力で、あなたの「変わりたい」を現実へと導きます。
+            </p>
+          </div>
+        </section>
+
         {/* Enhanced Content Sections */}
         <div className="space-y-16 md:space-y-8">
           {SERVICES_PAGE_DATA.map((section, index) => {
@@ -57,8 +91,7 @@ const WhatIsCoachingPage: React.FC = () => {
                     ? "bg-gradient-to-br from-[#e53935]/10 via-[#d4af37]/5 to-[#e53935]/10 border-2 border-[#e53935]/30 hover:border-[#e53935]/50 hover:scale-1.02"
                     : "bg-white/5 border border-[#d4af37]/20 hover:border-[#d4af37]/40 hover:y-[-5px]"
                 }`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.8 }}
                 whileHover={
                   index === SERVICES_PAGE_DATA.length - 1
@@ -86,15 +119,13 @@ const WhatIsCoachingPage: React.FC = () => {
                 </VisualGuide>
 
                 <motion.div
-                  className="text-sm text-gray-200 leading-normal space-y-4 md:text-base text-center max-w-xs mx-auto jp-text-optimal"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  className="text-sm text-gray-200 leading-normal space-y-4 md:text-base jp-text-optimal"
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.2 + 0.3, duration: 0.8 }}
                 >
                   <motion.p
                     className={`text-gray-200`}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: index * 0.2 + 0.1,
                       duration: 0.5,

@@ -6463,3 +6463,10 @@ The editor process exited with an error: spawn cursor ENOENT ('cursor' command d
 16:50:21 [vite] hmr update /src/pages/WhatIsCoachingPage.tsx, /src/index.css
 16:57:04 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
 17:00:58 [vite] hmr update /src/pages/ServicesPage.tsx, /src/index.css
+19:35:43 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+19:54:56 [vite] hmr update /src/pages/WhatIsCoachingPage.tsx, /src/index.css
+19:58:00 [vite] hmr update /src/pages/WhatIsCoachingPage.tsx, /src/index.css
+20:07:38 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+20:08:08 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+8:48:26 [vite] hmr update /src/pages/ContactPage.tsx, /src/index.css, /src/pages/WhatIsCoachingPage.tsx, /src/pages/HomePage.tsx, /src/pages/BlogPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/BlogDetailPage.tsx, /src/pages/ProfilePage.tsx
+13:55:26 [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
