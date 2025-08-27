@@ -4,7 +4,7 @@ import { Target, Eye, Zap, Users } from "lucide-react";
 import VisualGuide from "../components/ui/VisualGuide";
 import ParticleBackground from "../components/ParticleBackground";
 import SEO from "../components/SEO";
-import { SERVICES_PAGE_DATA } from "../constants/content";
+// import { SERVICES_PAGE_DATA } from "../constants/content";
 
 const WhatsCoachingPage: React.FC = () => {
   return (
@@ -80,7 +80,7 @@ const WhatsCoachingPage: React.FC = () => {
         </section>
 
         {/* Enhanced Content Sections */}
-        <div className="space-y-16 md:space-y-8">
+        {/* <div className="space-y-16 md:space-y-8">
           {SERVICES_PAGE_DATA.map((section, index) => {
             const Icon = section.icon;
             return (
@@ -137,7 +137,7 @@ const WhatsCoachingPage: React.FC = () => {
               </motion.div>
             );
           })}
-        </div>
+        </div> */}
 
         {/* ナビゲーションボタン削除済み。LINE・noteボタンのみ残す */}
         {/* 必要に応じてLINE特典案内を追加する場合は、以下のように挿入できます */}
