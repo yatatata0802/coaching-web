@@ -747,12 +747,12 @@ export const getPageEngagementAnalytics = async (): Promise<
 // デバッグ用：ローカルストレージのデータを確認
 export const debugLocalStorage = () => {
   console.log("🔍 ローカルストレージ デバッグ情報:");
-  
+
   // 全体PV
   const totalKey = getLocalStorageKey("total");
   const total = localStorage.getItem(totalKey);
   console.log("📊 全体PV:", total);
-  
+
   // 各ページのPV
   const pages = [
     "/",
@@ -763,14 +763,14 @@ export const debugLocalStorage = () => {
     "/what-is-coaching",
     "/admin",
   ];
-  
+
   console.log("📄 各ページのPV:");
   pages.forEach((page) => {
     const pageKey = getLocalStorageKey(page);
     const pageViews = localStorage.getItem(pageKey);
     console.log(`  ${page}: ${pageViews || 0}`);
   });
-  
+
   // 分析データ
   const analyticsKey = getLocalStorageKey("analytics");
   const analytics = localStorage.getItem(analyticsKey);
@@ -778,7 +778,7 @@ export const debugLocalStorage = () => {
     const parsed = JSON.parse(analytics);
     console.log("📈 分析データ数:", parsed.length);
     console.log("📈 最新の分析データ:", parsed.slice(-3));
-    
+
     // ページ別の分析データ
     console.log("📈 ページ別分析データ:");
     pages.forEach((page) => {
@@ -786,31 +786,41 @@ export const debugLocalStorage = () => {
       console.log(`  ${page}: ${pageData.length}件`);
     });
   }
-  
+
   // ユーザー情報
   const userId = localStorage.getItem("user_id");
   const userMeta = localStorage.getItem("user_meta");
   console.log("👤 ユーザーID:", userId);
   console.log("👤 ユーザーメタ:", userMeta);
-  
+
   // データ整合性チェック
   console.log("🔍 データ整合性チェック:");
   if (analytics) {
     const parsed = JSON.parse(analytics);
     const totalFromAnalytics = parsed.length;
     const totalFromCounter = parseInt(total || "0");
-    
+
     console.log(`  分析データ総数: ${totalFromAnalytics}`);
     console.log(`  カウンター総数: ${totalFromCounter}`);
-    console.log(`  整合性: ${totalFromAnalytics === totalFromCounter ? "✅ OK" : "❌ 不一致"}`);
-    
+    console.log(
+      `  整合性: ${
+        totalFromAnalytics === totalFromCounter ? "✅ OK" : "❌ 不一致"
+      }`
+    );
+
     // ページ別の整合性チェック
     pages.forEach((page) => {
       const pageKey = getLocalStorageKey(page);
       const pageViews = parseInt(localStorage.getItem(pageKey) || "0");
-      const pageDataCount = parsed.filter((item: any) => item.page_path === page).length;
-      
-      console.log(`  ${page}: カウンター=${pageViews}, 分析データ=${pageDataCount} ${pageViews === pageDataCount ? "✅" : "❌"}`);
+      const pageDataCount = parsed.filter(
+        (item: any) => item.page_path === page
+      ).length;
+
+      console.log(
+        `  ${page}: カウンター=${pageViews}, 分析データ=${pageDataCount} ${
+          pageViews === pageDataCount ? "✅" : "❌"
+        }`
+      );
     });
   }
 };

@@ -23,16 +23,16 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  keywords = "コーチング,人生設計,行動変容,目標達成,自己管理,筋トレ,継続力,無料相談",
-  ogImage = "https://your-domain.com/og-image.jpg",
+  keywords = "矢田谷充則,コーチング,公安警察,元警察官,変わりたい,やる気,続かない,筋トレ,人生設計,行動変容,目標達成,自己管理,継続力,無料相談,大阪,関西",
+  ogImage = "https://yatatata0802.github.io/coaching-web/profile.jpg",
   canonical,
   type = "website",
   author,
   publishDate,
   lastModifiedDate,
 }) => {
-  const fullTitle = `${title} | コーチングサービス`;
-  const fullDescription = `${description} 筋トレ経験を活かした独自のコーチングで、あなたの「変わりたい」を行動に繋げます。`;
+  const fullTitle = `${title} | 矢田谷充則のコーチングサービス`;
+  const fullDescription = `${description} 元公安警察官の矢田谷充則によるコーチングサービス。公安部門での経験を活かした独自のアプローチで、あなたの「変わりたい」を行動に繋げます。`;
   const currentUrl = canonical || window.location.href;
 
   const schemaData = {

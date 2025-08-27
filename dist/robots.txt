@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://yatatata0802.github.io/coaching-web/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1 
