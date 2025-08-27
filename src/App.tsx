@@ -5,7 +5,7 @@ import MainLayout from "./components/layout/MainLayout";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage"));
-const WhatsCoachingPage = lazy(() => import("./pages/WhatsCoachingPage"));
+const WhatIsCoachingPage = lazy(() => import("./pages/WhatIsCoachingPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
@@ -33,10 +33,10 @@ function App() {
           }
         />
         <Route
-          path="/whats-coaching"
+          path="/what-is-coaching"
           element={
             <MainLayout>
-              <WhatsCoachingPage />
+              <WhatIsCoachingPage />
             </MainLayout>
           }
         />
@@ -72,14 +72,14 @@ function App() {
             </MainLayout>
           }
         />
-        {/* <Route
+        <Route
           path="/admin"
           element={
             <MainLayout showFloatingCTA={false}>
               <AdminDashboardPage />
             </MainLayout>
           }
-        /> */}
+        />
       </Routes>
     </Suspense>
   );
