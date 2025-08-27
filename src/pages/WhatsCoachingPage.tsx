@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Target, Eye, Zap, Users } from "lucide-react";
 import VisualGuide from "../components/ui/VisualGuide";
-import ParticleBackground from "../components/ParticleBackground";
+// import ParticleBackground from "../components/ParticleBackground";
 import SEO from "../components/SEO";
 // import { SERVICES_PAGE_DATA } from "../constants/content";
 
@@ -15,7 +15,7 @@ const WhatsCoachingPage: React.FC = () => {
         keywords="コーチングとは, コーチング, パーソナルコーチング, 矢田谷充則, コンサルティング, 自己理解, 目標達成, 行動変容, 変わりたい"
       />
       {/* Enhanced Background Effects */}
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
 
       <div className="max-w-5xl mx-auto px-8 relative z-20 md:px-4">
         {/* Enhanced Hero Section */}
