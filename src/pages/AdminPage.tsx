@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   BarChart3,
@@ -41,6 +42,7 @@ import {
 import SEO from "../components/SEO";
 
 const AdminPage: React.FC = () => {
+  const location = useLocation();
   const [hourlyData, setHourlyData] = useState<HourlyData[]>([]);
   const [dailyData, setDailyData] = useState<DayOfWeekData[]>([]);
   const [deviceData, setDeviceData] = useState<DeviceData[]>([]);
@@ -161,6 +163,22 @@ const AdminPage: React.FC = () => {
     alert("デバッグ情報をコンソールに出力しました。F12で確認してください。");
   };
 
+  const handleCheckRealTimeData = () => {
+    console.log("🔍 リアルタイムデータ確認開始");
+    
+    // 現在のページビューを手動でカウント
+    incrementPageView(location.pathname).then(() => {
+      console.log("✅ 手動ページビューテスト完了");
+      // 少し待ってからデータを再取得
+      setTimeout(() => {
+        fetchAnalytics();
+        console.log("🔄 データ再取得完了");
+      }, 1000);
+    }).catch(error => {
+      console.error("❌ 手動ページビューテストエラー:", error);
+    });
+  };
+
   const getDayName = (day: number): string => {
     const days = ["日", "月", "火", "水", "木", "金", "土"];
     return days[day];
@@ -247,6 +265,12 @@ const AdminPage: React.FC = () => {
                 className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600 transition-colors"
               >
                 デバッグデータ
+              </button>
+              <button
+                onClick={handleCheckRealTimeData}
+                className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
+              >
+                リアルタイムデータ確認
               </button>
               <button
                 onClick={logoutAdmin}

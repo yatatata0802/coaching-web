@@ -159,6 +159,8 @@ const formatWeek = (date: Date): string => {
 // 分析データを取得
 export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
   try {
+    console.log("🔍 getAnalyticsData 開始");
+    
     if (isSupabaseConfigured) {
       const { data, error } = await supabase
         .from("analytics")
@@ -170,15 +172,65 @@ export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
         return [];
       }
 
+      console.log("✅ Supabaseからデータ取得完了:", data?.length || 0, "件");
       return data || [];
     } else {
       // モック版：ローカルストレージから取得
       const analyticsKey = getLocalStorageKey("analytics");
       const analyticsData = localStorage.getItem(analyticsKey);
-      return analyticsData ? JSON.parse(analyticsData) : [];
+      const result = analyticsData ? JSON.parse(analyticsData) : [];
+      
+      console.log("✅ ローカルストレージからデータ取得完了:", result.length, "件");
+      console.log("📊 最新のデータ:", result.slice(-3));
+      
+      return result;
     }
   } catch (error) {
-    console.error("分析データ取得処理エラー:", error);
+    console.error("❌ 分析データ取得処理エラー:", error);
+    return [];
+  }
+};
+
+// 期間フィルター付きの分析データを取得
+export const getAnalyticsDataByPeriod = async (
+  period: "today" | "week" | "month" | "all" = "all"
+): Promise<AnalyticsData[]> => {
+  try {
+    const allData = await getAnalyticsData();
+
+    if (period === "all") {
+      return allData;
+    }
+
+    const now = new Date();
+    let startDate: Date;
+
+    switch (period) {
+      case "today":
+        startDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        break;
+      case "week":
+        const dayOfWeek = now.getDay();
+        const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // 月曜日を週の開始とする
+        startDate = new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate() - daysToSubtract
+        );
+        break;
+      case "month":
+        startDate = new Date(now.getFullYear(), now.getMonth(), 1);
+        break;
+      default:
+        return allData;
+    }
+
+    return allData.filter((item) => {
+      const itemDate = new Date(item.timestamp);
+      return itemDate >= startDate;
+    });
+  } catch (error) {
+    console.error("期間別分析データ取得エラー:", error);
     return [];
   }
 };
@@ -368,6 +420,9 @@ export function getUserMeta() {
 export const incrementPageView = async (pagePath: string) => {
   try {
     console.log("🔍 incrementPageView 開始:", pagePath);
+    console.log("🔍 現在のURL:", window.location.href);
+    console.log("🔍 リファラー:", document.referrer);
+    
     const now = new Date();
     const hour = now.getHours();
     const dayOfWeek = now.getDay();
@@ -399,6 +454,8 @@ export const incrementPageView = async (pagePath: string) => {
       first_visit: userMeta.firstVisit,
     };
 
+    console.log("🔍 分析データ作成完了:", analyticsData);
+
     if (isSupabaseConfigured) {
       const { error } = await supabase.rpc("increment_page_view", {
         page_path: pagePath,
@@ -418,10 +475,17 @@ export const incrementPageView = async (pagePath: string) => {
       const totalKey = getLocalStorageKey("total");
       const pageKey = getLocalStorageKey(pagePath);
       const analyticsKey = getLocalStorageKey("analytics");
+      
+      console.log("🔍 ローカルストレージキー:", { totalKey, pageKey, analyticsKey });
+      
       const currentTotal = parseInt(localStorage.getItem(totalKey) || "0");
       const currentPage = parseInt(localStorage.getItem(pageKey) || "0");
+      
+      console.log("🔍 現在の値:", { currentTotal, currentPage });
+      
       localStorage.setItem(totalKey, (currentTotal + 1).toString());
       localStorage.setItem(pageKey, (currentPage + 1).toString());
+      
       // 分析データを保存
       const existingAnalytics = localStorage.getItem(analyticsKey);
       const analytics = existingAnalytics ? JSON.parse(existingAnalytics) : [];
@@ -430,17 +494,27 @@ export const incrementPageView = async (pagePath: string) => {
         analytics.splice(0, analytics.length - 1000);
       }
       localStorage.setItem(analyticsKey, JSON.stringify(analytics));
-      console.log(
-        `✅ PVカウント完了: ${pagePath} (ローカルストレージ)`,
-        {
-          total: currentTotal + 1,
-          page: currentPage + 1,
-          analyticsCount: analytics.length
-        }
-      );
+      
+      console.log(`✅ PVカウント完了: ${pagePath} (ローカルストレージ)`, {
+        total: currentTotal + 1,
+        page: currentPage + 1,
+        analyticsCount: analytics.length,
+        timestamp: now.toISOString(),
+      });
+      
+      // 保存後の確認
+      const savedTotal = localStorage.getItem(totalKey);
+      const savedPage = localStorage.getItem(pageKey);
+      console.log("🔍 保存後の確認:", { savedTotal, savedPage });
     }
   } catch (error) {
-    console.error("PVカウント処理エラー:", error);
+    console.error("❌ PVカウント処理エラー:", error);
+    console.error("❌ エラー詳細:", {
+      pagePath,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    });
   }
 };
 
@@ -471,6 +545,14 @@ export const getTotalViews = async (): Promise<number> => {
   }
 };
 
+// 期間別の全体PV取得
+export const getTotalViewsByPeriod = async (
+  period: "today" | "week" | "month" | "all" = "all"
+): Promise<number> => {
+  const data = await getAnalyticsDataByPeriod(period);
+  return data.length;
+};
+
 // ページ別PV取得
 export const getPageViews = async (pagePath: string): Promise<number> => {
   try {
@@ -497,6 +579,15 @@ export const getPageViews = async (pagePath: string): Promise<number> => {
     console.error("ページPV取得処理エラー:", error);
     return 0;
   }
+};
+
+// 期間別のページ別PV取得
+export const getPageViewsByPeriod = async (
+  pagePath: string,
+  period: "today" | "week" | "month" | "all" = "all"
+): Promise<number> => {
+  const data = await getAnalyticsDataByPeriod(period);
+  return data.filter((item) => item.page_path === pagePath).length;
 };
 
 // 成果イベント（LINE登録クリック）を記録
@@ -585,7 +676,9 @@ export const resetAnalyticsData = () => {
 };
 
 // ページ別アクセス数
-export const getPageAnalytics = async (): Promise<{ page: string; count: number; bounceRate: number }[]> => {
+export const getPageAnalytics = async (): Promise<
+  { page: string; count: number; bounceRate: number }[]
+> => {
   const data = await getAnalyticsData();
   const pageCount: { [key: string]: { count: number; bounces: number } } = {};
 
@@ -595,7 +688,7 @@ export const getPageAnalytics = async (): Promise<{ page: string; count: number;
       pageCount[page] = { count: 0, bounces: 0 };
     }
     pageCount[page].count += 1;
-    
+
     // 単一ページビューの場合（リファラーが同じページの場合）をバウンスとみなす
     // これは簡易的な判定で、実際のバウンス率とは異なる場合があります
     if (item.referrer === page || item.referrer === "direct") {
@@ -613,9 +706,12 @@ export const getPageAnalytics = async (): Promise<{ page: string; count: number;
 };
 
 // ページ別の滞在時間分析（簡易版）
-export const getPageEngagementAnalytics = async (): Promise<{ page: string; avgTime: number; sessions: number }[]> => {
+export const getPageEngagementAnalytics = async (): Promise<
+  { page: string; avgTime: number; sessions: number }[]
+> => {
   const data = await getAnalyticsData();
-  const pageStats: { [key: string]: { totalTime: number; sessions: number } } = {};
+  const pageStats: { [key: string]: { totalTime: number; sessions: number } } =
+    {};
 
   // 簡易的な滞在時間計算（実際の実装ではより精密な計測が必要）
   data.forEach((item, index) => {
@@ -623,7 +719,7 @@ export const getPageEngagementAnalytics = async (): Promise<{ page: string; avgT
     if (!pageStats[page]) {
       pageStats[page] = { totalTime: 0, sessions: 0 };
     }
-    
+
     // 仮の滞在時間（実際の実装ではページ離脱イベントなどで計測）
     const estimatedTime = Math.random() * 300 + 30; // 30秒〜5分30秒
     pageStats[page].totalTime += estimatedTime;
@@ -633,7 +729,8 @@ export const getPageEngagementAnalytics = async (): Promise<{ page: string; avgT
   return Object.entries(pageStats)
     .map(([page, stats]) => ({
       page,
-      avgTime: stats.sessions > 0 ? Math.round(stats.totalTime / stats.sessions) : 0,
+      avgTime:
+        stats.sessions > 0 ? Math.round(stats.totalTime / stats.sessions) : 0,
       sessions: stats.sessions,
     }))
     .sort((a, b) => b.avgTime - a.avgTime); // 平均滞在時間順にソート
@@ -642,20 +739,28 @@ export const getPageEngagementAnalytics = async (): Promise<{ page: string; avgT
 // デバッグ用：ローカルストレージのデータを確認
 export const debugLocalStorage = () => {
   console.log("🔍 ローカルストレージ デバッグ情報:");
-  
+
   // 全体PV
   const totalKey = getLocalStorageKey("total");
   const total = localStorage.getItem(totalKey);
   console.log("📊 全体PV:", total);
-  
+
   // 各ページのPV
-  const pages = ["/", "/profile", "/services", "/contact", "/blog", "/what-is-coaching", "/admin"];
-  pages.forEach(page => {
+  const pages = [
+    "/",
+    "/profile",
+    "/services",
+    "/contact",
+    "/blog",
+    "/what-is-coaching",
+    "/admin",
+  ];
+  pages.forEach((page) => {
     const pageKey = getLocalStorageKey(page);
     const pageViews = localStorage.getItem(pageKey);
     console.log(`📄 ${page}:`, pageViews);
   });
-  
+
   // 分析データ
   const analyticsKey = getLocalStorageKey("analytics");
   const analytics = localStorage.getItem(analyticsKey);
@@ -664,7 +769,7 @@ export const debugLocalStorage = () => {
     console.log("📈 分析データ数:", parsed.length);
     console.log("📈 最新の分析データ:", parsed.slice(-3));
   }
-  
+
   // ユーザー情報
   const userId = localStorage.getItem("user_id");
   const userMeta = localStorage.getItem("user_meta");
