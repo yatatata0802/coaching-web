@@ -1,0 +1,48 @@
+{
+  "name": "coaching-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && cp public/404.html dist/ && npx gh-pages -d dist"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@nivo/core": "^0.99.0",
+    "@nivo/sankey": "^0.99.0",
+    "@react-three/drei": "^10.4.4",
+    "@react-three/fiber": "^9.2.0",
+    "@supabase/supabase-js": "^2.50.4",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^11.5.4",
+    "gsap": "^3.12.2",
+    "lucide-react": "^0.525.0",
+    "react": "^19.1.0",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "^19.1.0",
+    "react-ga4": "^2.1.0",
+    "react-router-dom": "^6.26.1",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.158.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^9.9.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "gh-pages": "^6.1.0",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.2"
+  }
+}

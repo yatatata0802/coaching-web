@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================================================================
+   1. BASE STYLES
+   - 基本的な要素のスタイルを定義
+   - TailwindのPreflight(リセットCSS)をベースに、プロジェクト固有の調整を追加
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* スマホでのスクロール最適化 */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    font-family: "Noto Sans JP", system-ui, sans-serif;
+    overflow-x: hidden;
+    /* スマホでのフォント調整 */
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* スマホ用スクロールバー（非表示） */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  /* デスクトップ用スクロールバー */
+  @media (min-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #d4af37, #ffd700);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, #ffd700, #d4af37);
+    }
+  }
+}
+
+/* =============================================================================
+   2. UTILITY CLASSES
+   - プロジェクトで再利用する汎用的なスタイルを定義
+   ========================================================================== */
+@layer utilities {
+  /* 日本語テキスト最適化 */
+  .japanese-text {
+    font-feature-settings: "palt" 1;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+  }
+
+  /* 日本語テキストの改行制御 */
+  .jp-text-optimal {
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: normal;
+    hanging-punctuation: allow-end;
+  }
+}
