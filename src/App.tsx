@@ -72,14 +72,14 @@ function App() {
             </MainLayout>
           }
         />
-        <Route
+        {/* <Route
           path="/admin"
           element={
             <MainLayout showFloatingCTA={false}>
               <AdminDashboardPage />
             </MainLayout>
           }
-        />
+        /> */}
       </Routes>
     </Suspense>
   );
