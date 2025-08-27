@@ -33,7 +33,7 @@ function App() {
           }
         />
         <Route
-          path="/what-coaching"
+          path="/what-is-coaching"
           element={
             <MainLayout>
               <WhatIsCoachingPage />
@@ -72,7 +72,14 @@ function App() {
             </MainLayout>
           }
         />
-        <Route path="/admin" element={<AdminDashboardPage />} />
+        <Route
+          path="/admin"
+          element={
+            <MainLayout showFloatingCTA={false}>
+              <AdminDashboardPage />
+            </MainLayout>
+          }
+        />
       </Routes>
     </Suspense>
   );

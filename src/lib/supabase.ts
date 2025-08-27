@@ -367,6 +367,7 @@ export function getUserMeta() {
 // --- 既存のincrementPageViewを拡張 ---
 export const incrementPageView = async (pagePath: string) => {
   try {
+    console.log("🔍 incrementPageView 開始:", pagePath);
     const now = new Date();
     const hour = now.getHours();
     const dayOfWeek = now.getDay();
@@ -430,8 +431,12 @@ export const incrementPageView = async (pagePath: string) => {
       }
       localStorage.setItem(analyticsKey, JSON.stringify(analytics));
       console.log(
-        `PVカウント: ${pagePath} (ローカルストレージ)`,
-        analyticsData
+        `✅ PVカウント完了: ${pagePath} (ローカルストレージ)`,
+        {
+          total: currentTotal + 1,
+          page: currentPage + 1,
+          analyticsCount: analytics.length
+        }
       );
     }
   } catch (error) {
@@ -632,4 +637,37 @@ export const getPageEngagementAnalytics = async (): Promise<{ page: string; avgT
       sessions: stats.sessions,
     }))
     .sort((a, b) => b.avgTime - a.avgTime); // 平均滞在時間順にソート
+};
+
+// デバッグ用：ローカルストレージのデータを確認
+export const debugLocalStorage = () => {
+  console.log("🔍 ローカルストレージ デバッグ情報:");
+  
+  // 全体PV
+  const totalKey = getLocalStorageKey("total");
+  const total = localStorage.getItem(totalKey);
+  console.log("📊 全体PV:", total);
+  
+  // 各ページのPV
+  const pages = ["/", "/profile", "/services", "/contact", "/blog", "/what-is-coaching", "/admin"];
+  pages.forEach(page => {
+    const pageKey = getLocalStorageKey(page);
+    const pageViews = localStorage.getItem(pageKey);
+    console.log(`📄 ${page}:`, pageViews);
+  });
+  
+  // 分析データ
+  const analyticsKey = getLocalStorageKey("analytics");
+  const analytics = localStorage.getItem(analyticsKey);
+  if (analytics) {
+    const parsed = JSON.parse(analytics);
+    console.log("📈 分析データ数:", parsed.length);
+    console.log("📈 最新の分析データ:", parsed.slice(-3));
+  }
+  
+  // ユーザー情報
+  const userId = localStorage.getItem("user_id");
+  const userMeta = localStorage.getItem("user_meta");
+  console.log("👤 ユーザーID:", userId);
+  console.log("👤 ユーザーメタ:", userMeta);
 };

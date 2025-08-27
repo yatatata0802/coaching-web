@@ -27,6 +27,7 @@ import {
   getReferrerAnalytics,
   getPageAnalytics,
   getPageEngagementAnalytics,
+  debugLocalStorage,
 } from "../lib/supabase";
 import {
   HourlyData,
@@ -155,6 +156,11 @@ const AdminPage: React.FC = () => {
     }
   };
 
+  const handleDebugData = () => {
+    debugLocalStorage();
+    alert("デバッグ情報をコンソールに出力しました。F12で確認してください。");
+  };
+
   const getDayName = (day: number): string => {
     const days = ["日", "月", "火", "水", "木", "金", "土"];
     return days[day];
@@ -235,6 +241,12 @@ const AdminPage: React.FC = () => {
                 className="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition-colors"
               >
                 テストPV追加
+              </button>
+              <button
+                onClick={handleDebugData}
+                className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600 transition-colors"
+              >
+                デバッグデータ
               </button>
               <button
                 onClick={logoutAdmin}
