@@ -160,7 +160,7 @@ const formatWeek = (date: Date): string => {
 export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
   try {
     console.log("🔍 getAnalyticsData 開始");
-    
+
     if (isSupabaseConfigured) {
       const { data, error } = await supabase
         .from("analytics")
@@ -179,10 +179,14 @@ export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
       const analyticsKey = getLocalStorageKey("analytics");
       const analyticsData = localStorage.getItem(analyticsKey);
       const result = analyticsData ? JSON.parse(analyticsData) : [];
-      
-      console.log("✅ ローカルストレージからデータ取得完了:", result.length, "件");
+
+      console.log(
+        "✅ ローカルストレージからデータ取得完了:",
+        result.length,
+        "件"
+      );
       console.log("📊 最新のデータ:", result.slice(-3));
-      
+
       return result;
     }
   } catch (error) {
@@ -422,7 +426,7 @@ export const incrementPageView = async (pagePath: string) => {
     console.log("🔍 incrementPageView 開始:", pagePath);
     console.log("🔍 現在のURL:", window.location.href);
     console.log("🔍 リファラー:", document.referrer);
-    
+
     const now = new Date();
     const hour = now.getHours();
     const dayOfWeek = now.getDay();
@@ -475,17 +479,21 @@ export const incrementPageView = async (pagePath: string) => {
       const totalKey = getLocalStorageKey("total");
       const pageKey = getLocalStorageKey(pagePath);
       const analyticsKey = getLocalStorageKey("analytics");
-      
-      console.log("🔍 ローカルストレージキー:", { totalKey, pageKey, analyticsKey });
-      
+
+      console.log("🔍 ローカルストレージキー:", {
+        totalKey,
+        pageKey,
+        analyticsKey,
+      });
+
       const currentTotal = parseInt(localStorage.getItem(totalKey) || "0");
       const currentPage = parseInt(localStorage.getItem(pageKey) || "0");
-      
+
       console.log("🔍 現在の値:", { currentTotal, currentPage });
-      
+
       localStorage.setItem(totalKey, (currentTotal + 1).toString());
       localStorage.setItem(pageKey, (currentPage + 1).toString());
-      
+
       // 分析データを保存
       const existingAnalytics = localStorage.getItem(analyticsKey);
       const analytics = existingAnalytics ? JSON.parse(existingAnalytics) : [];
@@ -494,14 +502,14 @@ export const incrementPageView = async (pagePath: string) => {
         analytics.splice(0, analytics.length - 1000);
       }
       localStorage.setItem(analyticsKey, JSON.stringify(analytics));
-      
+
       console.log(`✅ PVカウント完了: ${pagePath} (ローカルストレージ)`, {
         total: currentTotal + 1,
         page: currentPage + 1,
         analyticsCount: analytics.length,
         timestamp: now.toISOString(),
       });
-      
+
       // 保存後の確認
       const savedTotal = localStorage.getItem(totalKey);
       const savedPage = localStorage.getItem(pageKey);
@@ -739,12 +747,12 @@ export const getPageEngagementAnalytics = async (): Promise<
 // デバッグ用：ローカルストレージのデータを確認
 export const debugLocalStorage = () => {
   console.log("🔍 ローカルストレージ デバッグ情報:");
-
+  
   // 全体PV
   const totalKey = getLocalStorageKey("total");
   const total = localStorage.getItem(totalKey);
   console.log("📊 全体PV:", total);
-
+  
   // 各ページのPV
   const pages = [
     "/",
@@ -755,12 +763,14 @@ export const debugLocalStorage = () => {
     "/what-is-coaching",
     "/admin",
   ];
+  
+  console.log("📄 各ページのPV:");
   pages.forEach((page) => {
     const pageKey = getLocalStorageKey(page);
     const pageViews = localStorage.getItem(pageKey);
-    console.log(`📄 ${page}:`, pageViews);
+    console.log(`  ${page}: ${pageViews || 0}`);
   });
-
+  
   // 分析データ
   const analyticsKey = getLocalStorageKey("analytics");
   const analytics = localStorage.getItem(analyticsKey);
@@ -768,11 +778,39 @@ export const debugLocalStorage = () => {
     const parsed = JSON.parse(analytics);
     console.log("📈 分析データ数:", parsed.length);
     console.log("📈 最新の分析データ:", parsed.slice(-3));
+    
+    // ページ別の分析データ
+    console.log("📈 ページ別分析データ:");
+    pages.forEach((page) => {
+      const pageData = parsed.filter((item: any) => item.page_path === page);
+      console.log(`  ${page}: ${pageData.length}件`);
+    });
   }
-
+  
   // ユーザー情報
   const userId = localStorage.getItem("user_id");
   const userMeta = localStorage.getItem("user_meta");
   console.log("👤 ユーザーID:", userId);
   console.log("👤 ユーザーメタ:", userMeta);
+  
+  // データ整合性チェック
+  console.log("🔍 データ整合性チェック:");
+  if (analytics) {
+    const parsed = JSON.parse(analytics);
+    const totalFromAnalytics = parsed.length;
+    const totalFromCounter = parseInt(total || "0");
+    
+    console.log(`  分析データ総数: ${totalFromAnalytics}`);
+    console.log(`  カウンター総数: ${totalFromCounter}`);
+    console.log(`  整合性: ${totalFromAnalytics === totalFromCounter ? "✅ OK" : "❌ 不一致"}`);
+    
+    // ページ別の整合性チェック
+    pages.forEach((page) => {
+      const pageKey = getLocalStorageKey(page);
+      const pageViews = parseInt(localStorage.getItem(pageKey) || "0");
+      const pageDataCount = parsed.filter((item: any) => item.page_path === page).length;
+      
+      console.log(`  ${page}: カウンター=${pageViews}, 分析データ=${pageDataCount} ${pageViews === pageDataCount ? "✅" : "❌"}`);
+    });
+  }
 };

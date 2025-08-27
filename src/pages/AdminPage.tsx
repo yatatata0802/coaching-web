@@ -179,6 +179,30 @@ const AdminPage: React.FC = () => {
     });
   };
 
+  const handleTestAllPages = async () => {
+    console.log("🔍 全ページテスト開始");
+    
+    const pages = ["/", "/profile", "/services", "/contact", "/blog", "/what-is-coaching", "/admin"];
+    
+    for (const page of pages) {
+      try {
+        console.log(`📊 テストページビュー: ${page}`);
+        await incrementPageView(page);
+        console.log(`✅ テストページビュー完了: ${page}`);
+        // 少し待つ
+        await new Promise(resolve => setTimeout(resolve, 100));
+      } catch (error) {
+        console.error(`❌ テストページビューエラー: ${page}`, error);
+      }
+    }
+    
+    console.log("🔄 全ページテスト完了、データ再取得中...");
+    setTimeout(() => {
+      fetchAnalytics();
+      console.log("✅ 全ページテスト完了");
+    }, 1000);
+  };
+
   const getDayName = (day: number): string => {
     const days = ["日", "月", "火", "水", "木", "金", "土"];
     return days[day];
@@ -271,6 +295,12 @@ const AdminPage: React.FC = () => {
                 className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
               >
                 リアルタイムデータ確認
+              </button>
+              <button
+                onClick={handleTestAllPages}
+                className="px-4 py-2 bg-orange-700 text-white rounded-lg hover:bg-orange-600 transition-colors"
+              >
+                全ページテスト
               </button>
               <button
                 onClick={logoutAdmin}
@@ -855,10 +885,7 @@ const AdminPage: React.FC = () => {
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {pageData.map((item) => {
-                      const percentage =
-                        (item.count /
-                          Math.max(...pageData.map((p) => p.count), 1)) *
-                        100;
+                      const percentage = (item.count / Math.max(...pageData.map(p => p.count), 1)) * 100;
                       return (
                         <div
                           key={item.page}
@@ -899,6 +926,37 @@ const AdminPage: React.FC = () => {
                         </div>
                       );
                     })}
+                  </div>
+                  
+                  {/* ページ別詳細情報 */}
+                  <div className="mt-6 p-4 bg-gray-800/30 rounded-lg">
+                    <h3 className="text-lg font-medium text-white mb-3">ページ別詳細情報</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="text-gray-400">総ページ数:</span>
+                        <span className="text-white ml-2">{pageData.length}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-400">総アクセス数:</span>
+                        <span className="text-white ml-2">{pageData.reduce((sum, item) => sum + item.count, 0)}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-400">平均離脱率:</span>
+                        <span className="text-white ml-2">
+                          {pageData.length > 0 
+                            ? (pageData.reduce((sum, item) => sum + item.bounceRate, 0) / pageData.length).toFixed(1)
+                            : 0}%
+                        </span>
+                      </div>
+                      <div>
+                        <span className="text-gray-400">最も人気のページ:</span>
+                        <span className="text-white ml-2">
+                          {pageData.length > 0 
+                            ? (pageData[0].page === "/" ? "ホーム" : pageData[0].page)
+                            : "なし"}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

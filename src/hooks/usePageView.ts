@@ -4,83 +4,48 @@ import { incrementPageView } from "../lib/supabase";
 
 export const usePageView = () => {
   const location = useLocation();
-  const hasCounted = useRef(false);
-  const lastPath = useRef<string>("");
+  const hasCounted = useRef<{ [key: string]: boolean }>({});
 
   useEffect(() => {
+    const currentPath = location.pathname;
+    
     console.log("🔄 usePageView useEffect 実行:", {
-      currentPath: location.pathname,
-      lastPath: lastPath.current,
-      hasCounted: hasCounted.current,
+      currentPath,
+      hasCountedForPath: hasCounted.current[currentPath],
+      allCountedPaths: Object.keys(hasCounted.current),
       timestamp: new Date().toISOString(),
     });
 
-    // 初回レンダリング時とパス変更時にカウント
-    const countPageView = async () => {
-      try {
-        console.log("📊 ページビューカウント開始:", location.pathname);
-        await incrementPageView(location.pathname);
-        console.log("✅ ページビューカウント完了:", location.pathname);
-        hasCounted.current = true;
-        lastPath.current = location.pathname;
-      } catch (error) {
-        console.error("❌ PVカウントエラー:", error);
-        console.error("❌ エラー詳細:", {
-          pathname: location.pathname,
-          timestamp: new Date().toISOString(),
-          error: error instanceof Error ? error.message : String(error),
-        });
-      }
-    };
-
-    // パスが変更された場合、または初回の場合にカウント
-    if (location.pathname !== lastPath.current || !hasCounted.current) {
-      console.log("🎯 ページビューカウント実行条件満たす:", {
-        pathChanged: location.pathname !== lastPath.current,
-        notCounted: !hasCounted.current,
-      });
-      countPageView();
-    } else {
-      console.log("⏭️ ページビューカウントスキップ:", {
-        reason: "同じパスで既にカウント済み",
-        pathname: location.pathname,
-      });
-    }
-  }, [location.pathname]);
-
-  // 初回レンダリング時にも確実にカウント
-  useEffect(() => {
-    console.log("🚀 初回レンダリング useEffect 実行:", {
-      pathname: location.pathname,
-      hasCounted: hasCounted.current,
-      timestamp: new Date().toISOString(),
-    });
-
-    if (!hasCounted.current) {
+    // このパスでまだカウントしていない場合のみカウント
+    if (!hasCounted.current[currentPath]) {
       const countPageView = async () => {
         try {
-          console.log("📊 初回ページビューカウント:", location.pathname);
-          await incrementPageView(location.pathname);
-          console.log("✅ 初回ページビューカウント完了:", location.pathname);
-          hasCounted.current = true;
-          lastPath.current = location.pathname;
+          console.log("📊 ページビューカウント開始:", currentPath);
+          await incrementPageView(currentPath);
+          console.log("✅ ページビューカウント完了:", currentPath);
+          hasCounted.current[currentPath] = true;
         } catch (error) {
-          console.error("❌ 初回PVカウントエラー:", error);
-          console.error("❌ 初回エラー詳細:", {
-            pathname: location.pathname,
+          console.error("❌ PVカウントエラー:", error);
+          console.error("❌ エラー詳細:", {
+            pathname: currentPath,
             timestamp: new Date().toISOString(),
             error: error instanceof Error ? error.message : String(error),
           });
         }
       };
+      
+      console.log("🎯 ページビューカウント実行:", {
+        path: currentPath,
+        reason: "このパスで初回カウント",
+      });
       countPageView();
     } else {
-      console.log("⏭️ 初回カウントスキップ:", {
-        reason: "既にカウント済み",
-        pathname: location.pathname,
+      console.log("⏭️ ページビューカウントスキップ:", {
+        path: currentPath,
+        reason: "このパスで既にカウント済み",
       });
     }
-  }, []);
+  }, [location.pathname]);
 
   return null;
 };
