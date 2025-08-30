@@ -260,7 +260,7 @@ const HomePage: React.FC = () => {
               <div className="flex justify-center mt-8 sm:mt-10">
                 <VisualGuide type="attention-grabber" delay={1}>
                   <MobileOptimizedButton
-                    onClick={() => navigate("/what-coaching")}
+                    onClick={() => navigate("/what-is-coaching")}
                     icon={HelpCircle}
                     variant="secondary"
                     size="lg"
