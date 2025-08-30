@@ -10,7 +10,7 @@ const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogDetailPage = lazy(() => import("./pages/BlogDetailPage"));
-const AdminDashboardPage = lazy(() => import("./pages/AdminDashboardPage"));
+const AdminPage = lazy(() => import("./pages/AdminPage"));
 
 function App() {
   return (
@@ -76,7 +76,7 @@ function App() {
           path="/admin"
           element={
             <MainLayout showFloatingCTA={false}>
-              <AdminDashboardPage />
+              <AdminPage />
             </MainLayout>
           }
         />

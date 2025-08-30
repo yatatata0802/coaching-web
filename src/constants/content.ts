@@ -1,5 +1,34 @@
-import { Mail, MapPin, Clock, Target, TrendingUp, Heart, CheckCircle, ArrowDown, Home, User, HelpCircle, Settings, BookOpen } from "lucide-react";
+import { Mail, MapPin, Clock, Target, TrendingUp, Heart, CheckCircle, ArrowDown, Home, User, HelpCircle, Settings, BookOpen, Eye, Zap, Users } from "lucide-react";
 import type { ServiceFeature, StorySection, ContactInfo, ServiceItem, PricingPlan, ServicePageTestimonial, BlogPost } from "../types";
+
+interface ServiceData {
+  title: string;
+  description: string;
+  icon: any;
+}
+
+export const SERVICES_PAGE_DATA: ServiceData[] = [
+  {
+    title: "コーチングとコンサルティングの違い",
+    description: "コンサルティングは「答えを教える」、コーチングは「答えを引き出す」。あなたの内側にある可能性を信じ、対話を通じて本当の望みや解決策を発見できるようサポートします。",
+    icon: Target
+  },
+  {
+    title: "コーチングで得られる変化",
+    description: "表面的な悩みだけでなく、無意識にあなたを縛る「思い込み」や「パターン」を見抜き、根本から「人生の脚本」を書き換えるお手伝いをします。",
+    icon: Eye
+  },
+  {
+    title: "元公安警察官の独自性",
+    description: "20年間、人の心と行動の裏側を見続けてきた経験は、私のコーチングの根幹です。論理的思考力と、人の本質を見抜く洞察力で、あなたの「変わりたい」を現実へと導きます。",
+    icon: Zap
+  },
+  {
+    title: "「変わりたい」あなたへのメッセージ",
+    description: "私たちは、あなたの「伴走者」として、目標達成まで共に歩みます。あなたの内側に眠る可能性を信じ、対話を通じて「本当の望み」や「解決策」をあなた自身が発見できるよう、徹底的にサポートするプロセスです。",
+    icon: Users
+  }
+];
 
 export const HERO_TITLE = `このまま
 終わっていいの？`;
