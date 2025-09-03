@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Target, Eye, Zap, Users } from "lucide-react";
+
 import VisualGuide from "../components/ui/VisualGuide";
 import ParticleBackground from "../components/ParticleBackground";
 import SEO from "../components/SEO";

@@ -29,6 +29,7 @@ import {
   getPageAnalytics,
   getPageEngagementAnalytics,
   debugLocalStorage,
+  getDataSource,
 } from "../lib/supabase";
 import {
   HourlyData,
@@ -69,6 +70,7 @@ const AdminPage: React.FC = () => {
     | "funnel"
     | "pages"
   >("overview");
+  const [showHeader, setShowHeader] = useState(false);
 
   useEffect(() => {
     const checkAdminStatus = () => {
@@ -79,6 +81,11 @@ const AdminPage: React.FC = () => {
     };
 
     checkAdminStatus();
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowHeader(true), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   const fetchAnalytics = async () => {
@@ -165,37 +172,47 @@ const AdminPage: React.FC = () => {
 
   const handleCheckRealTimeData = () => {
     console.log("🔍 リアルタイムデータ確認開始");
-    
+
     // 現在のページビューを手動でカウント
-    incrementPageView(location.pathname).then(() => {
-      console.log("✅ 手動ページビューテスト完了");
-      // 少し待ってからデータを再取得
-      setTimeout(() => {
-        fetchAnalytics();
-        console.log("🔄 データ再取得完了");
-      }, 1000);
-    }).catch(error => {
-      console.error("❌ 手動ページビューテストエラー:", error);
-    });
+    incrementPageView(location.pathname)
+      .then(() => {
+        console.log("✅ 手動ページビューテスト完了");
+        // 少し待ってからデータを再取得
+        setTimeout(() => {
+          fetchAnalytics();
+          console.log("🔄 データ再取得完了");
+        }, 1000);
+      })
+      .catch((error) => {
+        console.error("❌ 手動ページビューテストエラー:", error);
+      });
   };
 
   const handleTestAllPages = async () => {
     console.log("🔍 全ページテスト開始");
-    
-    const pages = ["/", "/profile", "/services", "/contact", "/blog", "/what-is-coaching", "/admin"];
-    
+
+    const pages = [
+      "/",
+      "/profile",
+      "/services",
+      "/contact",
+      "/blog",
+      "/what-is-coaching",
+      "/admin",
+    ];
+
     for (const page of pages) {
       try {
         console.log(`📊 テストページビュー: ${page}`);
         await incrementPageView(page);
         console.log(`✅ テストページビュー完了: ${page}`);
         // 少し待つ
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise((resolve) => setTimeout(resolve, 100));
       } catch (error) {
         console.error(`❌ テストページビューエラー: ${page}`, error);
       }
     }
-    
+
     console.log("🔄 全ページテスト完了、データ再取得中...");
     setTimeout(() => {
       fetchAnalytics();
@@ -247,81 +264,120 @@ const AdminPage: React.FC = () => {
         description="管理者専用のアクセス分析ダッシュボード"
       />
 
-      {/* ヘッダー */}
-      <div className="bg-black/50 backdrop-blur-sm border-b border-[#d4af37]/30 p-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <BarChart3 size={32} className="text-[#d4af37]" />
-              <div>
-                <h1 className="text-2xl font-bold text-[#d4af37]">
-                  管理者分析ダッシュボード
-                </h1>
-                <p className="text-gray-400">リアルタイムアクセス分析</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="text-right">
-                <div className="text-2xl font-bold text-[#d4af37]">
-                  {totalViews.toLocaleString()}
-                </div>
-                <div className="text-sm text-gray-400">累積PV</div>
-              </div>
-              <button
-                onClick={handleRefresh}
-                disabled={isRefreshing}
-                className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-              >
-                <RefreshCw
-                  size={16}
-                  className={isRefreshing ? "animate-spin" : ""}
-                />
-                {isRefreshing ? "更新中..." : "更新"}
-              </button>
-              <button
-                onClick={handleTestPageView}
-                className="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition-colors"
-              >
-                テストPV追加
-              </button>
-              <button
-                onClick={handleDebugData}
-                className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600 transition-colors"
-              >
-                デバッグデータ
-              </button>
-              <button
-                onClick={handleCheckRealTimeData}
-                className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
-              >
-                リアルタイムデータ確認
-              </button>
-              <button
-                onClick={handleTestAllPages}
-                className="px-4 py-2 bg-orange-700 text-white rounded-lg hover:bg-orange-600 transition-colors"
-              >
-                全ページテスト
-              </button>
-              <button
-                onClick={logoutAdmin}
-                className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
-              >
-                ログアウト
-              </button>
-              <button
-                onClick={resetAnalyticsData}
-                className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
-              >
-                データをリセット
-              </button>
-            </div>
+      {/* データソース固定バッジ（ヘッダーに隠れない位置） */}
+      <div className="fixed top-20 right-4 z-50">
+        <div className="px-3 py-2 rounded-md border border-[#d4af37]/40 bg-black/70 backdrop-blur-sm shadow-lg">
+          <div className="text-[10px] text-gray-400 leading-tight">
+            データソース
+          </div>
+          <div className="text-xs font-semibold leading-tight">
+            {getDataSource() === "supabase" ? (
+              <span className="text-green-400">Supabase（全端末集計）</span>
+            ) : (
+              <span className="text-red-400">LocalStorage（端末単位）</span>
+            )}
           </div>
         </div>
       </div>
 
+      {/* ヘッダー（3秒遅延表示） */}
+      {showHeader && (
+        <div className="bg-black/50 backdrop-blur-sm border-b border-[#d4af37]/30 p-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <BarChart3 size={32} className="text-[#d4af37]" />
+                <div>
+                  <h1 className="text-2xl font-bold text-[#d4af37]">
+                    管理者分析ダッシュボード
+                  </h1>
+                  <p className="text-gray-400">リアルタイムアクセス分析</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                {/* データソース表示 */}
+                <div className="px-3 py-2 rounded-md border border-[#d4af37]/30 bg-black/40">
+                  <div className="text-xs text-gray-400">データソース</div>
+                  <div className="text-sm font-semibold">
+                    {getDataSource() === "supabase" ? (
+                      <span className="text-green-400">
+                        Supabase（全端末集計）
+                      </span>
+                    ) : (
+                      <span className="text-red-400">
+                        LocalStorage（端末単位）
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-[#d4af37]">
+                    {totalViews.toLocaleString()}
+                  </div>
+                  <div className="text-sm text-gray-400">累積PV</div>
+                </div>
+                <button
+                  onClick={handleRefresh}
+                  disabled={isRefreshing}
+                  className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                >
+                  <RefreshCw
+                    size={16}
+                    className={isRefreshing ? "animate-spin" : ""}
+                  />
+                  {isRefreshing ? "更新中..." : "更新"}
+                </button>
+                <button
+                  onClick={handleTestPageView}
+                  className="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition-colors"
+                >
+                  テストPV追加
+                </button>
+                <button
+                  onClick={handleDebugData}
+                  className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600 transition-colors"
+                >
+                  デバッグデータ
+                </button>
+                <button
+                  onClick={handleCheckRealTimeData}
+                  className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
+                >
+                  リアルタイムデータ確認
+                </button>
+                <button
+                  onClick={handleTestAllPages}
+                  className="px-4 py-2 bg-orange-700 text-white rounded-lg hover:bg-orange-600 transition-colors"
+                >
+                  全ページテスト
+                </button>
+                <button
+                  onClick={logoutAdmin}
+                  className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                >
+                  ログアウト
+                </button>
+                <button
+                  onClick={resetAnalyticsData}
+                  className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
+                >
+                  データをリセット
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ナビゲーション */}
       <div className="bg-black/30 backdrop-blur-sm border-b border-[#d4af37]/20 p-4">
         <div className="max-w-7xl mx-auto">
+          {getDataSource() !== "supabase" && (
+            <div className="mb-3 p-3 rounded-lg border border-yellow-500/40 bg-yellow-500/10 text-yellow-300 text-sm">
+              現在、ローカル保存（端末単位）のデータを表示しています。全端末の合算を表示するには、Vercelの環境変数（VITE_SUPABASE_URL
+              / VITE_SUPABASE_ANON_KEY）を設定して再デプロイしてください。
+            </div>
+          )}
           <div className="flex gap-2 overflow-x-auto">
             <button
               onClick={() => setActiveTab("overview")}
@@ -885,7 +941,10 @@ const AdminPage: React.FC = () => {
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {pageData.map((item) => {
-                      const percentage = (item.count / Math.max(...pageData.map(p => p.count), 1)) * 100;
+                      const percentage =
+                        (item.count /
+                          Math.max(...pageData.map((p) => p.count), 1)) *
+                        100;
                       return (
                         <div
                           key={item.page}
@@ -927,32 +986,46 @@ const AdminPage: React.FC = () => {
                       );
                     })}
                   </div>
-                  
+
                   {/* ページ別詳細情報 */}
                   <div className="mt-6 p-4 bg-gray-800/30 rounded-lg">
-                    <h3 className="text-lg font-medium text-white mb-3">ページ別詳細情報</h3>
+                    <h3 className="text-lg font-medium text-white mb-3">
+                      ページ別詳細情報
+                    </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <span className="text-gray-400">総ページ数:</span>
-                        <span className="text-white ml-2">{pageData.length}</span>
+                        <span className="text-white ml-2">
+                          {pageData.length}
+                        </span>
                       </div>
                       <div>
                         <span className="text-gray-400">総アクセス数:</span>
-                        <span className="text-white ml-2">{pageData.reduce((sum, item) => sum + item.count, 0)}</span>
+                        <span className="text-white ml-2">
+                          {pageData.reduce((sum, item) => sum + item.count, 0)}
+                        </span>
                       </div>
                       <div>
                         <span className="text-gray-400">平均離脱率:</span>
                         <span className="text-white ml-2">
-                          {pageData.length > 0 
-                            ? (pageData.reduce((sum, item) => sum + item.bounceRate, 0) / pageData.length).toFixed(1)
-                            : 0}%
+                          {pageData.length > 0
+                            ? (
+                                pageData.reduce(
+                                  (sum, item) => sum + item.bounceRate,
+                                  0
+                                ) / pageData.length
+                              ).toFixed(1)
+                            : 0}
+                          %
                         </span>
                       </div>
                       <div>
                         <span className="text-gray-400">最も人気のページ:</span>
                         <span className="text-white ml-2">
-                          {pageData.length > 0 
-                            ? (pageData[0].page === "/" ? "ホーム" : pageData[0].page)
+                          {pageData.length > 0
+                            ? pageData[0].page === "/"
+                              ? "ホーム"
+                              : pageData[0].page
                             : "なし"}
                         </span>
                       </div>

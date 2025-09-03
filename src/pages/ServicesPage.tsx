@@ -1,15 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import ParticleBackground from "../components/ParticleBackground";
 import ServiceTestimonialCard from "../components/ui/ServiceTestimonialCard";
-import { SERVICES_PAGE_DATA, PRICING_PLANS, SERVICE_PAGE_TESTIMONIALS } from "../constants/content";
-import { Target, TrendingUp, Heart, CheckCircle, Clock } from "lucide-react";
+import { PRICING_PLANS, SERVICE_PAGE_TESTIMONIALS } from "../constants/content";
+import { Target, TrendingUp, Heart, CheckCircle } from "lucide-react";
 
 const ServicesPage: React.FC = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen header-safe-padding pb-12 sm:pb-16 mobile-safe-area relative overflow-hidden">
       <SEO
@@ -217,20 +214,36 @@ const ServicesPage: React.FC = () => {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">セッションの実施形式</h3>
-                  <p className="text-gray-300">当コーチングは、対面形式でのセッションを基本としております。オンラインでの実施は現在行っておりません。</p>
-                  <p className="text-gray-300 mt-2">以下のいずれかの場所をお選びいただけます。</p>
+                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">
+                    セッションの実施形式
+                  </h3>
+                  <p className="text-gray-300">
+                    当コーチングは、対面形式でのセッションを基本としております。オンラインでの実施は現在行っておりません。
+                  </p>
+                  <p className="text-gray-300 mt-2">
+                    以下のいずれかの場所をお選びいただけます。
+                  </p>
                   <ul className="list-disc list-inside text-gray-400 text-sm mt-2 ml-4">
                     <li>私の自宅（京橋駅より徒歩3分）</li>
                     <li>京橋駅（大阪）周辺の喫茶店</li>
                   </ul>
-                  <p className="text-gray-500 text-xs mt-2">※詳細な場所は、お申し込み後に個別にご案内いたします。</p>
+                  <p className="text-gray-500 text-xs mt-2">
+                    ※詳細な場所は、お申し込み後に個別にご案内いたします。
+                  </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">対応可能日時</h3>
-                  <p className="text-gray-300"><span className="font-semibold">平日:</span> 10:00～20:00</p>
-                  <p className="text-gray-300 mt-1"><span className="font-semibold">土日祝:</span> 10:00～19:00</p>
-                  <p className="text-gray-400 text-xs mt-3">※上記以外の日時についても、お気軽にご相談ください。</p>
+                  <h3 className="text-xl font-bold text-[#d4af37] mb-4">
+                    対応可能日時
+                  </h3>
+                  <p className="text-gray-300">
+                    <span className="font-semibold">平日:</span> 10:00～20:00
+                  </p>
+                  <p className="text-gray-300 mt-1">
+                    <span className="font-semibold">土日祝:</span> 10:00～19:00
+                  </p>
+                  <p className="text-gray-400 text-xs mt-3">
+                    ※上記以外の日時についても、お気軽にご相談ください。
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -258,7 +271,11 @@ const ServicesPage: React.FC = () => {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {SERVICE_PAGE_TESTIMONIALS.map((testimonial, index) => (
-                <ServiceTestimonialCard key={index} testimonial={testimonial} index={index} />
+                <ServiceTestimonialCard
+                  key={index}
+                  testimonial={testimonial}
+                  index={index}
+                />
               ))}
             </div>
 

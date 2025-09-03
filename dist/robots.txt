@@ -1,8 +1,35 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# 特定のクローラー設定
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# 画像とCSS/JSファイルのクロール許可
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+
+# サイトマップ
 Sitemap: https://yatatata0802.github.io/coaching-web/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1 
+# クロール遅延
+Crawl-delay: 1
+
+# コメント
+# 矢田谷充則のコーチングサービスサイト
+# 最終更新: 2024年12月20日 

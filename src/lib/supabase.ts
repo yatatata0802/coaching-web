@@ -1,6 +1,8 @@
 // 一時的なモック版Supabaseクライアント
 // 実際のSupabaseを使用する場合は、環境変数を設定してこのファイルを置き換えてください
 
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
+
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
@@ -11,9 +13,13 @@ const isSupabaseConfigured =
   supabaseUrl !== "your_supabase_project_url" &&
   supabaseAnonKey !== "your_supabase_anon_key";
 
+export const getDataSource = (): "supabase" | "local" =>
+  isSupabaseConfigured ? "supabase" : "local";
+
 // モック版のSupabaseクライアント
 const mockSupabase = {
   rpc: async (func: string, params: any) => {
+    // eslint-disable-next-line no-console
     console.log(`Mock Supabase RPC: ${func}`, params);
     return { error: null };
   },
@@ -25,17 +31,15 @@ const mockSupabase = {
       }),
     }),
   }),
-};
+} as unknown as SupabaseClient;
 
-// 実際のSupabaseクライアント（環境変数が設定されている場合のみ）
-let supabase: any = mockSupabase;
-
+// 実際のSupabaseクライアント（同期初期化）
+let supabase: SupabaseClient = mockSupabase;
 if (isSupabaseConfigured) {
   try {
-    // 動的インポートを使用
-    const { createClient } = await import("@supabase/supabase-js");
-    supabase = createClient(supabaseUrl, supabaseAnonKey);
+    supabase = createClient(supabaseUrl as string, supabaseAnonKey as string);
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.warn("Supabase client creation failed, using mock:", error);
   }
 }
@@ -45,8 +49,6 @@ export { supabase };
 // 統一された型定義をインポート
 import {
   AnalyticsData,
-  PageView,
-  TotalViews,
   DailyData,
   MonthlyData,
   WeeklyData,
@@ -156,9 +158,10 @@ const formatWeek = (date: Date): string => {
   return `${year}-W${String(weekNumber).padStart(2, "0")}`; // YYYY-WNN形式
 };
 
-// 分析データを取得
+// 以下のAPIは既存のまま（supabase は同期で初期化済み）
 export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
   try {
+    // eslint-disable-next-line no-console
     console.log("🔍 getAnalyticsData 開始");
 
     if (isSupabaseConfigured) {
@@ -172,21 +175,19 @@ export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
         return [];
       }
 
+      // eslint-disable-next-line no-console
       console.log("✅ Supabaseからデータ取得完了:", data?.length || 0, "件");
       return data || [];
     } else {
-      // モック版：ローカルストレージから取得
       const analyticsKey = getLocalStorageKey("analytics");
       const analyticsData = localStorage.getItem(analyticsKey);
       const result = analyticsData ? JSON.parse(analyticsData) : [];
-
       console.log(
         "✅ ローカルストレージからデータ取得完了:",
         result.length,
         "件"
       );
       console.log("📊 最新のデータ:", result.slice(-3));
-
       return result;
     }
   } catch (error) {
@@ -213,7 +214,7 @@ export const getAnalyticsDataByPeriod = async (
       case "today":
         startDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
         break;
-      case "week":
+      case "week": {
         const dayOfWeek = now.getDay();
         const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // 月曜日を週の開始とする
         startDate = new Date(
@@ -222,6 +223,7 @@ export const getAnalyticsDataByPeriod = async (
           now.getDate() - daysToSubtract
         );
         break;
+      }
       case "month":
         startDate = new Date(now.getFullYear(), now.getMonth(), 1);
         break;
@@ -234,6 +236,7 @@ export const getAnalyticsDataByPeriod = async (
       return itemDate >= startDate;
     });
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error("期間別分析データ取得エラー:", error);
     return [];
   }
@@ -722,7 +725,7 @@ export const getPageEngagementAnalytics = async (): Promise<
     {};
 
   // 簡易的な滞在時間計算（実際の実装ではより精密な計測が必要）
-  data.forEach((item, index) => {
+  data.forEach((item) => {
     const page = item.page_path;
     if (!pageStats[page]) {
       pageStats[page] = { totalTime: 0, sessions: 0 };

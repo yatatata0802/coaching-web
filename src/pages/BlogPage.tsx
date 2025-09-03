@@ -1,43 +1,42 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ArrowRight, Calendar, Tag, Eye, Clock } from "lucide-react";
+import { Search, ArrowRight, Calendar, Tag, Eye } from "lucide-react";
 import SEO from "../components/SEO";
 import SectionDivider from "../components/SectionDivider";
 import { BLOG_CATEGORIES, BLOG_POSTS } from "../constants/content";
-import { BlogPost } from "../types";
 
 const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortBy, setSortBy] = useState<"views" | "date" | "title">("views"); // 人気順をデフォルトに
+  const [sortBy, setSortBy] = useState<"views" | "date" | "title">("date"); // 最新順をデフォルトに
 
   // フィルタリングとソート
-  const filteredPosts = BLOG_POSTS
-    .filter((post) => {
-      const matchesCategory =
-        selectedCategory === "all" || post.category === selectedCategory;
-      const matchesSearch =
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.tags.some((tag) =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-      return matchesCategory && matchesSearch;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case "views":
-          return b.views - a.views;
-        case "date":
-          return new Date(b.date).getTime() - new Date(a.date).getTime();
-        case "title":
-          return a.title.localeCompare(b.title);
-        default:
-          return b.views - a.views; // デフォルトは人気順
-      }
-    });
+  const filteredPosts = BLOG_POSTS.filter((post) => {
+    const matchesCategory =
+      selectedCategory === "all" || post.category === selectedCategory;
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.tags.some((tag) =>
+        tag.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    return matchesCategory && matchesSearch;
+  }).sort((a, b) => {
+    switch (sortBy) {
+      case "views":
+        return b.views - a.views;
+      case "date":
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      case "title":
+        return a.title.localeCompare(b.title);
+      default:
+        return new Date(b.date).getTime() - new Date(a.date).getTime(); // デフォルトは最新順
+    }
+  });
 
-  const currentCategory = BLOG_CATEGORIES.find((cat) => cat.id === selectedCategory);
+  const currentCategory = BLOG_CATEGORIES.find(
+    (cat) => cat.id === selectedCategory
+  );
 
   return (
     <div className="min-h-screen header-safe-padding pb-12 sm:pb-16 relative overflow-hidden">
@@ -159,17 +158,22 @@ const BlogPage: React.FC = () => {
             </div>
 
             {/* ソート選択 */}
-            <select
-              value={sortBy}
-              onChange={(e) =>
-                setSortBy(e.target.value as "views" | "date" | "title")
-              }
-              className="px-4 py-3 bg-white/10 border border-[#d4af37]/30 rounded-xl text-white focus:border-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/20 transition-all"
-            >
-              <option value="views">人気順</option>
-              <option value="date">最新順</option>
-              <option value="title">タイトル順</option>
-            </select>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-[#d4af37] font-medium">
+                並び順
+              </label>
+              <select
+                value={sortBy}
+                onChange={(e) =>
+                  setSortBy(e.target.value as "views" | "date" | "title")
+                }
+                className="px-4 py-3 bg-white/10 border border-[#d4af37]/30 rounded-xl text-white focus:border-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/20 transition-all"
+              >
+                <option value="date">最新順</option>
+                <option value="views">人気順</option>
+                <option value="title">タイトル順</option>
+              </select>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -215,9 +219,7 @@ const BlogPage: React.FC = () => {
                   >
                     {/* 記事サムネイル（YouTube風キャッチコピー＋サブコピー＋著者名） */}
                     <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-black to-[#181818] px-4">
-                      <span
-                        className="text-3xl sm:text-4xl font-extrabold text-white text-center drop-shadow-lg tracking-wide whitespace-pre-line break-words"
-                      >
+                      <span className="text-3xl sm:text-4xl font-extrabold text-white text-center drop-shadow-lg tracking-wide whitespace-pre-line break-words">
                         {post.punchline}
                       </span>
                     </div>
@@ -242,8 +244,9 @@ const BlogPage: React.FC = () => {
                       <div className="mb-3">
                         <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-[#d4af37]/20 text-[#d4af37]">
                           {
-                            BLOG_CATEGORIES.find((cat) => cat.id === post.category)
-                              ?.name
+                            BLOG_CATEGORIES.find(
+                              (cat) => cat.id === post.category
+                            )?.name
                           }
                         </span>
                       </div>

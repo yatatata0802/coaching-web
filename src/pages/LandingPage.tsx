@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import ParticleBackground from "../components/ParticleBackground";
 import TypewriterText from "../components/TypewriterText";
-import AnimatedText from "../components/ui/AnimatedText";
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();

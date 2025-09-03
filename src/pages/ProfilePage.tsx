@@ -1,14 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+
 import { ArrowUp } from "lucide-react";
 import SEO from "../components/SEO";
 import { useProcessProfileStory } from "../hooks/useProcessProfileStory.tsx";
 import { PROFILE_PAGE_DATA } from "../constants/content";
 
 const ProfilePage: React.FC = () => {
-  const navigate = useNavigate();
-
   const { titleParts, basicProfile, storyContent } = PROFILE_PAGE_DATA;
 
   const processedStory = useProcessProfileStory(storyContent);

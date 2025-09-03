@@ -1,10 +1,7 @@
 import {
   DailyData,
-  MonthlyData,
-  WeeklyData,
   ReferrerData,
   DeviceData,
-  BrowserData,
   FunnelData,
 } from "../types/analytics";
 
@@ -32,18 +29,24 @@ const detectAnomaly = (
       }
       return acc;
     },
-    { totalInflow: 0, totalConversion: 0 } as { totalInflow: number; totalConversion: number }
+    { totalInflow: 0, totalConversion: 0 } as {
+      totalInflow: number;
+      totalConversion: number;
+    }
   );
 
   const { totalInflow, totalConversion } = funnelMetrics;
-  const { MIN_INFLOW_THRESHOLD, LOW_CONVERSION_RATE_THRESHOLD } = ANOMALY_DETECTION_CONFIG;
+  const { MIN_INFLOW_THRESHOLD, LOW_CONVERSION_RATE_THRESHOLD } =
+    ANOMALY_DETECTION_CONFIG;
 
   if (
     totalInflow > MIN_INFLOW_THRESHOLD &&
     totalConversion / totalInflow < LOW_CONVERSION_RATE_THRESHOLD
   ) {
     return {
-      message: `全体のコンバージョン率が${(LOW_CONVERSION_RATE_THRESHOLD * 100).toFixed(0)}%未満です。LINE誘導の動線に問題がある可能性があります。`,
+      message: `全体のコンバージョン率が${(
+        LOW_CONVERSION_RATE_THRESHOLD * 100
+      ).toFixed(0)}%未満です。LINE誘導の動線に問題がある可能性があります。`,
     };
   }
 
@@ -52,20 +55,14 @@ const detectAnomaly = (
 
 export const generateAIInsights = ({
   dateData,
-  monthlyData,
-  weeklyData,
   referrerData,
   deviceData,
-  browserData,
   totalViews,
   funnelData,
 }: {
   dateData: DailyData[];
-  monthlyData: MonthlyData[];
-  weeklyData: WeeklyData[];
   referrerData: ReferrerData[];
   deviceData: DeviceData[];
-  browserData: BrowserData[];
   totalViews: number;
   funnelData: FunnelData[];
 }): AIInsight => {
@@ -76,15 +73,23 @@ export const generateAIInsights = ({
   const prev7DaysViews = dateData
     .slice(-14, -7)
     .reduce((acc, cur) => acc + cur.count, 0);
-  const weeklyChange = prev7DaysViews > 0 ? ((last7DaysViews - prev7DaysViews) / prev7DaysViews) * 100 : 0;
-  const weeklyChangeText = weeklyChange >= 0 ? `${weeklyChange.toFixed(1)}%増加` : `${Math.abs(weeklyChange).toFixed(1)}%減少`;
+  const weeklyChange =
+    prev7DaysViews > 0
+      ? ((last7DaysViews - prev7DaysViews) / prev7DaysViews) * 100
+      : 0;
+  const weeklyChangeText =
+    weeklyChange >= 0
+      ? `${weeklyChange.toFixed(1)}%増加`
+      : `${Math.abs(weeklyChange).toFixed(1)}%減少`;
 
   const topReferrer = referrerData.length > 0 ? referrerData[0] : null;
   const topDevice = deviceData.length > 0 ? deviceData[0] : null;
 
   let summary = `直近7日間のアクセス数は${last7DaysViews}件で、その前の7日間と比較して${weeklyChangeText}しています.\n`;
   if (topReferrer && totalViews > 0) {
-    const referrerPercentage = ((topReferrer.count / totalViews) * 100).toFixed(1);
+    const referrerPercentage = ((topReferrer.count / totalViews) * 100).toFixed(
+      1
+    );
     summary += `最も多い流入元は${topReferrer.platform}からで、全体の${referrerPercentage}%を占めています.\n`;
   }
   if (topDevice) {

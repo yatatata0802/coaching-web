@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Clock, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import SEO from "../components/SEO";
-import { CONTACT_INFO, ASSURANCES } from "../constants/content";
+import { ASSURANCES } from "../constants/content";
 
 const ContactPage: React.FC = () => {
   return (
@@ -38,8 +38,6 @@ const ContactPage: React.FC = () => {
           下記のGoogleフォームまたはLINEよりお願いいたします。
         </p>
       </div>
-
-      
 
       <div className="flex flex-col items-center gap-3 justify-center mt-2 mb-0">
         <a
@@ -88,7 +86,10 @@ const ContactPage: React.FC = () => {
           <ul className="space-y-4">
             {ASSURANCES.map((assurance, index) => (
               <li key={index} className="flex items-start gap-4">
-                <CheckCircle size={24} className="text-[#d4af37] flex-shrink-0 mt-1" />
+                <CheckCircle
+                  size={24}
+                  className="text-[#d4af37] flex-shrink-0 mt-1"
+                />
                 <p className="text-lg text-gray-200">{assurance}</p>
               </li>
             ))}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { FileText, X, Zap, Clock, Users } from "lucide-react";
+import { FileText, X, Zap, Clock } from "lucide-react";
 import ThumbZone from "./ui/ThumbZone";
 
 const FloatingCTA: React.FC = () => {
@@ -14,9 +14,10 @@ const FloatingCTA: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleContact = () => {
-    navigate("/contact?plan=無料相談");
-  };
+  // 必要に応じて使用する関数
+  // const handleContact = () => {
+  //   navigate("/contact?plan=無料相談");
+  // };
 
   return (
     <AnimatePresence>

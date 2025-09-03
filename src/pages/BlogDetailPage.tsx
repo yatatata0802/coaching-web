@@ -14,7 +14,6 @@ import {
 import SEO from "../components/SEO";
 import SectionDivider from "../components/SectionDivider";
 import { BLOG_POSTS } from "../constants/content";
-import { BlogPost } from "../types";
 
 const BlogDetailPage: React.FC = () => {
   const navigate = useNavigate();
@@ -111,7 +110,10 @@ const BlogDetailPage: React.FC = () => {
       if (currentList.length > 0) {
         if (listType === "ul") {
           elements.push(
-            <ul key={`ul-${elements.length}`} className="list-disc list-inside text-gray-300 mb-4 leading-relaxed">
+            <ul
+              key={`ul-${elements.length}`}
+              className="list-disc list-inside text-gray-300 mb-4 leading-relaxed"
+            >
               {currentList.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
@@ -119,7 +121,10 @@ const BlogDetailPage: React.FC = () => {
           );
         } else if (listType === "ol") {
           elements.push(
-            <ol key={`ol-${elements.length}`} className="list-decimal list-inside text-gray-300 mb-4 leading-relaxed">
+            <ol
+              key={`ol-${elements.length}`}
+              className="list-decimal list-inside text-gray-300 mb-4 leading-relaxed"
+            >
               {currentList.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
@@ -175,7 +180,7 @@ const BlogDetailPage: React.FC = () => {
         elements.push(<br key={index} />);
       } else {
         processList();
-        const parts = line.split(/(\*\*[^\*]+\*\*)/g); // **で囲まれた部分を分割
+        const parts = line.split(/(\*\*[^*]+\*\*)/g); // **で囲まれた部分を分割
         elements.push(
           <p key={index} className="text-gray-300 mb-4 leading-relaxed">
             {parts.map((part, i) =>
@@ -202,7 +207,25 @@ const BlogDetailPage: React.FC = () => {
       <SEO
         title={`${blogPost.title} | ブログ | 矢田谷充則`}
         description={blogPost.excerpt}
-        keywords={`${blogPost.tags.join(", ")}, ブログ, 矢田谷充則, コーチング`}
+        keywords={`${blogPost.tags.join(
+          ", "
+        )}, ブログ, 矢田谷充則, コーチング, ${
+          blogPost.category
+        }, 大阪, 関西, 無料相談`}
+        type="article"
+        author={{
+          name: "矢田谷充則",
+          jobTitle: "コーチング専門家",
+          description: "元公安警察官の矢田谷充則によるコーチングサービス",
+          knowsAbout: [
+            "コーチング",
+            "マインドセット",
+            "フィットネス",
+            "ライフスタイル",
+          ],
+        }}
+        publishDate={blogPost.date}
+        lastModifiedDate={blogPost.date}
       />
 
       {/* 戻るボタン */}

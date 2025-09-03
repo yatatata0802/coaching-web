@@ -46,11 +46,11 @@ const MinimalForm: React.FC<MinimalFormProps> = ({
         USER_ID
       )
       .then(
-        (result) => {
+        () => {
           setSending(false);
           onSubmit(formData); // サンクスメッセージ表示
         },
-        (error) => {
+        () => {
           setSending(false);
           alert("送信に失敗しました。再度お試しください。");
         }

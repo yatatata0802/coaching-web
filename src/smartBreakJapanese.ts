@@ -28,7 +28,7 @@ export function smartBreakJapanese(
   const blocks = text.split(/([。！？\n])/).filter(Boolean);
   let result = "";
   let line = "";
-  for (let block of blocks) {
+  for (const block of blocks) {
     if (/^[。！？\n]$/.test(block)) {
       line += block;
       result += line + '<br class="mobile-only-br"/>';
