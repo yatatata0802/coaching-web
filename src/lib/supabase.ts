@@ -464,18 +464,19 @@ export const incrementPageView = async (pagePath: string) => {
     console.log("🔍 分析データ作成完了:", analyticsData);
 
     if (isSupabaseConfigured) {
-      const { error } = await supabase.rpc("increment_page_view", {
-        page_path: pagePath,
-      });
-      if (error) {
-        console.error("PVカウントエラー:", error);
+      // 超シンプル版: hits テーブルに1行挿入するだけ
+      const { error: insertError } = await supabase
+        .from("hits")
+        .insert({ page_path: pagePath });
+      if (insertError) {
+        console.error("PVカウントINSERTエラー:", insertError);
       }
-      // 分析データも保存
-      const { error: analyticsError } = await supabase
-        .from("analytics")
-        .insert(analyticsData);
-      if (analyticsError) {
-        console.error("分析データ保存エラー:", analyticsError);
+      // 可能なら分析データも保存（失敗してもカウントには影響させない）
+      try {
+        await supabase.from("analytics").insert(analyticsData);
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.warn("analytics挿入はスキップ:", e);
       }
     } else {
       // モック版：ローカルストレージを使用
@@ -533,17 +534,15 @@ export const incrementPageView = async (pagePath: string) => {
 export const getTotalViews = async (): Promise<number> => {
   try {
     if (isSupabaseConfigured) {
-      const { data, error } = await supabase
-        .from("total_views")
-        .select("total_count")
-        .single();
-
+      // hits テーブルの総件数をカウント
+      const { count, error } = await supabase
+        .from("hits")
+        .select("id", { count: "exact", head: true });
       if (error) {
         console.error("全体PV取得エラー:", error);
         return 0;
       }
-
-      return data?.total_count || 0;
+      return count ?? 0;
     } else {
       // モック版：ローカルストレージから取得
       const totalKey = getLocalStorageKey("total");
@@ -568,18 +567,16 @@ export const getTotalViewsByPeriod = async (
 export const getPageViews = async (pagePath: string): Promise<number> => {
   try {
     if (isSupabaseConfigured) {
-      const { data, error } = await supabase
-        .from("page_views")
-        .select("view_count")
-        .eq("page_path", pagePath)
-        .single();
-
+      // hits テーブルからページ別件数を取得
+      const { count, error } = await supabase
+        .from("hits")
+        .select("id", { count: "exact", head: true })
+        .eq("page_path", pagePath);
       if (error) {
         console.error("ページPV取得エラー:", error);
         return 0;
       }
-
-      return data?.view_count || 0;
+      return count ?? 0;
     } else {
       // モック版：ローカルストレージから取得
       const pageKey = getLocalStorageKey(pagePath);
