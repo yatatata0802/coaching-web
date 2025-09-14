@@ -90,18 +90,7 @@ const AdminPage: React.FC = () => {
 
   const fetchAnalytics = async () => {
     try {
-      const [
-        hourly,
-        daily,
-        device,
-        browser,
-        total,
-        recent,
-        funnel,
-        referrer,
-        pages,
-        engagement,
-      ] = await Promise.all([
+      const results = await Promise.allSettled([
         getHourlyAnalytics(),
         getDayOfWeekAnalytics(),
         getDeviceAnalytics(),
@@ -114,18 +103,30 @@ const AdminPage: React.FC = () => {
         getPageEngagementAnalytics(),
       ]);
 
-      setHourlyData(hourly);
-      setDailyData(daily);
-      setDeviceData(device);
-      setBrowserData(browser);
-      setTotalViews(total);
-      setRecentData(recent.slice(0, 20)); // 最新20件
-      setFunnelData(funnel);
-      setReferrerData(referrer);
-      setPageData(pages);
-      setPageEngagementData(engagement);
+      if (results[0].status === "fulfilled") setHourlyData(results[0].value);
+      if (results[1].status === "fulfilled") setDailyData(results[1].value);
+      if (results[2].status === "fulfilled") setDeviceData(results[2].value);
+      if (results[3].status === "fulfilled") setBrowserData(results[3].value);
+      if (results[4].status === "fulfilled")
+        setTotalViews(results[4].value as number);
+      if (results[5].status === "fulfilled")
+        setRecentData(results[5].value.slice(0, 20)); // 最新20件
+      if (results[6].status === "fulfilled") setFunnelData(results[6].value);
+      if (results[7].status === "fulfilled") setReferrerData(results[7].value);
+      if (results[8].status === "fulfilled") setPageData(results[8].value);
+      if (results[9].status === "fulfilled")
+        setPageEngagementData(results[9].value);
+
+      results.forEach((result, i) => {
+        if (result.status === "rejected") {
+          console.error(
+            `分析データ取得エラー (Promise.allSettled[${i}]):`,
+            result.reason
+          );
+        }
+      });
     } catch (error) {
-      console.error("分析データ取得エラー:", error);
+      console.error("分析データ取得中に予期せぬエラーが発生しました:", error);
     } finally {
       setIsLoading(false);
       setIsRefreshing(false);
