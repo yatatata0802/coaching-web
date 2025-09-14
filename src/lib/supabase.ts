@@ -464,19 +464,9 @@ export const incrementPageView = async (pagePath: string) => {
     console.log("🔍 分析データ作成完了:", analyticsData);
 
     if (isSupabaseConfigured) {
-      // 超シンプル版: hits テーブルに1行挿入するだけ
-      const { error: insertError } = await supabase
-        .from("hits")
-        .insert({ page_path: pagePath });
-      if (insertError) {
-        console.error("PVカウントINSERTエラー:", insertError);
-      }
-      // 可能なら分析データも保存（失敗してもカウントには影響させない）
-      try {
-        await supabase.from("analytics").insert(analyticsData);
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.warn("analytics挿入はスキップ:", e);
+      const { error } = await supabase.from("analytics").insert(analyticsData);
+      if (error) {
+        console.error("PVカウントINSERTエラー:", error);
       }
     } else {
       // モック版：ローカルストレージを使用
@@ -534,9 +524,9 @@ export const incrementPageView = async (pagePath: string) => {
 export const getTotalViews = async (): Promise<number> => {
   try {
     if (isSupabaseConfigured) {
-      // hits テーブルの総件数をカウント
+      // analytics テーブルの総件数をカウント
       const { count, error } = await supabase
-        .from("hits")
+        .from("analytics")
         .select("id", { count: "exact", head: true });
       if (error) {
         console.error("全体PV取得エラー:", error);
@@ -567,9 +557,9 @@ export const getTotalViewsByPeriod = async (
 export const getPageViews = async (pagePath: string): Promise<number> => {
   try {
     if (isSupabaseConfigured) {
-      // hits テーブルからページ別件数を取得
+      // analytics テーブルからページ別件数を取得
       const { count, error } = await supabase
-        .from("hits")
+        .from("analytics")
         .select("id", { count: "exact", head: true })
         .eq("page_path", pagePath);
       if (error) {
