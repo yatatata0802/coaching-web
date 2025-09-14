@@ -444,7 +444,6 @@ export const incrementPageView = async (pagePath: string) => {
     const analyticsData: AnalyticsData & {
       user_id?: string;
       visit_count?: number;
-      first_visit?: string;
     } = {
       id: Date.now().toString(),
       page_path: pagePath,
@@ -458,7 +457,6 @@ export const incrementPageView = async (pagePath: string) => {
       os,
       user_id: userId,
       visit_count: userMeta.visitCount,
-      first_visit: userMeta.firstVisit,
     };
 
     console.log("🔍 分析データ作成完了:", analyticsData);
