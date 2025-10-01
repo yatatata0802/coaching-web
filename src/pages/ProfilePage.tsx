@@ -1,13 +1,14 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, X } from "lucide-react";
 import SEO from "../components/SEO";
 import { useProcessProfileStory } from "../hooks/useProcessProfileStory.tsx";
 import { PROFILE_PAGE_DATA } from "../constants/content";
 
 const ProfilePage: React.FC = () => {
   const { titleParts, basicProfile, storyContent } = PROFILE_PAGE_DATA;
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
   const processedStory = useProcessProfileStory(storyContent);
 
@@ -99,10 +100,13 @@ const ProfilePage: React.FC = () => {
 
           {/* Profile Image */}
           <div className="flex justify-center mb-8">
-            <img
+            <motion.img
               src="/profile.jpg"
               alt="矢田谷充則"
-              className="w-32 h-40 object-cover shadow-lg border-4 border-[#d4af37]"
+              className="w-32 h-40 object-cover shadow-lg border-4 border-[#d4af37] cursor-pointer hover:scale-105 transition-transform duration-300"
+              onClick={() => setIsImageModalOpen(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             />
           </div>
 
@@ -190,6 +194,43 @@ const ProfilePage: React.FC = () => {
             <ArrowUp size={24} />
           </motion.button>
         </section>
+
+        {/* Image Modal */}
+        <AnimatePresence>
+          {isImageModalOpen && (
+            <motion.div
+              className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[100] p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setIsImageModalOpen(false)}
+            >
+              <motion.div
+                className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img
+                  src="/profile.jpg"
+                  alt="矢田谷充則 - 拡大画像"
+                  className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                />
+                <motion.button
+                  onClick={() => setIsImageModalOpen(false)}
+                  className="absolute top-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all duration-200"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <X size={24} />
+                </motion.button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </>
   );

@@ -103,30 +103,65 @@ const AdminPage: React.FC = () => {
         getPageEngagementAnalytics(),
       ]);
 
+      // データ設定（エラー時は空配列で初期化）
       if (results[0].status === "fulfilled") setHourlyData(results[0].value);
+      else setHourlyData([]);
+
       if (results[1].status === "fulfilled") setDailyData(results[1].value);
+      else setDailyData([]);
+
       if (results[2].status === "fulfilled") setDeviceData(results[2].value);
+      else setDeviceData([]);
+
       if (results[3].status === "fulfilled") setBrowserData(results[3].value);
+      else setBrowserData([]);
+
       if (results[4].status === "fulfilled")
         setTotalViews(results[4].value as number);
+      else setTotalViews(0);
+
       if (results[5].status === "fulfilled")
-        setRecentData(results[5].value.slice(0, 20)); // 最新20件
+        setRecentData(results[5].value.slice(0, 20));
+      else setRecentData([]);
+
       if (results[6].status === "fulfilled") setFunnelData(results[6].value);
+      else setFunnelData([]);
+
       if (results[7].status === "fulfilled") setReferrerData(results[7].value);
+      else setReferrerData([]);
+
       if (results[8].status === "fulfilled") setPageData(results[8].value);
+      else setPageData([]);
+
       if (results[9].status === "fulfilled")
         setPageEngagementData(results[9].value);
+      else setPageEngagementData([]);
 
-      results.forEach((result, i) => {
-        if (result.status === "rejected") {
-          console.error(
-            `分析データ取得エラー (Promise.allSettled[${i}]):`,
-            result.reason
-          );
-        }
-      });
+      // エラーログ出力
+      const errorCount = results.filter(
+        (result) => result.status === "rejected"
+      ).length;
+      if (errorCount > 0) {
+        console.warn(`${errorCount}個のデータ取得でエラーが発生しました`);
+        results.forEach((result, i) => {
+          if (result.status === "rejected") {
+            console.error(`分析データ取得エラー (${i}):`, result.reason);
+          }
+        });
+      }
     } catch (error) {
       console.error("分析データ取得中に予期せぬエラーが発生しました:", error);
+      // エラー時は全て空データで初期化
+      setHourlyData([]);
+      setDailyData([]);
+      setDeviceData([]);
+      setBrowserData([]);
+      setTotalViews(0);
+      setRecentData([]);
+      setFunnelData([]);
+      setReferrerData([]);
+      setPageData([]);
+      setPageEngagementData([]);
     } finally {
       setIsLoading(false);
       setIsRefreshing(false);
@@ -221,9 +256,10 @@ const AdminPage: React.FC = () => {
     }, 1000);
   };
 
+  // ユーティリティ関数
   const getDayName = (day: number): string => {
     const days = ["日", "月", "火", "水", "木", "金", "土"];
-    return days[day];
+    return days[day] || "不明";
   };
 
   const getDeviceIcon = (device: string) => {
@@ -237,6 +273,20 @@ const AdminPage: React.FC = () => {
       default:
         return <Monitor size={16} />;
     }
+  };
+
+  const getPageDisplayName = (page: string | undefined): string => {
+    if (!page) return "不明";
+    const pageNames: { [key: string]: string } = {
+      "/": "ホーム",
+      "/profile": "プロフィール",
+      "/services": "サービス",
+      "/contact": "お問い合わせ",
+      "/blog": "ブログ",
+      "/what-is-coaching": "コーチングとは",
+      "/admin": "管理画面",
+    };
+    return pageNames[page] || page;
   };
 
   const getMaxValue = (data: any[]): number => {
@@ -264,22 +314,6 @@ const AdminPage: React.FC = () => {
         title="管理者分析 | 矢田谷充則のコーチング"
         description="管理者専用のアクセス分析ダッシュボード"
       />
-
-      {/* データソース固定バッジ（ヘッダーに隠れない位置） */}
-      <div className="fixed top-20 right-4 z-50">
-        <div className="px-3 py-2 rounded-md border border-[#d4af37]/40 bg-black/70 backdrop-blur-sm shadow-lg">
-          <div className="text-[10px] text-gray-400 leading-tight">
-            データソース
-          </div>
-          <div className="text-xs font-semibold leading-tight">
-            {getDataSource() === "supabase" ? (
-              <span className="text-green-400">Supabase（全端末集計）</span>
-            ) : (
-              <span className="text-red-400">LocalStorage（端末単位）</span>
-            )}
-          </div>
-        </div>
-      </div>
 
       {/* ヘッダー（3秒遅延表示） */}
       {showHeader && (
@@ -311,59 +345,77 @@ const AdminPage: React.FC = () => {
                     )}
                   </div>
                 </div>
+
+                {/* 累積PV表示 */}
                 <div className="text-right">
                   <div className="text-2xl font-bold text-[#d4af37]">
                     {totalViews.toLocaleString()}
                   </div>
                   <div className="text-sm text-gray-400">累積PV</div>
                 </div>
-                <button
-                  onClick={handleRefresh}
-                  disabled={isRefreshing}
-                  className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                >
-                  <RefreshCw
-                    size={16}
-                    className={isRefreshing ? "animate-spin" : ""}
-                  />
-                  {isRefreshing ? "更新中..." : "更新"}
-                </button>
-                <button
-                  onClick={handleTestPageView}
-                  className="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition-colors"
-                >
-                  テストPV追加
-                </button>
-                <button
-                  onClick={handleDebugData}
-                  className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600 transition-colors"
-                >
-                  デバッグデータ
-                </button>
-                <button
-                  onClick={handleCheckRealTimeData}
-                  className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
-                >
-                  リアルタイムデータ確認
-                </button>
-                <button
-                  onClick={handleTestAllPages}
-                  className="px-4 py-2 bg-orange-700 text-white rounded-lg hover:bg-orange-600 transition-colors"
-                >
-                  全ページテスト
-                </button>
-                <button
-                  onClick={logoutAdmin}
-                  className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                >
-                  ログアウト
-                </button>
-                <button
-                  onClick={resetAnalyticsData}
-                  className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors"
-                >
-                  データをリセット
-                </button>
+
+                {/* 主要ボタン */}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={handleRefresh}
+                    disabled={isRefreshing}
+                    className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                  >
+                    <RefreshCw
+                      size={16}
+                      className={isRefreshing ? "animate-spin" : ""}
+                    />
+                    {isRefreshing ? "更新中..." : "更新"}
+                  </button>
+
+                  <button
+                    onClick={logoutAdmin}
+                    className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                  >
+                    ログアウト
+                  </button>
+                </div>
+
+                {/* 開発者ツール（折りたたみ可能） */}
+                <details className="group">
+                  <summary className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors cursor-pointer text-sm">
+                    開発者ツール
+                  </summary>
+                  <div className="absolute top-full right-0 mt-2 p-2 bg-gray-800 rounded-lg shadow-lg border border-gray-600 min-w-max z-50">
+                    <div className="flex flex-col gap-2">
+                      <button
+                        onClick={handleTestPageView}
+                        className="px-3 py-2 bg-green-700 text-white rounded hover:bg-green-600 transition-colors text-sm"
+                      >
+                        テストPV追加
+                      </button>
+                      <button
+                        onClick={handleDebugData}
+                        className="px-3 py-2 bg-purple-700 text-white rounded hover:bg-purple-600 transition-colors text-sm"
+                      >
+                        デバッグデータ
+                      </button>
+                      <button
+                        onClick={handleCheckRealTimeData}
+                        className="px-3 py-2 bg-red-700 text-white rounded hover:bg-red-600 transition-colors text-sm"
+                      >
+                        リアルタイム確認
+                      </button>
+                      <button
+                        onClick={handleTestAllPages}
+                        className="px-3 py-2 bg-orange-700 text-white rounded hover:bg-orange-600 transition-colors text-sm"
+                      >
+                        全ページテスト
+                      </button>
+                      <button
+                        onClick={resetAnalyticsData}
+                        className="px-3 py-2 bg-red-700 text-white rounded hover:bg-red-600 transition-colors text-sm"
+                      >
+                        データリセット
+                      </button>
+                    </div>
+                  </div>
+                </details>
               </div>
             </div>
           </div>
@@ -613,7 +665,8 @@ const AdminPage: React.FC = () => {
                       <Clock size={24} className="text-[#d4af37]" />
                       <div>
                         <div className="text-2xl font-bold text-white">
-                          {pageEngagementData.length > 0
+                          {pageEngagementData.length > 0 &&
+                          pageEngagementData[0]
                             ? Math.floor(pageEngagementData[0].avgTime / 60)
                             : 0}
                           分
@@ -650,33 +703,43 @@ const AdminPage: React.FC = () => {
                 <h2 className="text-xl font-bold text-[#d4af37] mb-6">
                   時間帯別アクセス数
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {hourlyData.map((item) => {
-                    const percentage =
-                      (item.count / getMaxValue(hourlyData)) * 100;
-                    return (
-                      <div
-                        key={item.hour}
-                        className="bg-gray-800/50 rounded-lg p-4"
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-lg font-medium text-white">
-                            {item.hour.toString().padStart(2, "0")}:00
-                          </span>
-                          <span className="text-[#d4af37] font-bold">
-                            {item.count}
-                          </span>
+                {hourlyData.length === 0 ? (
+                  <div className="text-center py-12">
+                    <Clock size={48} className="text-gray-400 mx-auto mb-4" />
+                    <p className="text-gray-400 text-lg">データがありません</p>
+                    <p className="text-gray-500 text-sm">
+                      アクセスがあると表示されます
+                    </p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {hourlyData.map((item) => {
+                      const percentage =
+                        (item.count / getMaxValue(hourlyData)) * 100;
+                      return (
+                        <div
+                          key={item.hour}
+                          className="bg-gray-800/50 rounded-lg p-4"
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-lg font-medium text-white">
+                              {item.hour.toString().padStart(2, "0")}:00
+                            </span>
+                            <span className="text-[#d4af37] font-bold">
+                              {item.count}
+                            </span>
+                          </div>
+                          <div className="bg-gray-700 rounded-full h-3">
+                            <div
+                              className="bg-gradient-to-r from-[#d4af37] to-[#ffd700] h-3 rounded-full transition-all duration-500"
+                              style={{ width: `${percentage}%` }}
+                            />
+                          </div>
                         </div>
-                        <div className="bg-gray-700 rounded-full h-3">
-                          <div
-                            className="bg-gradient-to-r from-[#d4af37] to-[#ffd700] h-3 rounded-full transition-all duration-500"
-                            style={{ width: `${percentage}%` }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             )}
 
@@ -736,7 +799,9 @@ const AdminPage: React.FC = () => {
                               ? "PC"
                               : item.device === "mobile"
                               ? "スマホ"
-                              : "タブレット"}
+                              : item.device === "tablet"
+                              ? "タブレット"
+                              : "その他"}
                           </span>
                         </div>
                         <div className="text-2xl font-bold text-[#d4af37] mb-2">
@@ -793,38 +858,53 @@ const AdminPage: React.FC = () => {
                 <h2 className="text-xl font-bold text-[#d4af37] mb-6">
                   最近のアクセス
                 </h2>
-                <div className="space-y-4">
-                  {recentData.map((item, index) => (
-                    <div key={index} className="bg-gray-800/50 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-3">
-                          <div className="flex items-center gap-2">
-                            {getDeviceIcon(item.device_type)}
+                {recentData.length === 0 ? (
+                  <div className="text-center py-12">
+                    <Users size={48} className="text-gray-400 mx-auto mb-4" />
+                    <p className="text-gray-400 text-lg">
+                      アクセスデータがありません
+                    </p>
+                    <p className="text-gray-500 text-sm">
+                      ページを訪問すると表示されます
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {recentData.map((item, index) => (
+                      <div
+                        key={index}
+                        className="bg-gray-800/50 rounded-lg p-4"
+                      >
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-2">
+                              {getDeviceIcon(item.device_type)}
+                              <span className="text-sm text-gray-400">
+                                {item.browser}
+                              </span>
+                            </div>
+                            <span className="text-sm text-gray-400">|</span>
                             <span className="text-sm text-gray-400">
-                              {item.browser}
+                              {item.os}
                             </span>
                           </div>
-                          <span className="text-sm text-gray-400">|</span>
                           <span className="text-sm text-gray-400">
-                            {item.os}
+                            {formatDate(item.timestamp)}
                           </span>
                         </div>
-                        <span className="text-sm text-gray-400">
-                          {formatDate(item.timestamp)}
-                        </span>
+                        <div className="text-white font-medium">
+                          {item.page_path}
+                        </div>
+                        <div className="text-sm text-gray-400 mt-1">
+                          リファラー:{" "}
+                          {item.referrer === "direct"
+                            ? "直接アクセス"
+                            : item.referrer}
+                        </div>
                       </div>
-                      <div className="text-white font-medium">
-                        {item.page_path}
-                      </div>
-                      <div className="text-sm text-gray-400 mt-1">
-                        リファラー:{" "}
-                        {item.referrer === "direct"
-                          ? "直接アクセス"
-                          : item.referrer}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 
@@ -953,19 +1033,7 @@ const AdminPage: React.FC = () => {
                         >
                           <div className="flex items-center justify-between mb-3">
                             <span className="text-lg font-medium text-white">
-                              {item.page === "/"
-                                ? "ホーム"
-                                : item.page === "/profile"
-                                ? "プロフィール"
-                                : item.page === "/services"
-                                ? "サービス"
-                                : item.page === "/contact"
-                                ? "お問い合わせ"
-                                : item.page === "/blog"
-                                ? "ブログ"
-                                : item.page === "/what-is-coaching"
-                                ? "コーチングとは"
-                                : item.page}
+                              {getPageDisplayName(item.page)}
                             </span>
                             <span className="text-sm text-gray-400">
                               {item.page}
@@ -1023,10 +1091,8 @@ const AdminPage: React.FC = () => {
                       <div>
                         <span className="text-gray-400">最も人気のページ:</span>
                         <span className="text-white ml-2">
-                          {pageData.length > 0
-                            ? pageData[0].page === "/"
-                              ? "ホーム"
-                              : pageData[0].page
+                          {pageData.length > 0 && pageData[0]
+                            ? getPageDisplayName(pageData[0].page)
                             : "なし"}
                         </span>
                       </div>
@@ -1047,19 +1113,7 @@ const AdminPage: React.FC = () => {
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-lg font-medium text-white">
-                            {item.page === "/"
-                              ? "ホーム"
-                              : item.page === "/profile"
-                              ? "プロフィール"
-                              : item.page === "/services"
-                              ? "サービス"
-                              : item.page === "/contact"
-                              ? "お問い合わせ"
-                              : item.page === "/blog"
-                              ? "ブログ"
-                              : item.page === "/what-is-coaching"
-                              ? "コーチングとは"
-                              : item.page}
+                            {getPageDisplayName(item.page)}
                           </span>
                           <span className="text-sm text-gray-400">
                             {item.page}
@@ -1099,12 +1153,10 @@ const AdminPage: React.FC = () => {
                       <h3 className="text-lg font-medium text-white mb-3">
                         最も人気のページ
                       </h3>
-                      {pageData.length > 0 && (
+                      {pageData.length > 0 && pageData[0] && (
                         <div>
                           <div className="text-2xl font-bold text-[#d4af37]">
-                            {pageData[0].page === "/"
-                              ? "ホーム"
-                              : pageData[0].page}
+                            {getPageDisplayName(pageData[0].page)}
                           </div>
                           <div className="text-sm text-gray-400">
                             {pageData[0].count} アクセス
@@ -1116,21 +1168,20 @@ const AdminPage: React.FC = () => {
                       <h3 className="text-lg font-medium text-white mb-3">
                         最も滞在時間が長いページ
                       </h3>
-                      {pageEngagementData.length > 0 && (
-                        <div>
-                          <div className="text-2xl font-bold text-[#d4af37]">
-                            {pageEngagementData[0].page === "/"
-                              ? "ホーム"
-                              : pageEngagementData[0].page}
+                      {pageEngagementData.length > 0 &&
+                        pageEngagementData[0] && (
+                          <div>
+                            <div className="text-2xl font-bold text-[#d4af37]">
+                              {getPageDisplayName(pageEngagementData[0].page)}
+                            </div>
+                            <div className="text-sm text-gray-400">
+                              {Math.floor(pageEngagementData[0].avgTime / 60)}:
+                              {(pageEngagementData[0].avgTime % 60)
+                                .toString()
+                                .padStart(2, "0")}
+                            </div>
                           </div>
-                          <div className="text-sm text-gray-400">
-                            {Math.floor(pageEngagementData[0].avgTime / 60)}:
-                            {(pageEngagementData[0].avgTime % 60)
-                              .toString()
-                              .padStart(2, "0")}
-                          </div>
-                        </div>
-                      )}
+                        )}
                     </div>
                     <div className="bg-gray-800/50 rounded-lg p-4">
                       <h3 className="text-lg font-medium text-white mb-3">
@@ -1139,19 +1190,13 @@ const AdminPage: React.FC = () => {
                       {pageData.length > 0 && (
                         <div>
                           <div className="text-2xl font-bold text-[#d4af37]">
-                            {pageData.find(
-                              (p) =>
-                                p.bounceRate ===
-                                Math.max(...pageData.map((p) => p.bounceRate))
-                            )?.page === "/"
-                              ? "ホーム"
-                              : pageData.find(
-                                  (p) =>
-                                    p.bounceRate ===
-                                    Math.max(
-                                      ...pageData.map((p) => p.bounceRate)
-                                    )
-                                )?.page}
+                            {getPageDisplayName(
+                              pageData.find(
+                                (p) =>
+                                  p.bounceRate ===
+                                  Math.max(...pageData.map((p) => p.bounceRate))
+                              )?.page
+                            )}
                           </div>
                           <div className="text-sm text-gray-400">
                             {Math.max(
