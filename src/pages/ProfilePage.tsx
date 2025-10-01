@@ -221,7 +221,7 @@ const ProfilePage: React.FC = () => {
                 />
                 <motion.button
                   onClick={() => setIsImageModalOpen(false)}
-                  className="absolute bottom-4 left-4 bg-[#e53935] bg-opacity-90 text-white p-3 rounded-full hover:bg-opacity-100 transition-all duration-200 shadow-lg border-2 border-white/20"
+                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#e53935] bg-opacity-90 text-white p-3 rounded-full hover:bg-opacity-100 transition-all duration-200 shadow-lg border-2 border-white/20"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   title="閉じる"
