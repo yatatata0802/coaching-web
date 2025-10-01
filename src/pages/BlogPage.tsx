@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ArrowRight, Calendar, Tag, Eye } from "lucide-react";
+import { Search, ArrowRight, Calendar, Tag } from "lucide-react";
 import SEO from "../components/SEO";
 import SectionDivider from "../components/SectionDivider";
 import { BLOG_CATEGORIES, BLOG_POSTS } from "../constants/content";
@@ -8,7 +8,7 @@ import { BLOG_CATEGORIES, BLOG_POSTS } from "../constants/content";
 const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortBy, setSortBy] = useState<"views" | "date" | "title">("date"); // 最新順をデフォルトに
+  const [sortBy, setSortBy] = useState<"date" | "title">("date"); // 最新順をデフォルトに
 
   // フィルタリングとソート
   const filteredPosts = BLOG_POSTS.filter((post) => {
@@ -23,8 +23,6 @@ const BlogPage: React.FC = () => {
     return matchesCategory && matchesSearch;
   }).sort((a, b) => {
     switch (sortBy) {
-      case "views":
-        return b.views - a.views;
       case "date":
         return new Date(b.date).getTime() - new Date(a.date).getTime();
       case "title":
@@ -165,12 +163,11 @@ const BlogPage: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) =>
-                  setSortBy(e.target.value as "views" | "date" | "title")
+                  setSortBy(e.target.value as "date" | "title")
                 }
                 className="px-4 py-3 bg-white/10 border border-[#d4af37]/30 rounded-xl text-white focus:border-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/20 transition-all"
               >
                 <option value="date">最新順</option>
-                <option value="views">人気順</option>
                 <option value="title">タイトル順</option>
               </select>
             </div>
@@ -233,10 +230,6 @@ const BlogPage: React.FC = () => {
                           <span>
                             {new Date(post.date).toLocaleDateString("ja-JP")}
                           </span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Eye size={12} />
-                          <span>{post.views.toLocaleString()}</span>
                         </div>
                       </div>
 
