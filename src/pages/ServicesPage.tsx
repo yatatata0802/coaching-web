@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 import ParticleBackground from "../components/ParticleBackground";
 import ServiceTestimonialCard from "../components/ui/ServiceTestimonialCard";
 import { PRICING_PLANS, SERVICE_PAGE_TESTIMONIALS } from "../constants/content";
-import { Target, TrendingUp, Heart, CheckCircle } from "lucide-react";
+import { Target, TrendingUp, Heart, CheckCircle, Dumbbell } from "lucide-react";
 
 const ServicesPage: React.FC = () => {
   return (
@@ -189,6 +189,34 @@ const ServicesPage: React.FC = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* オプションサービス：フィジカル・トレーニング指導 */}
+        <section className="py-12 sm:py-16">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative rounded-2xl border border-[#d4af37]/30 bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 p-8 text-center shadow-lg hover:border-[#d4af37]/50 transition-all duration-300"
+            >
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                OPTION
+              </div>
+              <div className="flex justify-center items-center mb-4">
+                  <Dumbbell className="text-[#d4af37] mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-white">
+                    フィジカル・トレーニング指導
+                  </h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed mb-6 max-w-2xl mx-auto">
+                希望される方には、コーチングと並行して基礎的な筋トレ（自重・ダンベル等）の指導も行います。心と身体を同時に鍛え、自己表現をより強く、揺るぎないものへと昇華させましょう。
+              </p>
+              <p className="text-sm text-[#d4af37]/80">
+                ※本サービスはコーチングセッションのオプションです。追加料金・詳細についてはお問い合わせください。
+              </p>
+            </motion.div>
           </div>
         </section>
 
