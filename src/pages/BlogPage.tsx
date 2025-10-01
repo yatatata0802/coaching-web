@@ -162,9 +162,7 @@ const BlogPage: React.FC = () => {
               </label>
               <select
                 value={sortBy}
-                onChange={(e) =>
-                  setSortBy(e.target.value as "date" | "title")
-                }
+                onChange={(e) => setSortBy(e.target.value as "date" | "title")}
                 className="px-4 py-3 bg-white/10 border border-[#d4af37]/30 rounded-xl text-white focus:border-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/20 transition-all"
               >
                 <option value="date">最新順</option>
@@ -329,7 +327,7 @@ const BlogPage: React.FC = () => {
 
               {/* note誘導ボタン */}
               <a
-                href="https://note.com/YOUR_NOTE_ID"
+                href="https://note.com/coach_yatagai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base sm:text-lg shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"

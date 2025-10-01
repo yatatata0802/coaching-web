@@ -429,7 +429,7 @@ const BlogDetailPage: React.FC = () => {
 
           {/* note誘導ボタン */}
           <a
-            href="https://note.com/YOUR_NOTE_ID"
+            href="https://note.com/coach_yatagai"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gradient-to-r from-[#181818] to-[#333] text-[#ffd700] font-semibold text-base sm:text-lg shadow-md border-2 border-[#d4af37] hover:bg-[#222] hover:text-[#fff] transition-all duration-300 text-center"
