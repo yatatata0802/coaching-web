@@ -178,15 +178,16 @@ export const useProcessProfileStory = (storyContent: ProfileStoryItem[]) => {
                   className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
                 />
                 {modalImage.caption && (
-                  <p className="absolute bottom-4 left-4 right-4 text-white text-center bg-black bg-opacity-50 p-2 rounded">
+                  <p className="absolute bottom-20 left-4 right-4 text-white text-center bg-black bg-opacity-50 p-2 rounded">
                     {modalImage.caption}
                   </p>
                 )}
                 <motion.button
                   onClick={() => setIsImageModalOpen(false)}
-                  className="absolute top-4 right-4 bg-black bg-opacity-70 text-white p-2 rounded-full hover:bg-opacity-90 transition-all duration-200 z-[10000]"
+                  className="absolute bottom-4 left-4 bg-[#e53935] bg-opacity-90 text-white p-3 rounded-full hover:bg-opacity-100 transition-all duration-200 z-[10000] shadow-lg border-2 border-white/20"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
+                  title="閉じる"
                 >
                   <X size={24} />
                 </motion.button>
