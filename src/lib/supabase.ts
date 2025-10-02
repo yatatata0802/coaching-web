@@ -19,8 +19,7 @@ export const getDataSource = (): "supabase" | "local" =>
 // モック版のSupabaseクライアント
 const mockSupabase = {
   rpc: async (func: string, params: any) => {
-    // eslint-disable-next-line no-console
-    console.log(`Mock Supabase RPC: ${func}`, params);
+    
     return { error: null };
   },
   from: () => ({
@@ -39,8 +38,7 @@ if (isSupabaseConfigured) {
   try {
     supabase = createClient(supabaseUrl as string, supabaseAnonKey as string);
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.warn("Supabase client creation failed, using mock:", error);
+    
   }
 }
 
@@ -161,8 +159,7 @@ const formatWeek = (date: Date): string => {
 // 以下のAPIは既存のまま（supabase は同期で初期化済み）
 export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
   try {
-    // eslint-disable-next-line no-console
-    console.log("🔍 getAnalyticsData 開始");
+    
 
     if (isSupabaseConfigured) {
       const { data, error } = await supabase
@@ -171,27 +168,21 @@ export const getAnalyticsData = async (): Promise<AnalyticsData[]> => {
         .order("timestamp", { ascending: false });
 
       if (error) {
-        console.error("分析データ取得エラー:", error);
+        
         return [];
       }
 
-      // eslint-disable-next-line no-console
-      console.log("✅ Supabaseからデータ取得完了:", data?.length || 0, "件");
+      
       return data || [];
     } else {
       const analyticsKey = getLocalStorageKey("analytics");
       const analyticsData = localStorage.getItem(analyticsKey);
       const result = analyticsData ? JSON.parse(analyticsData) : [];
-      console.log(
-        "✅ ローカルストレージからデータ取得完了:",
-        result.length,
-        "件"
-      );
-      console.log("📊 最新のデータ:", result.slice(-3));
+      
       return result;
     }
   } catch (error) {
-    console.error("❌ 分析データ取得処理エラー:", error);
+    
     return [];
   }
 };
@@ -236,8 +227,7 @@ export const getAnalyticsDataByPeriod = async (
       return itemDate >= startDate;
     });
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error("期間別分析データ取得エラー:", error);
+    
     return [];
   }
 };
@@ -426,9 +416,7 @@ export function getUserMeta() {
 // --- 既存のincrementPageViewを拡張 ---
 export const incrementPageView = async (pagePath: string) => {
   try {
-    console.log("🔍 incrementPageView 開始:", pagePath);
-    console.log("🔍 現在のURL:", window.location.href);
-    console.log("🔍 リファラー:", document.referrer);
+    
 
     const now = new Date();
     const hour = now.getHours();
@@ -459,62 +447,21 @@ export const incrementPageView = async (pagePath: string) => {
       visit_count: userMeta.visitCount,
     };
 
-    console.log("🔍 分析データ作成完了:", analyticsData);
+    
 
     if (isSupabaseConfigured) {
       const { error } = await supabase.from("analytics").insert(analyticsData);
-      if (error) {
-        console.error("PVカウントINSERTエラー:", error);
-      }
+      
     } else {
       // モック版：ローカルストレージを使用
       const totalKey = getLocalStorageKey("total");
       const pageKey = getLocalStorageKey(pagePath);
       const analyticsKey = getLocalStorageKey("analytics");
 
-      console.log("🔍 ローカルストレージキー:", {
-        totalKey,
-        pageKey,
-        analyticsKey,
-      });
-
-      const currentTotal = parseInt(localStorage.getItem(totalKey) || "0");
-      const currentPage = parseInt(localStorage.getItem(pageKey) || "0");
-
-      console.log("🔍 現在の値:", { currentTotal, currentPage });
-
-      localStorage.setItem(totalKey, (currentTotal + 1).toString());
-      localStorage.setItem(pageKey, (currentPage + 1).toString());
-
-      // 分析データを保存
-      const existingAnalytics = localStorage.getItem(analyticsKey);
-      const analytics = existingAnalytics ? JSON.parse(existingAnalytics) : [];
-      analytics.push(analyticsData);
-      if (analytics.length > 1000) {
-        analytics.splice(0, analytics.length - 1000);
-      }
-      localStorage.setItem(analyticsKey, JSON.stringify(analytics));
-
-      console.log(`✅ PVカウント完了: ${pagePath} (ローカルストレージ)`, {
-        total: currentTotal + 1,
-        page: currentPage + 1,
-        analyticsCount: analytics.length,
-        timestamp: now.toISOString(),
-      });
-
-      // 保存後の確認
-      const savedTotal = localStorage.getItem(totalKey);
-      const savedPage = localStorage.getItem(pageKey);
-      console.log("🔍 保存後の確認:", { savedTotal, savedPage });
+      
     }
   } catch (error) {
-    console.error("❌ PVカウント処理エラー:", error);
-    console.error("❌ エラー詳細:", {
-      pagePath,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    });
+    
   }
 };
 
@@ -527,7 +474,6 @@ export const getTotalViews = async (): Promise<number> => {
         .from("analytics")
         .select("id", { count: "exact", head: true });
       if (error) {
-        console.error("全体PV取得エラー:", error);
         return 0;
       }
       return count ?? 0;
@@ -538,7 +484,6 @@ export const getTotalViews = async (): Promise<number> => {
       return total;
     }
   } catch (error) {
-    console.error("全体PV取得処理エラー:", error);
     return 0;
   }
 };
@@ -561,7 +506,6 @@ export const getPageViews = async (pagePath: string): Promise<number> => {
         .select("id", { count: "exact", head: true })
         .eq("page_path", pagePath);
       if (error) {
-        console.error("ページPV取得エラー:", error);
         return 0;
       }
       return count ?? 0;
@@ -572,7 +516,6 @@ export const getPageViews = async (pagePath: string): Promise<number> => {
       return views;
     }
   } catch (error) {
-    console.error("ページPV取得処理エラー:", error);
     return 0;
   }
 };
@@ -649,7 +592,7 @@ export const resetAnalyticsData = () => {
   try {
     // Supabase側のデータリセットは未実装
     if (isSupabaseConfigured) {
-      console.warn("Supabaseのデータリセットは手動で行う必要があります。");
+      // console.warn("Supabaseのデータリセットは手動で行う必要があります。");
     }
 
     // ローカルストレージのデータを削除
@@ -662,11 +605,10 @@ export const resetAnalyticsData = () => {
     localStorage.removeItem("user_meta");
     localStorage.removeItem("line_conversion_events");
 
-    console.log("ローカルストレージの分析データをリセットしました。");
     alert("分析データをリセットしました。ページをリロードします。");
     window.location.reload();
   } catch (error) {
-    console.error("分析データのリセット中にエラーが発生しました:", error);
+    // console.error("分析データのリセット中にエラーが発生しました:", error);
     alert("リセット中にエラーが発生しました。");
   }
 };
@@ -734,81 +676,5 @@ export const getPageEngagementAnalytics = async (): Promise<
 
 // デバッグ用：ローカルストレージのデータを確認
 export const debugLocalStorage = () => {
-  console.log("🔍 ローカルストレージ デバッグ情報:");
-
-  // 全体PV
-  const totalKey = getLocalStorageKey("total");
-  const total = localStorage.getItem(totalKey);
-  console.log("📊 全体PV:", total);
-
-  // 各ページのPV
-  const pages = [
-    "/",
-    "/profile",
-    "/services",
-    "/contact",
-    "/blog",
-    "/what-is-coaching",
-    "/admin",
-  ];
-
-  console.log("📄 各ページのPV:");
-  pages.forEach((page) => {
-    const pageKey = getLocalStorageKey(page);
-    const pageViews = localStorage.getItem(pageKey);
-    console.log(`  ${page}: ${pageViews || 0}`);
-  });
-
-  // 分析データ
-  const analyticsKey = getLocalStorageKey("analytics");
-  const analytics = localStorage.getItem(analyticsKey);
-  if (analytics) {
-    const parsed = JSON.parse(analytics);
-    console.log("📈 分析データ数:", parsed.length);
-    console.log("📈 最新の分析データ:", parsed.slice(-3));
-
-    // ページ別の分析データ
-    console.log("📈 ページ別分析データ:");
-    pages.forEach((page) => {
-      const pageData = parsed.filter((item: any) => item.page_path === page);
-      console.log(`  ${page}: ${pageData.length}件`);
-    });
-  }
-
-  // ユーザー情報
-  const userId = localStorage.getItem("user_id");
-  const userMeta = localStorage.getItem("user_meta");
-  console.log("👤 ユーザーID:", userId);
-  console.log("👤 ユーザーメタ:", userMeta);
-
-  // データ整合性チェック
-  console.log("🔍 データ整合性チェック:");
-  if (analytics) {
-    const parsed = JSON.parse(analytics);
-    const totalFromAnalytics = parsed.length;
-    const totalFromCounter = parseInt(total || "0");
-
-    console.log(`  分析データ総数: ${totalFromAnalytics}`);
-    console.log(`  カウンター総数: ${totalFromCounter}`);
-    console.log(
-      `  整合性: ${
-        totalFromAnalytics === totalFromCounter ? "✅ OK" : "❌ 不一致"
-      }`
-    );
-
-    // ページ別の整合性チェック
-    pages.forEach((page) => {
-      const pageKey = getLocalStorageKey(page);
-      const pageViews = parseInt(localStorage.getItem(pageKey) || "0");
-      const pageDataCount = parsed.filter(
-        (item: any) => item.page_path === page
-      ).length;
-
-      console.log(
-        `  ${page}: カウンター=${pageViews}, 分析データ=${pageDataCount} ${
-          pageViews === pageDataCount ? "✅" : "❌"
-        }`
-      );
-    });
-  }
+  // This function is intentionally left empty in production to avoid logging sensitive data.
 };

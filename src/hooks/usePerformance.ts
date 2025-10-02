@@ -96,8 +96,7 @@ export const usePerformanceMeasure = (name: string) => {
       const duration = performance.now() - startTime.current;
       // 開発環境でのみログを出力
       if (import.meta.env.DEV) {
-        // eslint-disable-next-line no-console
-        console.log(`${name}: ${duration.toFixed(2)}ms`);
+        
       }
     }
   }, [name]);

@@ -21,12 +21,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("ErrorBoundary caught an error:", error, errorInfo);
+    
 
     // エラーをログサービスに送信（本番環境で）
     if (process.env.NODE_ENV === "production") {
-      // ここでエラー監視サービス（Sentry等）に送信
-      console.log("Error logged to monitoring service");
+      
     }
   }
 

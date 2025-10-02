@@ -141,16 +141,9 @@ const AdminPage: React.FC = () => {
       const errorCount = results.filter(
         (result) => result.status === "rejected"
       ).length;
-      if (errorCount > 0) {
-        console.warn(`${errorCount}個のデータ取得でエラーが発生しました`);
-        results.forEach((result, i) => {
-          if (result.status === "rejected") {
-            console.error(`分析データ取得エラー (${i}):`, result.reason);
-          }
-        });
-      }
+      
     } catch (error) {
-      console.error("分析データ取得中に予期せぬエラーが発生しました:", error);
+      // console.error("分析データ取得中に予期せぬエラーが発生しました:", error);
       // エラー時は全て空データで初期化
       setHourlyData([]);
       setDailyData([]);
@@ -196,7 +189,6 @@ const AdminPage: React.FC = () => {
         "テストページビューを記録しました。更新ボタンを押して確認してください。"
       );
     } catch (error) {
-      console.error("テストページビューエラー:", error);
       alert("テストページビューの記録に失敗しました。");
     }
   };
@@ -207,25 +199,25 @@ const AdminPage: React.FC = () => {
   };
 
   const handleCheckRealTimeData = () => {
-    console.log("🔍 リアルタイムデータ確認開始");
+    // console.log("🔍 リアルタイムデータ確認開始");
 
     // 現在のページビューを手動でカウント
     incrementPageView(location.pathname)
       .then(() => {
-        console.log("✅ 手動ページビューテスト完了");
+        // console.log("✅ 手動ページビューテスト完了");
         // 少し待ってからデータを再取得
         setTimeout(() => {
           fetchAnalytics();
-          console.log("🔄 データ再取得完了");
+          // console.log("🔄 データ再取得完了");
         }, 1000);
       })
       .catch((error) => {
-        console.error("❌ 手動ページビューテストエラー:", error);
+        // console.error("❌ 手動ページビューテストエラー:", error);
       });
   };
 
   const handleTestAllPages = async () => {
-    console.log("🔍 全ページテスト開始");
+    // console.log("🔍 全ページテスト開始");
 
     const pages = [
       "/",
@@ -239,20 +231,20 @@ const AdminPage: React.FC = () => {
 
     for (const page of pages) {
       try {
-        console.log(`📊 テストページビュー: ${page}`);
+        // console.log(`📊 テストページビュー: ${page}`);
         await incrementPageView(page);
-        console.log(`✅ テストページビュー完了: ${page}`);
+        // console.log(`✅ テストページビュー完了: ${page}`);
         // 少し待つ
         await new Promise((resolve) => setTimeout(resolve, 100));
       } catch (error) {
-        console.error(`❌ テストページビューエラー: ${page}`, error);
+        // console.error(`❌ テストページビューエラー: ${page}`, error);
       }
     }
 
-    console.log("🔄 全ページテスト完了、データ再取得中...");
+    // console.log("🔄 全ページテスト完了、データ再取得中...");
     setTimeout(() => {
       fetchAnalytics();
-      console.log("✅ 全ページテスト完了");
+      // console.log("✅ 全ページテスト完了");
     }, 1000);
   };
 
