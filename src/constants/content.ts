@@ -522,7 +522,7 @@ export const PROFILE_PAGE_DATA = {
       src: "/images/karate-child.jpg",
       alt: "空手の道着を着てメダルと賞状を持つ少年時代の矢田谷充則",
       caption:
-        "4歳から中学3年生まで続けた空手。道着は私が最初に身につけた「制服」でした。",
+        "全国大会の団体戦で優勝した、小学5年生の時の記念写真。",
     },
     {
       type: "paragraph",
@@ -560,7 +560,7 @@ export const PROFILE_PAGE_DATA = {
       src: "/images/family-white-bike.jpg",
       alt: "職場体験会で白バイの前で撮影した家族写真（制服姿の矢田谷充則、妻、子供）",
       caption:
-        "職場体験会での家族写真。制服を着た私と、妻、子供。この頃、人生の転機が訪れようとしていました。",
+        "職場体験会での家族写真。",
     },
     {
       type: "paragraph",
@@ -592,7 +592,7 @@ export const PROFILE_PAGE_DATA = {
       src: "/images/current-self.jpg",
       alt: "現在の矢田谷充則",
       caption:
-        "現在の私。制服を脱ぎ、自分らしい生き方を選んだ今。あなたも、あなただけの人生の脚本を書き始めませんか？",
+        "現在の私。制服を脱ぎ、自分らしい生き方を選んだ今。",
     },
     {
       type: "paragraph",
