@@ -32,7 +32,7 @@ const SEO: React.FC<SEOProps> = ({
   lastModifiedDate,
 }) => {
   const fullTitle = `${title} | 矢田谷充則のコーチングサービス`;
-  const fullDescription = `${description} 元公安警察官の矢田谷充則によるコーチングサービス。公安部門での経験を活かした独自のアプローチで、あなたの「変わりたい」を行動に繋げます。大阪・関西エリアで無料相談受付中。`;
+  const fullDescription = description || SITE_DESCRIPTION;
   const currentUrl = canonical || window.location.href;
 
   const schemaData = {
@@ -150,9 +150,9 @@ const SEO: React.FC<SEOProps> = ({
 
       {/* 地域・ローカルSEO */}
       <meta name="geo.region" content="JP-27" />
-      <meta name="geo.placename" content="大阪市" />
-      <meta name="geo.position" content="34.7024;135.4959" />
-      <meta name="ICBM" content="34.7024, 135.4959" />
+      <meta name="geo.placename" content="大阪市都島区 京橋" />
+      <meta name="geo.position" content="34.6968;135.5346" />
+      <meta name="ICBM" content="34.6968, 135.5346" />
 
       {/* カノニカルURL */}
       <link rel="canonical" href={currentUrl} />
@@ -181,6 +181,32 @@ const SEO: React.FC<SEOProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(schemaData),
+        }}
+      />
+
+      {/* LocalBusiness 構造化データ（大阪・京橋向け） */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "矢田谷充則のコーチングサービス",
+            url: currentUrl,
+            image: ogImage,
+            address: {
+              "@type": "PostalAddress",
+              addressRegion: "大阪府",
+              addressLocality: "大阪市都島区",
+              streetAddress: "京橋周辺",
+            },
+            areaServed: "大阪市・京橋",
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 34.6968,
+              longitude: 135.5346,
+            },
+          }),
         }}
       />
 

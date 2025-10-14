@@ -255,13 +255,14 @@ const BlogPage: React.FC = () => {
                       {/* タグ */}
                       <div className="flex flex-wrap gap-1 mb-4">
                         {post.tags.slice(0, 3).map((tag) => (
-                          <span
+                          <a
                             key={tag}
-                            className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-700 text-gray-300"
+                            href={`/tags/${encodeURIComponent(tag)}`}
+                            className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-700 text-gray-300 hover:bg-gray-600"
                           >
                             <Tag size={10} />
                             {tag}
-                          </span>
+                          </a>
                         ))}
                       </div>
 

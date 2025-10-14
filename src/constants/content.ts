@@ -33,6 +33,8 @@ interface ServiceData {
   icon: any;
 }
 
+export const SITE_DESCRIPTION = '【大阪・京橋】元公安警察官の矢田谷充則によるコーチングサービス。認知科学で「変わりたい」を行動へ。';
+
 export const SERVICES_PAGE_DATA: ServiceData[] = [
   {
     title: "コーチングとコンサルティングの違い",
@@ -308,7 +310,7 @@ export const SERVICE_PAGE_TESTIMONIALS: ServicePageTestimonial[] = [
     duration: "コーチングセッション",
     category: "キャリアデザイン",
     testimonial:
-      "「やたさんの変わりようにも驚いた。昔のギラギラがなくなってて、これがコーチングの力なんやなって思った」",
+      "「やたさんの変わりようにも驚いた。昔のギラギラがなくなってて、これがコーチングの力なんやなって思った"",
   },
   {
     name: "Mさん",

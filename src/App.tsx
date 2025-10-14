@@ -12,6 +12,7 @@ const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogDetailPage = lazy(() => import("./pages/BlogDetailPage"));
+const TagPage = lazy(() => import("./pages/TagPage"));
 const AdminPage = lazy(() => import("./pages/AdminPage"));
 
 // 改善されたローディングコンポーネント
@@ -79,6 +80,14 @@ function App() {
             element={
               <MainLayout>
                 <BlogDetailPage />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/tags/:tagId"
+            element={
+              <MainLayout>
+                <TagPage />
               </MainLayout>
             }
           />

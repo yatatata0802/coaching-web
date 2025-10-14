@@ -39,8 +39,8 @@ export interface Testimonial {
 }
 
 export interface ProfileStoryItem {
-  type: "heading" | "paragraph" | "question" | "image";
-  content: string;
+  type: string;
+  content?: string;
   src?: string;
   alt?: string;
   caption?: string;

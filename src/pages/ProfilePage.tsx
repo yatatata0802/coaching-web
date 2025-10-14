@@ -10,7 +10,7 @@ const ProfilePage: React.FC = () => {
   const { titleParts, basicProfile, storyContent } = PROFILE_PAGE_DATA;
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
-  const processedStory = useProcessProfileStory(storyContent);
+  const processedStory = useProcessProfileStory(storyContent as any);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -19,9 +19,9 @@ const ProfilePage: React.FC = () => {
   return (
     <>
       <SEO
-        title="PROFILE | 矢田谷充則の物語"
-        description="公安警察官として20年間勤務した経験と、GCS認定コーチとしての専門知識を活かし、個人の目標達成と行動変容を支援する矢田谷充則の公式プロフィールページです。"
-        keywords="矢田谷充則,プロフィール,GCS認定コーチ,元公安警察官,公安警察,筋トレ,ムエタイ,大阪,人生設計,継続力,目標達成,行動変容"
+        title="PROFILE | 大阪・京橋のコーチ | 矢田谷充則の物語"
+        description="大阪・京橋を拠点に、公安警察での20年の経験とGCS認定の専門性を活かして、目標達成と行動変容を支援。京橋エリアでのコーチング実践の背景と想いを紹介する公式プロフィールページ。"
+        keywords="矢田谷充則,プロフィール,京橋,大阪市,都島区,GCS認定コーチ,元公安警察官,公安警察,筋トレ,ムエタイ,人生設計,継続力,目標達成,行動変容"
         type="person"
         author={{
           name: "矢田谷充則",
