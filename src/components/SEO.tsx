@@ -32,7 +32,7 @@ const SEO: React.FC<SEOProps> = ({
   lastModifiedDate,
 }) => {
   const fullTitle = `${title} | 矢田谷充則のコーチングサービス`;
-  const fullDescription = description || SITE_DESCRIPTION;
+  const fullDescription = `${description} 元公安警察官の矢田谷充則によるコーチングサービス。公安部門での経験を活かした独自のアプローチで、あなたの「変わりたい」を行動に繋げます。大阪・関西エリアで無料相談受付中。`;
   const currentUrl = canonical || window.location.href;
 
   const schemaData = {
