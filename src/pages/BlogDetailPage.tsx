@@ -216,7 +216,177 @@ const BlogDetailPage: React.FC = () => {
         author={{
           name: "矢田谷充則",
           jobTitle: "コーチング専門家",
-          description: blogPost.excerpt,
+          description: "元公安警察官の矢田谷充則によるコーチングサービス",
+          knowsAbout: [
+            "コーチング",
+            "マインドセット",
+            "フィットネス",
+            "ライフスタイル",
+          ],
+        }}
+        publishDate={blogPost.date}
+        lastModifiedDate={blogPost.date}
+      />
+
+      {/* 戻るボタン */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <motion.button
+          onClick={() => navigate("/blog")}
+          className="flex items-center gap-2 text-[#d4af37] hover:text-[#ffd700] transition-colors mb-6"
+          whileHover={{ x: -5 }}
+        >
+          <ArrowLeft size={20} />
+          ブログ一覧に戻る
+        </motion.button>
+      </div>
+
+      {/* 記事ヘッダー */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* カテゴリバッジ */}
+          <div className="mb-4">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-[#d4af37]/20 text-[#d4af37]">
+              {blogPost.category === "coaching" && "🎯 コーチング"}
+              {blogPost.category === "mindset" && "🧠 マインドセット"}
+              {blogPost.category === "fitness" && "💪 フィットネス"}
+              {blogPost.category === "lifestyle" && "🌟 ライフスタイル"}
+            </span>
+          </div>
+
+          {/* タイトル */}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight antialiased">
+            {blogPost.title}
+          </h1>
+
+          {/* パンチライン */}
+          {blogPost.punchline && (
+            <div className="mb-6">
+              <span className="text-2xl sm:text-3xl font-extrabold text-[#ffd700] text-center drop-shadow-lg block">
+                {blogPost.punchline}
+              </span>
+            </div>
+          )}
+
+          {/* 抜粋 */}
+          <p className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
+            {blogPost.excerpt}
+          </p>
+
+          {/* メタ情報 */}
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-6">
+            <div className="flex items-center gap-1">
+              <Calendar size={16} />
+              <span>{formatDate(blogPost.date)}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock size={16} />
+              <span>{blogPost.readTime}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Eye size={16} />
+              <span>{blogPost.views.toLocaleString()} views</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <BookOpen size={16} />
+              <span>by {blogPost.author}</span>
+            </div>
+          </div>
+
+          {/* タグ */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {blogPost.tags.map((tag) => (
+              <a
+                key={tag}
+                href={`/tags/${encodeURIComponent(tag)}`}
+                className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-gray-700 text-gray-300 hover:bg-gray-600"
+              >
+                <Tag size={14} />
+                {tag}
+              </a>
+            ))}
+          </div>
+
+          {/* いいね・シェアボタン */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={handleLike}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                isLiked
+                  ? "bg-red-500/20 text-red-400 border border-red-500/30"
+                  : "bg-gray-700/50 text-gray-300 border border-gray-600 hover:bg-gray-600/50"
+              }`}
+            >
+              <Heart size={16} className={isLiked ? "fill-current" : ""} />
+              <span>{likes}</span>
+            </button>
+
+            <div className="relative">
+              <button
+                onClick={() => setShowShareMenu(!showShareMenu)}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-700/50 text-gray-300 border border-gray-600 hover:bg-gray-600/50 transition-all duration-300"
+              >
+                <Share2 size={16} />
+                <span>シェア</span>
+              </button>
+
+              {showShareMenu && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="absolute top-full left-0 mt-2 bg-gray-800 border border-gray-600 rounded-lg p-2 z-10"
+                >
+                  <button
+                    onClick={() => handleShare("twitter")}
+                    className="block w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded"
+                  >
+                    Twitterでシェア
+                  </button>
+                  <button
+                    onClick={() => handleShare("facebook")}
+                    className="block w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded"
+                  >
+                    Facebookでシェア
+                  </button>
+                  <button
+                    onClick={() => handleShare("line")}
+                    className="block w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded"
+                  >
+                    LINEでシェア
+                  </button>
+                  <button
+                    onClick={() => handleShare("copy")}
+                    className="block w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded"
+                  >
+                    リンクをコピー
+                  </button>
+                </motion.div>
+              )}
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      <SectionDivider variant="wave" />
+
+      {/* 記事本文 */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="prose prose-invert prose-lg max-w-none"
+        >
+          <div className="bg-gradient-to-br from-[#181818]/80 to-[#0a0a0a]/90 border border-[#d4af37]/30 rounded-2xl p-6 sm:p-8">
+            {renderContent(
+              `大阪・京橋の自己実現コーチ、矢田谷充則です。認知科学に基づくコーチングで、行動が続く仕組みを一緒に作ります。\n\n${blogPost.content}`
+            )}
+          </div>
+        </motion.div>
+      </section>
 
       <SectionDivider variant="diagonal" />
 
