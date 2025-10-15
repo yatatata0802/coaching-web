@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import FloatingSocial from '../ui/FloatingSocial';
-import FloatingCTA from '../FloatingCTA';
+
 import ScrollToTop from '../ScrollToTop';
 import { usePageView } from '../../hooks/usePageView';
 
@@ -12,8 +12,7 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-  showFloatingCTA = true,
-}) => {
+  }) => {
   // ページビューをカウント
   usePageView();
 
