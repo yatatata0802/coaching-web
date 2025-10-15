@@ -46,7 +46,7 @@ const AnalyticsDashboard: React.FC = () => {
         setDeviceData(device);
         setBrowserData(browser);
       } catch (error) {
-        console.error("分析データ取得エラー:", error);
+        // console.error("分析データ取得エラー:", error);
       } finally {
         setIsLoading(false);
       }

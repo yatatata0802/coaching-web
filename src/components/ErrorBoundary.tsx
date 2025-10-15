@@ -20,12 +20,13 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     
 
     // エラーをログサービスに送信（本番環境で）
     if (process.env.NODE_ENV === "production") {
-      
+      // TODO: Sentry, LogRocketなどのエラー監視サービスにエラー情報を送信する
     }
   }
 

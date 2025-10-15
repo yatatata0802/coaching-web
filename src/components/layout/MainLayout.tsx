@@ -28,7 +28,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <p>&copy; {new Date().getFullYear()} Mitsunori Yatagai. All Rights Reserved.</p>
       </footer>
       <FloatingSocial />
-      {showFloatingCTA && <FloatingCTA />}
+      
     </div>
   );
 };
