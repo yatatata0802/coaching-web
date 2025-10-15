@@ -14,7 +14,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 }) => {
   const titleCharVariants = {
     hidden: { opacity: 0, scale: 0.8, filter: "blur(8px)", y: 50 },
-    visible: { opacity: 1, scale: 1, filter: "blur(0px)", y: 0 },
+    visible: { opacity: 1, scale: 1, filter: "none", y: 0 },
   };
 
   return (
@@ -32,6 +32,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
                 delay: delay + (lineIndex * line.length + charIndex) * 0.15,
                 duration: 1.2,
                 ease: [0.25, 0.46, 0.45, 0.94],
+                filter: { duration: 0.4, ease: "easeOut" },
               }}
             >
               {char === " " ? "\u00A0" : char}

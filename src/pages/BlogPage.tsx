@@ -36,12 +36,18 @@ const BlogPage: React.FC = () => {
     (cat) => cat.id === selectedCategory
   );
 
+  const breadcrumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "ブログ", path: "/blog" },
+  ];
+
   return (
     <div className="min-h-screen header-safe-padding pb-12 sm:pb-16 relative overflow-hidden">
       <SEO
         title="ブログ | 矢田谷充則のコーチング記事"
         description="矢田谷充則が執筆するコーチング、マインドセット、フィットネス、ライフスタイルに関する記事。あなたの「変わりたい」をサポートする実践的な内容をお届けします。"
         keywords="ブログ, コーチング記事, マインドセット, フィットネス, ライフスタイル, 矢田谷充則, 習慣化, 目標達成, 自己改善"
+        breadcrumbs={breadcrumbs}
       />
 
       {/* ファーストビュー - シンプルな紹介文 + CTAバナー */}

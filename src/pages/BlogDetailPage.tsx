@@ -44,6 +44,13 @@ const BlogDetailPage: React.FC = () => {
     );
   }
 
+  // パンくずリストのデータを生成
+  const breadcrumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "ブログ", path: "/blog" },
+    { name: blogPost.title, path: `/blog/${blogPost.id}` },
+  ];
+
   // --- 関連記事データとその表示部分をすべて削除 ---
 
   const handleLike = () => {
@@ -205,27 +212,12 @@ const BlogDetailPage: React.FC = () => {
   return (
     <div className="min-h-screen header-safe-padding pb-12 sm:pb-16 relative overflow-hidden">
       <SEO
-        title={`${blogPost.title} | ブログ | 矢田谷充則`}
+        title={`${blogPost.title} | ブログ`}
         description={blogPost.excerpt}
-        keywords={`${blogPost.tags.join(
-          ", "
-        )}, ブログ, 矢田谷充則, コーチング, ${
-          blogPost.category
-        }, 大阪, 関西, 無料相談`}
+        keywords={blogPost.tags.join(", ")}
         type="article"
-        author={{
-          name: "矢田谷充則",
-          jobTitle: "コーチング専門家",
-          description: "元公安警察官の矢田谷充則によるコーチングサービス",
-          knowsAbout: [
-            "コーチング",
-            "マインドセット",
-            "フィットネス",
-            "ライフスタイル",
-          ],
-        }}
-        publishDate={blogPost.date}
-        lastModifiedDate={blogPost.date}
+        blogPost={blogPost}
+        breadcrumbs={breadcrumbs}
       />
 
       {/* 戻るボタン */}

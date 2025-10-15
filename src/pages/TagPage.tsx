@@ -14,12 +14,19 @@ const TagPage: React.FC = () => {
     p.tags.map((t) => t.toLowerCase()).includes(decodedTag.toLowerCase())
   );
 
+  const breadcrumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "ブログ", path: "/blog" },
+    { name: `タグ: ${decodedTag}`, path: `/tags/${tagId}` },
+  ];
+
   return (
     <div className="min-h-screen header-safe-padding pb-12 sm:pb-16 relative overflow-hidden">
       <SEO
         title={`タグ: ${decodedTag} | ブログ一覧`}
         description={`${decodedTag} に関する記事一覧`}
         keywords={`${decodedTag}, ブログ, 記事一覧`}
+        breadcrumbs={breadcrumbs}
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

@@ -7,12 +7,18 @@ import { PRICING_PLANS, SERVICE_PAGE_TESTIMONIALS } from "../constants/content";
 import { Target, TrendingUp, Heart, CheckCircle, Dumbbell } from "lucide-react";
 
 const ServicesPage: React.FC = () => {
+  const breadcrumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "サービス", path: "/services" },
+  ];
+
   return (
     <div className="min-h-screen header-safe-padding pb-12 sm:pb-16 mobile-safe-area relative overflow-hidden">
       <SEO
         title="コーチングサービス | 矢田谷充則の提供サービスと料金"
         description="矢田谷充則が提供する行動変容支援、自己管理強化、心と身体のサポートといったコーチングサービスの詳細と料金プランをご紹介します。あなたの「変わりたい」を現実にする最適なプランを見つけてください。"
         keywords="コーチングサービス, 料金プラン, 行動変容支援, 自己管理強化, 心と身体のサポート, 矢田谷充則, パーソナルコーチング, 目標達成, 習慣化, 筋トレ"
+        breadcrumbs={breadcrumbs}
       />
       {/* パーティクル背景 */}
       <ParticleBackground />

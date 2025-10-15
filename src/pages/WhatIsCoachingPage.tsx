@@ -7,12 +7,18 @@ import SEO from "../components/SEO";
 import { SERVICES_PAGE_DATA } from "../constants/content";
 
 const WhatIsCoachingPage: React.FC = () => {
+  const breadcrumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "コーチングとは", path: "/what-is-coaching" },
+  ];
+
   return (
     <div className="min-h-screen header-safe-padding relative overflow-hidden">
       <SEO
         title="コーチングとは？ | 矢田谷充則のパーソナルコーチング"
         description="矢田谷充則がコーチングの真髄を解説。コンサルティングとの違い、コーチングで得られる変化、そして「変わりたい」あなたへのメッセージを深く掘り下げます."
         keywords="コーチングとは, コーチング, パーソナルコーチング, 矢田谷充則, コンサルティング, 自己理解, 目標達成, 行動変容, 変わりたい"
+        breadcrumbs={breadcrumbs}
       />
       {/* Enhanced Background Effects */}
       <ParticleBackground />

@@ -5,11 +5,17 @@ import SEO from "../components/SEO";
 import { ASSURANCES } from "../constants/content";
 
 const ContactPage: React.FC = () => {
+  const breadcrumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "お問い合わせ", path: "/contact" },
+  ];
+
   return (
     <div className="min-h-[60vh] py-16 px-4 mt-20">
       <SEO
         title="お問い合わせ・お申込み"
         description="コーチングサービスのお問い合わせ・お申込みはこちらから。"
+        breadcrumbs={breadcrumbs}
       />
       <h1 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-8 text-center">
         お問い合わせ・お申込み

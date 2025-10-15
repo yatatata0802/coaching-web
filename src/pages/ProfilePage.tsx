@@ -16,6 +16,11 @@ const ProfilePage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const breadcrumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "プロフィール", path: "/profile" },
+  ];
+
   return (
     <>
       <SEO
@@ -45,6 +50,7 @@ const ProfilePage: React.FC = () => {
             "https://www.ginza-coach.com/coaches/view.cgi?username=2505FB4944",
           ],
         }}
+        breadcrumbs={breadcrumbs}
       />
       <div className="min-h-screen font-sans header-safe-padding pb-12 sm:pb-16 relative overflow-hidden">
         <section className="text-center py-8 sm:py-12 lg:py-16 px-4 sm:px-5 relative z-10 overflow-hidden pt-24 md:pt-20">
@@ -79,7 +85,7 @@ const ProfilePage: React.FC = () => {
                           opacity: 1,
                           scale: 1.1,
                           rotate: 0,
-                          filter: "blur(0px)",
+                          filter: "none",
                         }}
                         transition={{
                           delay: 0.12 + (partIndex * 20 + charIndex) * 0.04,
@@ -87,6 +93,7 @@ const ProfilePage: React.FC = () => {
                           type: "spring",
                           stiffness: 400,
                           damping: 18,
+                          filter: { duration: 0.4, ease: "easeOut" },
                         }}
                       >
                         {char === " " ? "\u00A0" : char}
