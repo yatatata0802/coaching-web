@@ -595,7 +595,7 @@ export const PROFILE_PAGE_DATA: {
     {
       type: "image",
       src: "/images/seijinshiki.jpg",
-      alt: "成人式の時の矢田谷充則",
+      alt: "警察官になる前、成人式でスーツを着て友人と写る矢田谷充則",
       caption: "成人式の時。まだ警察官になる前の、自由だった頃の自分。",
     },
     {
@@ -644,7 +644,7 @@ export const PROFILE_PAGE_DATA: {
     {
       type: "image",
       src: "/images/current-self.jpg",
-      alt: "現在の矢田谷充則",
+      alt: "コーチとして独立し、自信に満ちた表情で腕を組む現在の矢田谷充則",
       caption: "現在の私。制服を脱ぎ、自分らしい生き方を選んだ今。",
     },
     {

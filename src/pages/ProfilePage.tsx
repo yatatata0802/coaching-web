@@ -109,7 +109,7 @@ const ProfilePage: React.FC = () => {
           <div className="flex justify-center mb-8">
             <motion.img
               src="/profile.jpg"
-              alt="矢田谷充則"
+              alt="大阪・京橋の自己実現コーチ、矢田谷充則のプロフィール写真"
               className="w-32 h-40 object-cover shadow-lg border-4 border-[#d4af37] cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => setIsImageModalOpen(true)}
               whileHover={{ scale: 1.05 }}
