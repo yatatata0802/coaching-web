@@ -23,7 +23,7 @@ const WhatIsCoachingPage: React.FC = () => {
       {/* Enhanced Background Effects */}
       <ParticleBackground />
 
-      <div className="max-w-5xl mx-auto px-8 relative z-20 md:px-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 relative z-20">
         {/* Enhanced Hero Section */}
         <motion.section
           className="text-center py-12 sm:py-16 md:py-8"
@@ -92,7 +92,7 @@ const WhatIsCoachingPage: React.FC = () => {
             return (
               <motion.div
                 key={index}
-                className={`p-8 md:p-6 backdrop-blur-sm rounded-2xl relative shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-500 ${
+                className={`p-6 md:p-8 backdrop-blur-sm rounded-2xl relative shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-500 ${
                   index === SERVICES_PAGE_DATA.length - 1
                     ? "bg-gradient-to-br from-[#e53935]/10 via-[#d4af37]/5 to-[#e53935]/10 border-2 border-[#e53935]/30 hover:border-[#e53935]/50 hover:scale-1.02"
                     : "bg-white/5 border border-[#d4af37]/20 hover:border-[#d4af37]/40 hover:y-[-5px]"
@@ -118,7 +118,7 @@ const WhatIsCoachingPage: React.FC = () => {
                     >
                       <Icon size={32} className="text-[#d4af37]" />
                     </motion.div>
-                    <h2 className="text-3xl font-bold text-[#d4af37] font-serif md:text-2xl">
+                    <h2 className="text-2xl font-bold text-[#d4af37] font-serif md:text-3xl">
                       {section.title}
                     </h2>
                   </div>
